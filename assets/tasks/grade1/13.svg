@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="260" viewBox="0 0 320 260"><defs><linearGradient id="ggrade113c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade113g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade113w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade113s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade113b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade113b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade113b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade113bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="320" height="260" rx="20" fill="url(#ggrade113bg)"/>
+
+<!--icon:поле_клеток--><rect x="10" y="10" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="70" y="10" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="130" y="10" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="190" y="10" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="250" y="10" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="10" y="70" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="70" y="70" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<text x="100.0" y="112.0" font-size="31" fill="#2A1F1A" text-anchor="middle" font-weight="600">А</text>
+<rect x="130" y="70" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<text x="160.0" y="112.0" font-size="31" fill="#2A1F1A" text-anchor="middle" font-weight="600">Г</text>
+<rect x="190" y="70" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<text x="220.0" y="112.0" font-size="31" fill="#2A1F1A" text-anchor="middle" font-weight="600">Б</text>
+<rect x="250" y="70" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="10" y="130" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="70" y="130" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<text x="100.0" y="172.0" font-size="31" fill="#2A1F1A" text-anchor="middle" font-weight="600">В</text>
+<rect x="130" y="130" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="190" y="130" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="250" y="130" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="10" y="190" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="70" y="190" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="130" y="190" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="190" y="190" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="250" y="190" width="60" height="60" fill="url(#ggrade113w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<!--icon:божья_коровка--><line x1="41.6" y1="201.0" x2="41.6" y2="205.7" stroke="#2A1F1A" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="52.9" y1="207.6" x2="49.4" y2="211.2" stroke="#2A1F1A" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="59.8" y1="218.9" x2="54.9" y2="218.9" stroke="#2A1F1A" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="21.3" y1="221.9" x2="26.2" y2="221.9" stroke="#2A1F1A" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="27.4" y1="232.9" x2="30.9" y2="229.3" stroke="#2A1F1A" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="38.9" y1="235.7" x2="38.9" y2="240.1" stroke="#2A1F1A" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M28.2 197.2 Q30.8 199.8 30.5 203.8" fill="none" stroke="#2A1F1A" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M17.2 208.2 Q19.8 210.8 23.8 210.5" fill="none" stroke="#2A1F1A" stroke-width="1.4" stroke-linecap="round"/>
+<circle cx="28.9" cy="208.9" r="5.5" fill="#3A302B" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" data-opaque="1" data-keepcolor="1"/>
+<g transform="translate(1.8 2.2)" opacity=".95"><ellipse cx="41.1" cy="221.1" rx="15.7" ry="12.9" fill="#E2505F" data-ink="1" data-opaque="1" data-keepcolor="1" transform="rotate(45 41.1 221.1)" filter="url(#ggrade113b5)"/></g>
+<ellipse cx="41.1" cy="221.1" rx="15.7" ry="12.9" fill="#E2505F" data-ink="1" data-keepcolor="1" transform="rotate(45 41.1 221.1)"/>
+<ellipse cx="41.1" cy="221.1" rx="15.7" ry="12.9" fill="url(#ggrade113g)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-opaque="1" data-keepcolor="1" transform="rotate(45 41.1 221.1)" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<line x1="35.3" y1="215.3" x2="51.0" y2="230.7" stroke="#2A1F1A" stroke-width="1.4" stroke-linecap="round"/>
+<circle cx="38.4" cy="211.5" r="2.3" fill="#2A1F1A"/>
+<circle cx="46.0" cy="214.8" r="2.3" fill="#2A1F1A"/>
+<circle cx="31.5" cy="218.3" r="2.3" fill="#2A1F1A"/>
+<circle cx="49.4" cy="222.5" r="2.3" fill="#2A1F1A"/>
+<circle cx="34.8" cy="225.8" r="2.3" fill="#2A1F1A"/>
+<circle cx="42.5" cy="229.6" r="2.3" fill="#2A1F1A"/>
+</svg>

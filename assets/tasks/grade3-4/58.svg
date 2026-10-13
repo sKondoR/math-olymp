@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="230" viewBox="0 0 300 230"><defs><linearGradient id="ggrade3401c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade3401g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade3401w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade3401s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade3401b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade3401b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade3401b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade3401bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="300" height="230" rx="20" fill="url(#ggrade3401bg)"/>
+
+<!--icon:пирамида_чисел--><line x1="137.1" y1="67.6" x2="122.9" y2="92.4" stroke="#4F86D9" stroke-width="3"/>
+<line x1="162.9" y1="67.6" x2="177.1" y2="92.4" stroke="#4F86D9" stroke-width="3"/>
+<line x1="97.1" y1="137.6" x2="82.9" y2="162.4" stroke="#4F86D9" stroke-width="3"/>
+<line x1="122.9" y1="137.6" x2="137.1" y2="162.4" stroke="#4F86D9" stroke-width="3"/>
+<line x1="177.1" y1="137.6" x2="162.9" y2="162.4" stroke="#4F86D9" stroke-width="3"/>
+<line x1="202.9" y1="137.6" x2="217.1" y2="162.4" stroke="#4F86D9" stroke-width="3"/>
+<circle cx="150.0" cy="45" r="26" fill="url(#ggrade3401w)" stroke="#2A1F1A" stroke-width="2.5" stroke-opacity=".85"/>
+<text x="150.0" y="55.08" font-size="28" font-weight="bold" fill="#2A1F1A" text-anchor="middle">31</text>
+<circle cx="110.0" cy="115" r="26" fill="url(#ggrade3401w)" stroke="#2A1F1A" stroke-width="2.5" stroke-opacity=".85"/>
+<circle cx="190.0" cy="115" r="26" fill="url(#ggrade3401w)" stroke="#2A1F1A" stroke-width="2.5" stroke-opacity=".85"/>
+<circle cx="70.0" cy="185" r="26" fill="url(#ggrade3401w)" stroke="#2A1F1A" stroke-width="2.5" stroke-opacity=".85"/>
+<text x="70.0" y="195.08" font-size="28" font-weight="bold" fill="#2A1F1A" text-anchor="middle">5</text>
+<circle cx="150.0" cy="185" r="26" fill="url(#ggrade3401w)" stroke="#2A1F1A" stroke-width="2.5" stroke-opacity=".85"/>
+<text x="150.0" y="195.08" font-size="28" font-weight="bold" fill="#2A1F1A" text-anchor="middle">?</text>
+<circle cx="230.0" cy="185" r="26" fill="url(#ggrade3401w)" stroke="#2A1F1A" stroke-width="2.5" stroke-opacity=".85"/>
+<text x="230.0" y="195.08" font-size="28" font-weight="bold" fill="#2A1F1A" text-anchor="middle">8</text>
+</svg>

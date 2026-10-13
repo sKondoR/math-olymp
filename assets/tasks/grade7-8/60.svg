@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="270" viewBox="0 0 420 270"><defs><linearGradient id="ggrade7803c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade7803g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade7803w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade7803s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade7803b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade7803b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade7803b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade7803bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="420" height="270" rx="20" fill="url(#ggrade7803bg)"/>
+
+<!--icon:шарики_в_коробке--><path d="M30 40 L30 250 L390 250 L390 40" fill="none" stroke="#2A1F1A" stroke-width="4" stroke-linejoin="round" data-ink="1"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="62" cy="225" r="19" fill="#3DB54A" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="62" cy="225" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="102" cy="225" r="19" fill="#2F80D1" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="102" cy="225" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="142" cy="225" r="19" fill="#E8343F" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="142" cy="225" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="182" cy="225" r="19" fill="#3DB54A" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="182" cy="225" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="222" cy="225" r="19" fill="#3DB54A" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="222" cy="225" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="262" cy="225" r="19" fill="#2F80D1" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="262" cy="225" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="302" cy="225" r="19" fill="#E8343F" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="302" cy="225" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="342" cy="225" r="19" fill="#2F80D1" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="342" cy="225" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="82" cy="186" r="19" fill="#E8343F" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="82" cy="186" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="122" cy="186" r="19" fill="#E8343F" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="122" cy="186" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="162" cy="186" r="19" fill="#3DB54A" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="162" cy="186" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="202" cy="186" r="19" fill="#E8343F" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="202" cy="186" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="242" cy="186" r="19" fill="#2F80D1" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="242" cy="186" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="282" cy="186" r="19" fill="#E8343F" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="282" cy="186" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="322" cy="186" r="19" fill="#2F80D1" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="322" cy="186" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="362" cy="186" r="19" fill="#E8343F" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="362" cy="186" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="62" cy="147" r="19" fill="#E8343F" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="62" cy="147" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="102" cy="147" r="19" fill="#2F80D1" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="102" cy="147" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="142" cy="147" r="19" fill="#E8343F" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="142" cy="147" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="182" cy="147" r="19" fill="#2F80D1" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="182" cy="147" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="222" cy="147" r="19" fill="#3DB54A" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="222" cy="147" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="262" cy="147" r="19" fill="#2F80D1" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="262" cy="147" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="302" cy="147" r="19" fill="#E8343F" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="302" cy="147" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<!--icon:мячи--><g transform="translate(2.7 3.2)" opacity=".95"><circle cx="342" cy="147" r="19" fill="#3DB54A" data-ink="1" data-keepcolor="1" filter="url(#ggrade7803b5)"/></g>
+<circle cx="342" cy="147" r="19" fill="url(#ggrade7803c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" data-keepcolor="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+</svg>

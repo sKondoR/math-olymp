@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260"><defs><linearGradient id="ggrade7820c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade7820g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade7820w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade7820s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade7820b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade7820b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade7820b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade7820bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="260" height="260" rx="20" fill="url(#ggrade7820bg)"/>
+
+<!--icon:часы--><g transform="translate(3.1 3.7)" opacity=".95"><circle cx="130" cy="130" r="113" fill="#E6CF3C" filter="url(#ggrade7820b7)"/></g>
+<circle cx="130" cy="130" r="113" fill="url(#ggrade7820c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<circle cx="130" cy="130" r="105" fill="url(#ggrade7820w)" stroke="#E3925A" stroke-width="4" stroke-opacity=".85"/>
+<text x="170.95000000000002" y="63.07251943005447" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">1</text>
+<text x="200.92748056994554" y="93.05000000000001" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">2</text>
+<text x="211.9" y="134.0" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">3</text>
+<text x="200.92748056994554" y="174.95" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">4</text>
+<text x="170.95000000000002" y="204.92748056994554" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">5</text>
+<text x="130.0" y="215.9" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">6</text>
+<text x="89.05000000000001" y="204.92748056994554" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">7</text>
+<text x="59.07251943005447" y="174.95" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">8</text>
+<text x="48.099999999999994" y="134.0" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">9</text>
+<text x="59.07251943005447" y="93.04999999999998" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">10</text>
+<text x="89.04999999999995" y="63.0725194300545" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">11</text>
+<text x="129.99999999999997" y="52.099999999999994" font-size="23" font-weight="bold" fill="#2A1F1A" text-anchor="middle">12</text>
+<line x1="130" y1="130" x2="176.5" y2="121.8" stroke="#2A1F1A" stroke-width="4" stroke-linecap="round"/>
+<line x1="130" y1="130" x2="68.2" y2="165.7" stroke="#2A1F1A" stroke-width="3" stroke-linecap="round"/>
+<circle cx="130" cy="130" r="5" fill="#2A1F1A"/>
+</svg>

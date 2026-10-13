@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="277" height="172" viewBox="0 0 277 172"><defs><linearGradient id="ggrade3429c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade3429g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade3429w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade3429s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade3429b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade3429b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade3429b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade3429bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="277" height="172" rx="20" fill="url(#ggrade3429bg)"/>
+
+<!--icon:брусок_из_кубиков--><g transform="translate(3.1 3.7)" opacity=".95"><polygon points="15,157 207,157 207,61 15,61" fill="#E3925A" stroke-linejoin="round" filter="url(#ggrade3429b7)"/></g>
+<polygon points="15,157 207,157 207,61 15,61" fill="url(#ggrade3429c)" stroke="#2A1F1A" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<g transform="translate(3.1 3.7)" opacity=".95"><polygon points="15,61 207,61 262.2,14.7 70.2,14.7" fill="#E3925A" stroke-linejoin="round" filter="url(#ggrade3429b5)"/></g>
+<polygon points="15,61 207,61 262.2,14.7 70.2,14.7" fill="url(#ggrade3429c)" stroke="#2A1F1A" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<g transform="translate(3.1 3.7)" opacity=".95"><polygon points="207,157 262.2,110.7 262.2,14.7 207,61" fill="#E3925A" stroke-linejoin="round" filter="url(#ggrade3429b5)"/></g>
+<polygon points="207,157 262.2,110.7 262.2,14.7 207,61" fill="url(#ggrade3429c)" stroke="#2A1F1A" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<line x1="63" y1="157" x2="63" y2="61" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<line x1="63" y1="61" x2="118.2" y2="14.7" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<line x1="111" y1="157" x2="111" y2="61" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<line x1="111" y1="61" x2="166.2" y2="14.7" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<line x1="159" y1="157" x2="159" y2="61" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<line x1="159" y1="61" x2="214.2" y2="14.7" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<line x1="15" y1="109" x2="207" y2="109" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<line x1="207" y1="109" x2="262.2" y2="62.7" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<line x1="33.4" y1="45.6" x2="225.4" y2="45.6" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<line x1="225.4" y1="141.6" x2="225.4" y2="45.6" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<line x1="51.8" y1="30.1" x2="243.8" y2="30.1" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<line x1="243.8" y1="126.1" x2="243.8" y2="30.1" stroke="#2A1F1A" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+</svg>

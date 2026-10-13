@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><defs><linearGradient id="ggrade7806c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade7806g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade7806w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade7806s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade7806b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade7806b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade7806b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade7806bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="300" height="300" rx="20" fill="url(#ggrade7806bg)"/>
+
+<!--icon:поле_клеток--><rect x="30" y="30" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="90" y="30" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<text x="120.0" y="72.0" font-size="31" fill="#2A1F1A" text-anchor="middle" font-weight="600">4</text>
+<rect x="150" y="30" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<text x="180.0" y="72.0" font-size="31" fill="#2A1F1A" text-anchor="middle" font-weight="600">1</text>
+<rect x="210" y="30" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="30" y="90" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="90" y="90" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<text x="120.0" y="132.0" font-size="31" fill="#2A1F1A" text-anchor="middle" font-weight="600">3</text>
+<rect x="150" y="90" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="210" y="90" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<text x="240.0" y="132.0" font-size="31" fill="#2A1F1A" text-anchor="middle" font-weight="600">?</text>
+<rect x="30" y="150" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<text x="60.0" y="192.0" font-size="31" fill="#2A1F1A" text-anchor="middle" font-weight="600">3</text>
+<rect x="90" y="150" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="150" y="150" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="210" y="150" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="30" y="210" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="90" y="210" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<text x="120.0" y="252.0" font-size="31" fill="#2A1F1A" text-anchor="middle" font-weight="600">1</text>
+<rect x="150" y="210" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+<rect x="210" y="210" width="60" height="60" fill="url(#ggrade7806w)" stroke="#2A1F1A" stroke-width="2" data-ink="1" stroke-opacity=".85"/>
+</svg>

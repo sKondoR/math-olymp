@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="545" height="290" viewBox="0 0 545 290"><defs><linearGradient id="ggrade3403c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade3403g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade3403w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade3403s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade3403b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade3403b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade3403b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade3403bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="545" height="290" rx="20" fill="url(#ggrade3403bg)"/>
+
+<!--icon:граф_дорожек--><line x1="45.0" y1="150.0" x2="150.0" y2="55.0" stroke="#C9A27E" stroke-width="5" stroke-linecap="round"/>
+<line x1="45.0" y1="150.0" x2="150.0" y2="245.0" stroke="#C9A27E" stroke-width="5" stroke-linecap="round"/>
+<line x1="150.0" y1="55.0" x2="255.0" y2="150.0" stroke="#C9A27E" stroke-width="5" stroke-linecap="round"/>
+<line x1="150.0" y1="245.0" x2="255.0" y2="150.0" stroke="#C9A27E" stroke-width="5" stroke-linecap="round"/>
+<line x1="150.0" y1="55.0" x2="360.0" y2="150.0" stroke="#C9A27E" stroke-width="5" stroke-linecap="round"/>
+<line x1="255.0" y1="150.0" x2="360.0" y2="150.0" stroke="#C9A27E" stroke-width="5" stroke-linecap="round"/>
+<line x1="360.0" y1="150.0" x2="470.0" y2="55.0" stroke="#C9A27E" stroke-width="5" stroke-linecap="round"/>
+<line x1="360.0" y1="150.0" x2="500.0" y2="225.0" stroke="#C9A27E" stroke-width="5" stroke-linecap="round"/>
+<line x1="470.0" y1="55.0" x2="500.0" y2="225.0" stroke="#C9A27E" stroke-width="5" stroke-linecap="round"/>
+<g transform="translate(2.9 3.6)" opacity=".95"><circle cx="45" cy="150" r="21" fill="#E6CF3C" filter="url(#ggrade3403b5)"/></g>
+<circle cx="45" cy="150" r="21" fill="url(#ggrade3403c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="45" y="157.7" font-size="22" font-weight="bold" fill="#2A1F1A" text-anchor="middle">1</text>
+<g transform="translate(2.9 3.6)" opacity=".95"><circle cx="150" cy="55" r="21" fill="#E6CF3C" filter="url(#ggrade3403b5)"/></g>
+<circle cx="150" cy="55" r="21" fill="url(#ggrade3403c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="150" y="62.7" font-size="22" font-weight="bold" fill="#2A1F1A" text-anchor="middle">2</text>
+<g transform="translate(2.9 3.6)" opacity=".95"><circle cx="150" cy="245" r="21" fill="#E6CF3C" filter="url(#ggrade3403b5)"/></g>
+<circle cx="150" cy="245" r="21" fill="url(#ggrade3403c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="150" y="252.7" font-size="22" font-weight="bold" fill="#2A1F1A" text-anchor="middle">3</text>
+<g transform="translate(2.9 3.6)" opacity=".95"><circle cx="255" cy="150" r="21" fill="#E6CF3C" filter="url(#ggrade3403b5)"/></g>
+<circle cx="255" cy="150" r="21" fill="url(#ggrade3403c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="255" y="157.7" font-size="22" font-weight="bold" fill="#2A1F1A" text-anchor="middle">4</text>
+<g transform="translate(2.9 3.6)" opacity=".95"><circle cx="360" cy="150" r="21" fill="#E6CF3C" filter="url(#ggrade3403b5)"/></g>
+<circle cx="360" cy="150" r="21" fill="url(#ggrade3403c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="360" y="157.7" font-size="22" font-weight="bold" fill="#2A1F1A" text-anchor="middle">5</text>
+<g transform="translate(2.9 3.6)" opacity=".95"><circle cx="470" cy="55" r="21" fill="#E6CF3C" filter="url(#ggrade3403b5)"/></g>
+<circle cx="470" cy="55" r="21" fill="url(#ggrade3403c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="470" y="62.7" font-size="22" font-weight="bold" fill="#2A1F1A" text-anchor="middle">6</text>
+<g transform="translate(2.9 3.6)" opacity=".95"><circle cx="500" cy="225" r="21" fill="#E6CF3C" filter="url(#ggrade3403b5)"/></g>
+<circle cx="500" cy="225" r="21" fill="url(#ggrade3403c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="500" y="232.7" font-size="22" font-weight="bold" fill="#2A1F1A" text-anchor="middle">7</text>
+</svg>

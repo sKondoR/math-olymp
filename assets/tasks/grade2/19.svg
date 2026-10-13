@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="240" viewBox="0 0 330 240"><defs><linearGradient id="ggrade219c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade219g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade219w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade219s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade219b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade219b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade219b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade219bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="330" height="240" rx="20" fill="url(#ggrade219bg)"/>
+
+<!--icon:фигуры--><g transform="translate(2.5 3.1)" opacity=".95"><path d="M40 25.0 L60.0 61.0 L20.0 61.0 Z" fill="#B9AA3A" stroke-linejoin="round" filter="url(#ggrade219b5)"/></g>
+<path d="M40 25.0 L60.0 61.0 L20.0 61.0 Z" fill="url(#ggrade219c)" stroke="#2A1F1A" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<text x="80.0" y="55.0" font-size="30" fill="#2A1F1A" text-anchor="middle" font-weight="600">+</text>
+<g transform="translate(2.5 3.1)" opacity=".95"><path d="M120.0 25.0 L140.0 61.0 L100.0 61.0 Z" fill="#B9AA3A" stroke-linejoin="round" filter="url(#ggrade219b5)"/></g>
+<path d="M120.0 25.0 L140.0 61.0 L100.0 61.0 Z" fill="url(#ggrade219c)" stroke="#2A1F1A" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<text x="160.0" y="55.0" font-size="30" fill="#2A1F1A" text-anchor="middle" font-weight="600">+</text>
+<g transform="translate(2.5 3.1)" opacity=".95"><path d="M200.0 25.0 L220.0 61.0 L180.0 61.0 Z" fill="#B9AA3A" stroke-linejoin="round" filter="url(#ggrade219b5)"/></g>
+<path d="M200.0 25.0 L220.0 61.0 L180.0 61.0 Z" fill="url(#ggrade219c)" stroke="#2A1F1A" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<text x="240.0" y="55.0" font-size="30" fill="#2A1F1A" text-anchor="middle" font-weight="600">=</text>
+<text x="284.5" y="57.0" font-size="30" font-weight="bold" fill="#2A1F1A" text-anchor="middle">12</text>
+<!--icon:фигуры--><g transform="translate(2.8 3.4)" opacity=".95"><circle cx="40" cy="125" r="20" fill="#E3925A" stroke-linejoin="round" filter="url(#ggrade219b5)"/></g>
+<circle cx="40" cy="125" r="20" fill="url(#ggrade219c)" stroke="#2A1F1A" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<text x="80.0" y="135.0" font-size="30" fill="#2A1F1A" text-anchor="middle" font-weight="600">+</text>
+<g transform="translate(2.5 3.1)" opacity=".95"><path d="M120.0 105.0 L140.0 141.0 L100.0 141.0 Z" fill="#B9AA3A" stroke-linejoin="round" filter="url(#ggrade219b5)"/></g>
+<path d="M120.0 105.0 L140.0 141.0 L100.0 141.0 Z" fill="url(#ggrade219c)" stroke="#2A1F1A" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<text x="160.0" y="135.0" font-size="30" fill="#2A1F1A" text-anchor="middle" font-weight="600">=</text>
+<text x="204.5" y="137.0" font-size="30" font-weight="bold" fill="#2A1F1A" text-anchor="middle">10</text>
+<!--icon:фигуры--><g transform="translate(2.8 3.4)" opacity=".95"><circle cx="40" cy="205" r="20" fill="#E3925A" stroke-linejoin="round" filter="url(#ggrade219b5)"/></g>
+<circle cx="40" cy="205" r="20" fill="url(#ggrade219c)" stroke="#2A1F1A" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<text x="80.0" y="215.0" font-size="30" fill="#2A1F1A" text-anchor="middle" font-weight="600">=</text>
+<text x="120.0" y="216.9" font-size="34" font-weight="bold" fill="#2A1F1A" text-anchor="middle">?</text>
+</svg>

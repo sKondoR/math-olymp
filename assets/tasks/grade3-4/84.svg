@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="210" viewBox="0 0 340 210"><defs><linearGradient id="ggrade3409c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade3409g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade3409w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade3409s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade3409b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade3409b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade3409b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade3409bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="340" height="210" rx="20" fill="url(#ggrade3409bg)"/>
+
+<!--icon:числа_по_строчкам--><text x="170.0" y="64" font-size="24" font-weight="bold" fill="#2A1F1A" text-anchor="middle">1</text>
+<text x="147.0" y="98" font-size="24" font-weight="bold" fill="#2A1F1A" text-anchor="middle">2</text>
+<text x="193.0" y="98" font-size="24" font-weight="bold" fill="#2A1F1A" text-anchor="middle">3</text>
+<text x="124.0" y="132" font-size="24" font-weight="bold" fill="#2A1F1A" text-anchor="middle">4</text>
+<text x="170.0" y="132" font-size="24" font-weight="bold" fill="#2A1F1A" text-anchor="middle">5</text>
+<text x="216.0" y="132" font-size="24" font-weight="bold" fill="#2A1F1A" text-anchor="middle">6</text>
+<text x="101.0" y="166" font-size="24" font-weight="bold" fill="#2A1F1A" text-anchor="middle">7</text>
+<text x="147.0" y="166" font-size="24" font-weight="bold" fill="#2A1F1A" text-anchor="middle">8</text>
+<text x="193.0" y="166" font-size="24" font-weight="bold" fill="#2A1F1A" text-anchor="middle">9</text>
+<text x="239.0" y="166" font-size="24" font-weight="bold" fill="#2A1F1A" text-anchor="middle">10</text>
+<text x="170" y="194" font-size="24" font-weight="bold" fill="#2A1F1A" text-anchor="middle">. . .</text>
+</svg>
