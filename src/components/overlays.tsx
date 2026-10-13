@@ -133,7 +133,7 @@ export function ConfirmDialog({
               onPress={onConfirm}
               style={[styles.dlgBtn, { backgroundColor: c.deep, paddingHorizontal: 18 }]}
             >
-              <Text variant="small" color="#ffffff" style={styles.dlgBtnText}>
+              <Text variant="small" color={c.onDark} style={styles.dlgBtnText}>
                 {confirm}
               </Text>
             </Pressable>
@@ -157,6 +157,7 @@ export function SnackbarProvider({ children }: { children: ReactNode }) {
   const [key, setKey] = useState(0);
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const insets = useSafeAreaInsets();
+  const c = useTheme();
   const show = (value: string) => {
     setText(value);
     setKey((k) => k + 1);
@@ -176,7 +177,7 @@ export function SnackbarProvider({ children }: { children: ReactNode }) {
           accessibilityLiveRegion="polite"
           style={[styles.snack, { bottom: insets.bottom + 24 }]}
         >
-          <Text variant="small" color="#ffffff">
+          <Text variant="small" color={c.onDark}>
             {text}
           </Text>
         </Animated.View>

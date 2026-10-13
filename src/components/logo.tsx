@@ -24,7 +24,7 @@ export function Logo() {
                 outline ? { borderWidth: 3, borderColor: c.logo } : { backgroundColor: c.deep },
               ]}
             >
-              <Text style={styles.letter} color={outline ? c.logo : '#ffffff'}>
+              <Text style={styles.letter} color={outline ? c.logo : c.onDark}>
                 {l}
               </Text>
             </View>

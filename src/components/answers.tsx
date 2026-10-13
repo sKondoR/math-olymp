@@ -122,12 +122,12 @@ export function AnswerOptions({
                 {wrong ? (
                   <Icon name="close" size={18} color={alpha(c.ink, 0.42)} />
                 ) : right || reveal ? (
-                  <Icon name="check" size={18} color={right ? c.progress : '#ffffff'} />
+                  <Icon name="check" size={18} color={right ? c.progress : c.onDark} />
                 ) : (
                   <Text
                     variant="captionStrong"
                     style={{ fontSize: 14 }}
-                    color={picked ? '#ffffff' : c.deep}
+                    color={picked ? c.onDark : c.deep}
                   >
                     {letter}
                   </Text>
@@ -140,7 +140,7 @@ export function AnswerOptions({
                   wrong && styles.struck,
                   form !== 'row' && { flexShrink: 1 },
                 ]}
-                color={right ? '#ffffff' : wrong ? alpha(c.ink, 0.42) : c.ink}
+                color={right ? c.onDark : wrong ? alpha(c.ink, 0.42) : c.ink}
               >
                 {texts[i]}
               </Text>
@@ -194,10 +194,10 @@ export function WrittenAnswer({
                 <Icon
                   name="check"
                   size={30}
-                  color={record.done === 'solved' ? '#ffffff' : c.progress}
+                  color={record.done === 'solved' ? c.onDark : c.progress}
                 />
               )}
-              <Text style={styles.ansValue} color={record.done === 'solved' ? '#ffffff' : c.ink}>
+              <Text style={styles.ansValue} color={record.done === 'solved' ? c.onDark : c.ink}>
                 {shown}
               </Text>
             </>
@@ -210,7 +210,7 @@ export function WrittenAnswer({
       </Shake>
       {!record.done && (
         <View style={styles.pad} accessibilityLabel={t.digits}>
-          {['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', 'del'].map((k, i) =>
+          {['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', 'del'].map((k) =>
             k ? (
               <Pressable
                 key={k}
@@ -230,7 +230,7 @@ export function WrittenAnswer({
                 )}
               </Pressable>
             ) : (
-              <View key={i} style={styles.keyGap} />
+              <View key="gap" style={styles.keyGap} />
             ),
           )}
         </View>

@@ -17,6 +17,8 @@ export const Palettes = {
     /** main action: «Решать», «Проверить», «Следующая задача» */
     action: '#f5a065',
     onAction: '#0f2a3d',
+    /** text and icons on progress, deep and the snackbar */
+    onDark: '#ffffff',
     /** progress, solved, next-task ring, focus, right answer */
     progress: '#2a7590',
     /** logo tiles, icons in components, difficulty stars */
@@ -37,6 +39,7 @@ export const Palettes = {
     hairline: '#2b273033',
     action: '#7a5fa6',
     onAction: '#ffffff',
+    onDark: '#ffffff',
     progress: '#7a5fa6',
     deep: '#8f73b8',
     logo: '#a87e12',
@@ -53,6 +56,7 @@ export const Palettes = {
     hairline: '#2d2a2838',
     action: '#48655f',
     onAction: '#ffffff',
+    onDark: '#ffffff',
     progress: '#48655f',
     deep: '#48655f',
     logo: '#b0694f',

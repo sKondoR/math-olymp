@@ -49,7 +49,7 @@ export function TaskTile({
       </View>
       {state === 'solved' && (
         <View style={[styles.badge, styles.right, { backgroundColor: c.progress }]}>
-          <Icon name="check" size={18} color="#ffffff" />
+          <Icon name="check" size={18} color={c.onDark} />
         </View>
       )}
       {state === 'next' && (

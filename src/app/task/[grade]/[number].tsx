@@ -228,7 +228,7 @@ function Verdict({ task, record }: { task: Task; record: TaskRecord }) {
           <Icon
             name={solved ? 'check' : 'lightbulb'}
             size={26}
-            color={solved ? '#ffffff' : c.deep}
+            color={solved ? c.onDark : c.deep}
           />
         </Animated.View>
         <Text

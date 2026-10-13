@@ -25,7 +25,7 @@ npm run tasks:sync     # перенести задачи и рисунки из 
 
 ## Стек и версии
 
-Expo SDK 57, React Native 0.86, React 19.2, expo-router 57 (typed routes и React Compiler включены в `app.json`), Reanimated 4 и worklets, NativeWind 4 с Tailwind 3, TypeScript 6. Эти версии новее хорошо известных, поэтому перед использованием API сверяйтесь с документацией (context7 или плагин `expo` в `.claude/settings.json`). Целевая платформа одна — Android (`com.kondrse.matholymp`). Папка `android/` сгенерирована (CNG) и лежит в `.gitignore`: нативные настройки меняйте через `app.json` и плагины, а не правкой `android/`.
+Expo SDK 57, React Native 0.86, React 19.2, expo-router 57 (typed routes и React Compiler включены в `app.json`), Reanimated 4 и worklets, TypeScript 6. Эти версии новее хорошо известных, поэтому перед использованием API сверяйтесь с документацией (context7 или плагин `expo` в `.claude/settings.json`). Целевая платформа одна — Android (`com.kondrse.matholymp`). Папка `android/` сгенерирована (CNG) и лежит в `.gitignore`: нативные настройки меняйте через `app.json` и плагины, а не правкой `android/`.
 
 ## Архитектура
 
@@ -34,14 +34,13 @@ Expo SDK 57, React Native 0.86, React 19.2, expo-router 57 (typed routes и Reac
 - **Рисунки задач** — SVG «стекло» как есть, рисуются через `expo-image` (на Android — AndroidSVG: `<style>` поддерживается, blur-фильтры игнорируются, это свечение под точной копией элемента, данные рисунка не теряются). Не растрировать.
 - **Состояние** (`src/state/`): `progress.ts` — чистая логика (попытки, закрытие, следующая задача, подсчёты); `store.tsx` — два контекста в AsyncStorage: `useSettings()` (язык, тема, последний возраст; `mo:settings`) и `useProgress()` (прогресс по возрастам; `mo:progress:<grade>`), раздельно, чтобы ответ на задачу не перерисовывал всё, что читает тему и язык; `useGradeSummary(grade)` — задачи возраста, подсчёты и следующая задача. Профилей нет, всё локально; Android Auto Backup включён (`android.allowBackup` в `app.json`).
 - **i18n** (`src/i18n/`): строки интерфейса на ru/en/es/fr в `strings.ts`; тексты задач — `localize()` с откатом на русский.
-- **Тема**: токены трёх тем в [src/constants/tokens.ts](src/constants/tokens.ts) (`Palettes.sea/lilac/stone`, `Spacing`, `Radius`) — только данные, без импортов RN (его читает `tailwind.config.js` в Node). `useTheme()` из `@/theme` даёт палитру выбранной темы; `ThemeRoot` выставляет её же CSS-переменными для классов Tailwind (`bg-page`, `text-ink`). Экраны написаны на StyleSheet.
+- **Тема и стили**: палитры трёх тем в [src/constants/tokens.ts](src/constants/tokens.ts) (`Palettes.sea/lilac/stone`, роли одинаковые). `useTheme()` из `@/theme` даёт палитру выбранной темы; там же `alpha()` и `pressedScale()` (отклик нажатия для стандартного `Pressable`). Всё на StyleSheet, NativeWind/Tailwind не используются.
 - **Шрифты и иконки**: Manrope 500–800 (`components/text.tsx`, семейство на каждый вес) и Material Symbols (`components/icon.tsx`, кодовые точки глифов там же) грузятся в `_layout.tsx`.
 - **Алиасы:** `@/*` → `src/*`, `@/assets/*` → `assets/*`.
-- **NativeWind** подключён через `babel.config.js` (`jsxImportSource: 'nativewind'`) и `metro.config.js` (`input: ./src/global.css`). Tailwind сканирует только `src/**`.
 
 ## Стиль кода
 
-Prettier: одинарные кавычки, trailing commas, ширина 100, `prettier-plugin-tailwindcss` сортирует классы. ESLint запускает prettier как правило, так что ошибки форматирования — это ошибки линта.
+Prettier: одинарные кавычки, trailing commas, ширина 100. ESLint запускает prettier как правило, так что ошибки форматирования — это ошибки линта.
 
 ## Дизайн-прототипы (`frontend-ideas/`)
 
@@ -59,3 +58,17 @@ Prettier: одинарные кавычки, trailing commas, ширина 100, 
 - Доставка в приложение: `npm run tasks:sync` копирует JSON (в формате приложения) и SVG из `generated/` в `assets/tasks/` и проверяет данные (ответ среди вариантов, вписываемый ответ — число, есть рисунок). Результат лежит в репозитории, так что сборка не зависит от `../sources`. Позже дополнительные задачи будут загружаться с сервера за оплату; как это устроено, ещё не решено — новый источник подключается через `addTaskSource()`.
 
 Интерфейс и задачи должны поддерживать русский и английский с первой версии; сейчас задачи есть только на русском.
+
+## Agent skills
+
+### Issue tracker
+
+Задачи и спецификации — markdown-файлы в `.scratch/<feature>/`. См. `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Стандартные пять меток (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). См. `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: `CONTEXT.md` и `docs/adr/` в корне. См. `docs/agents/domain.md`.
