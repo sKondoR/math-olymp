@@ -245,8 +245,8 @@ const styles = StyleSheet.create({
   half: { width: '48.5%', flexGrow: 1 },
   full: { width: '100%' },
   opt: {
-    minHeight: 64,
-    paddingVertical: 10,
+    minHeight: 52,
+    paddingVertical: 8,
     paddingLeft: 10,
     paddingRight: 14,
     borderRadius: 16,
