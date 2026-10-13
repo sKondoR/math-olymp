@@ -18,6 +18,8 @@ import { StoreProvider } from '@/state/store';
 import { ThemeRoot, useTheme } from '@/theme';
 
 SplashScreen.preventAutoHideAsync();
+// Design 01: the system splash fades out over 320 ms into the home screen
+SplashScreen.setOptions({ fade: true, duration: 320 });
 
 export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts({

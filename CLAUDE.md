@@ -19,6 +19,7 @@ npm run typecheck      # tsc --noEmit
 npm run format         # prettier --write .
 npm run format:check
 npm run tasks:sync     # перенести задачи и рисунки из ../sources/generated в assets/tasks
+npm run icons          # перерисовать иконку и заставку (логотип «M·A») в assets/images
 ```
 
 Тестов и тестового раннера нет. Проверка изменений: `npm run lint && npm run typecheck`.
