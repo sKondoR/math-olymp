@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="130" viewBox="0 0 470 130"><defs><linearGradient id="ggrade91008c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade91008g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade91008w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade91008s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade91008b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade91008b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade91008b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade91008bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="470" height="130" rx="20" fill="url(#ggrade91008bg)"/>
+
+<!--icon:расписание--><g transform="translate(2.4 2.9)" opacity=".95"><rect x="15" y="12" width="230" height="34" fill="#B98BEA" data-ink="1" filter="url(#ggrade91008b5)"/></g>
+<rect x="15" y="12" width="230" height="34" fill="url(#ggrade91008c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="130.0" y="34.44" font-size="15" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Flight</text>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="245" y="12" width="105" height="34" fill="#B98BEA" data-ink="1" filter="url(#ggrade91008b5)"/></g>
+<rect x="245" y="12" width="105" height="34" fill="url(#ggrade91008c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="297.5" y="34.44" font-size="15" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Departure</text>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="350" y="12" width="105" height="34" fill="#B98BEA" data-ink="1" filter="url(#ggrade91008b5)"/></g>
+<rect x="350" y="12" width="105" height="34" fill="url(#ggrade91008c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="402.5" y="34.44" font-size="15" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Landing</text>
+<rect x="15" y="46" width="230" height="34" fill="url(#ggrade91008w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="130.0" y="68.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">Khabarovsk → Moscow</text>
+<rect x="245" y="46" width="105" height="34" fill="url(#ggrade91008w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="297.5" y="68.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">08:00</text>
+<rect x="350" y="46" width="105" height="34" fill="url(#ggrade91008w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="402.5" y="68.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">09:00</text>
+<rect x="15" y="80" width="230" height="34" fill="url(#ggrade91008w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="130.0" y="102.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">Moscow → Khabarovsk</text>
+<rect x="245" y="80" width="105" height="34" fill="url(#ggrade91008w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="297.5" y="102.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">20:00</text>
+<rect x="350" y="80" width="105" height="34" fill="url(#ggrade91008w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="402.5" y="102.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">?</text>
+</svg>

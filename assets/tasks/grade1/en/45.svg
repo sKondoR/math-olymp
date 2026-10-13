@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="245" viewBox="0 0 270 245"><defs><linearGradient id="ggrade106c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade106g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade106w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade106s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade106b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade106b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade106b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade106bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="270" height="245" rx="20" fill="url(#ggrade106bg)"/>
+
+<!--icon:календарь_месяца--><text x="132.5" y="26.0" font-size="17" font-weight="bold" fill="#2A1F1A" text-anchor="middle">February 2026</text>
+<g transform="translate(1.7 2.1)" opacity=".95"><rect x="10" y="34.75" width="35" height="24.5" fill="#B98BEA" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="10" y="34.75" width="35" height="24.5" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="27.5" y="52.25" font-size="12" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Mo</text>
+<g transform="translate(1.7 2.1)" opacity=".95"><rect x="45" y="34.75" width="35" height="24.5" fill="#B98BEA" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="45" y="34.75" width="35" height="24.5" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="62.5" y="52.25" font-size="12" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Tu</text>
+<g transform="translate(1.7 2.1)" opacity=".95"><rect x="80" y="34.75" width="35" height="24.5" fill="#B98BEA" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="80" y="34.75" width="35" height="24.5" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="97.5" y="52.25" font-size="12" font-weight="bold" fill="#2A1F1A" text-anchor="middle">We</text>
+<g transform="translate(1.7 2.1)" opacity=".95"><rect x="115" y="34.75" width="35" height="24.5" fill="#B98BEA" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="115" y="34.75" width="35" height="24.5" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="132.5" y="52.25" font-size="12" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Th</text>
+<g transform="translate(1.7 2.1)" opacity=".95"><rect x="150" y="34.75" width="35" height="24.5" fill="#B98BEA" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="150" y="34.75" width="35" height="24.5" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="167.5" y="52.25" font-size="12" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Fr</text>
+<g transform="translate(1.7 2.1)" opacity=".95"><rect x="185" y="34.75" width="35" height="24.5" fill="#B98BEA" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="185" y="34.75" width="35" height="24.5" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="202.5" y="52.25" font-size="12" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Sa</text>
+<g transform="translate(1.7 2.1)" opacity=".95"><rect x="220" y="34.75" width="35" height="24.5" fill="#B98BEA" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="220" y="34.75" width="35" height="24.5" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="237.5" y="52.25" font-size="12" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Su</text>
+<g transform="translate(2.5 3.0)" opacity=".95"><rect x="220" y="59.2" width="35" height="35" fill="#E58FC0" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="220" y="59.2" width="35" height="35" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="237.5" y="82.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">1</text>
+<rect x="10" y="94.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="27.5" y="117.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">2</text>
+<rect x="45" y="94.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="62.5" y="117.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">3</text>
+<rect x="80" y="94.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="97.5" y="117.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">4</text>
+<rect x="115" y="94.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="132.5" y="117.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">5</text>
+<rect x="150" y="94.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="167.5" y="117.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">6</text>
+<g transform="translate(2.5 3.0)" opacity=".95"><rect x="185" y="94.2" width="35" height="35" fill="#E58FC0" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="185" y="94.2" width="35" height="35" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="202.5" y="117.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">7</text>
+<g transform="translate(2.5 3.0)" opacity=".95"><rect x="220" y="94.2" width="35" height="35" fill="#E58FC0" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="220" y="94.2" width="35" height="35" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="237.5" y="117.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">8</text>
+<rect x="10" y="129.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="27.5" y="152.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">9</text>
+<rect x="45" y="129.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="62.5" y="152.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">10</text>
+<rect x="80" y="129.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="97.5" y="152.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">11</text>
+<rect x="115" y="129.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="132.5" y="152.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">12</text>
+<rect x="150" y="129.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="167.5" y="152.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">13</text>
+<g transform="translate(2.5 3.0)" opacity=".95"><rect x="185" y="129.2" width="35" height="35" fill="#E58FC0" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="185" y="129.2" width="35" height="35" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="202.5" y="152.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">14</text>
+<g transform="translate(2.5 3.0)" opacity=".95"><rect x="220" y="129.2" width="35" height="35" fill="#E58FC0" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="220" y="129.2" width="35" height="35" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="237.5" y="152.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">15</text>
+<rect x="10" y="164.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="27.5" y="187.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">16</text>
+<rect x="45" y="164.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="62.5" y="187.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">17</text>
+<rect x="80" y="164.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="97.5" y="187.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">18</text>
+<rect x="115" y="164.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="132.5" y="187.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">19</text>
+<rect x="150" y="164.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="167.5" y="187.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">20</text>
+<g transform="translate(2.5 3.0)" opacity=".95"><rect x="185" y="164.2" width="35" height="35" fill="#E58FC0" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="185" y="164.2" width="35" height="35" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="202.5" y="187.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">21</text>
+<g transform="translate(2.5 3.0)" opacity=".95"><rect x="220" y="164.2" width="35" height="35" fill="#E58FC0" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="220" y="164.2" width="35" height="35" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="237.5" y="187.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">22</text>
+<rect x="10" y="199.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="27.5" y="222.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">23</text>
+<rect x="45" y="199.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="62.5" y="222.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">24</text>
+<rect x="80" y="199.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="97.5" y="222.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">25</text>
+<rect x="115" y="199.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="132.5" y="222.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">26</text>
+<rect x="150" y="199.2" width="35" height="35" fill="url(#ggrade106w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="167.5" y="222.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">27</text>
+<g transform="translate(2.5 3.0)" opacity=".95"><rect x="185" y="199.2" width="35" height="35" fill="#E58FC0" data-ink="1" filter="url(#ggrade106b5)"/></g>
+<rect x="185" y="199.2" width="35" height="35" fill="url(#ggrade106c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="202.5" y="222.35" font-size="14" fill="#2A1F1A" text-anchor="middle" font-weight="600">28</text>
+</svg>

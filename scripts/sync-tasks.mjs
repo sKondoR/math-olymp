@@ -6,6 +6,8 @@
  * falling back to NN.svg) and writes:
  *   assets/tasks/<grade>/tasks.json  — tasks in the app format (see src/data/types.ts)
  *   assets/tasks/<grade>/NN.svg      — pictures, copied as is
+ *   assets/tasks/<grade>/<lang>/NN.svg — pictures with Russian text, the text translated by
+ *                                      ../sources/generated/svg_i18n.json
  *   src/data/builtin.generated.ts    — static requires for Metro
  *
  * Only invented tasks (generated/) go into the app; real contest tasks (tasks/) never do.
@@ -39,9 +41,26 @@ const TYPES = {
   'Первые примеры': 'first-examples',
 };
 const LEVELS = { лёгкая: 1, средняя: 2, трудная: 3 };
+// Translations live in raw.i18n.<lang> as { text, options, solution }; Russian is the base.
+const LANGS = ['en', 'es', 'fr'];
+// Letter labels in pictures (and in translated texts) go Latin by position: А→A, Б→B, В→C…
+const LATIN = Object.fromEntries([...'АБВГДЕЖЗИК'].map((c, i) => [c, 'ABCDEFGHIJ'[i]]));
+const CYRILLIC = /[А-Яа-яЁё]/;
+const SVG_TEXT = /(<text\b[^>]*>)([^<]*)(<\/text>)/g;
 function fail(msg) {
   console.error(`sync-tasks: ${msg}`);
   process.exit(1);
+}
+
+/** Russian text plus every translation of the field `pick` returns, e.g. the text or an option. */
+function localized(raw, ru, pick, where, errors) {
+  const out = { ru: String(ru) };
+  for (const lang of LANGS) {
+    const value = raw.i18n?.[lang] && pick(raw.i18n[lang]);
+    if (value == null || value === '') errors.push(`${where}: no ${lang} translation`);
+    else out[lang] = String(value);
+  }
+  return out;
 }
 
 function convert(raw, grade, errors) {
@@ -55,7 +74,7 @@ function convert(raw, grade, errors) {
   if (raw.options && Object.keys(raw.options).length) {
     options = Object.entries(raw.options).map(([key, text]) => ({
       key,
-      text: { ru: String(text) },
+      text: localized(raw, text, (tr) => tr.options?.[key], `${where} option ${key}`, errors),
     }));
     if (!options.some((o) => o.key === answer)) errors.push(`${where}: answer not among options`);
   } else if (!/^\d+$/.test(answer)) {
@@ -70,16 +89,48 @@ function convert(raw, grade, errors) {
     weight,
     type,
     topics: raw.topics ?? [],
-    text: { ru: raw.text },
+    text: localized(raw, raw.text, (tr) => tr.text, `${where} text`, errors),
     options,
     answer,
-    solution: { ru: raw.solution },
+    solution: localized(raw, raw.solution, (tr) => tr.solution, `${where} solution`, errors),
     image: raw.image ?? null,
   };
 }
 
+/**
+ * The picture in every language that needs its own copy: { en: svg, … }, or null when the
+ * picture has no Russian text or keeps it on purpose (rebuses, Russian words).
+ */
+function translatePicture(svg, file, dict, used, errors) {
+  if (dict.keep.includes(file) || ![...svg.matchAll(SVG_TEXT)].some((m) => CYRILLIC.test(m[2]))) {
+    return null;
+  }
+  const own = dict.files[file] ?? {};
+  const labels = dict.labels.includes(file);
+  const out = {};
+  for (const lang of LANGS) {
+    out[lang] = svg.replace(SVG_TEXT, (all, open, text, close) => {
+      if (!CYRILLIC.test(text)) return all;
+      const key = text.trim();
+      const tr = own[lang]?.[key] ?? (labels ? LATIN[key] : undefined) ?? dict.common[lang][key];
+      if (tr == null) {
+        errors.push(`${file}: no ${lang} translation for picture text "${key}"`);
+        return all;
+      }
+      used.add(file);
+      return open + text.replace(key, tr) + close;
+    });
+  }
+  return out;
+}
+
 function main() {
   if (!fs.existsSync(path.join(SOURCES, 'generated'))) fail(`no generated/ in ${SOURCES}`);
+
+  const dict = JSON.parse(
+    fs.readFileSync(path.join(SOURCES, 'generated', 'svg_i18n.json'), 'utf8'),
+  );
+  const used = new Set();
 
   fs.rmSync(OUT_ASSETS, { recursive: true, force: true });
   const errors = [];
@@ -109,6 +160,13 @@ function main() {
       }
       fs.copyFileSync(svgPath, path.join(out, t.image));
       images.push(t.image);
+      const svg = fs.readFileSync(svgPath, 'utf8');
+      const translated = translatePicture(svg, `${folder}/${t.image}`, dict, used, errors);
+      for (const [lang, text] of Object.entries(translated ?? {})) {
+        fs.mkdirSync(path.join(out, lang), { recursive: true });
+        fs.writeFileSync(path.join(out, lang, t.image), text);
+        images.push(`${lang}/${t.image}`);
+      }
     }
     fs.writeFileSync(path.join(out, 'tasks.json'), JSON.stringify(tasks, null, 1) + '\n');
 
@@ -121,9 +179,16 @@ function main() {
     lines.push('    },');
     lines.push('  },');
     total += tasks.length;
-    console.log(`${grade}: ${tasks.length} tasks, ${images.length} pictures`);
+    const localized = images.filter((i) => i.includes('/')).length;
+    console.log(
+      `${grade}: ${tasks.length} tasks, ${images.length - localized} pictures (+${localized} translated)`,
+    );
   }
   lines.push('};', '');
+
+  for (const file of [...Object.keys(dict.files), ...dict.labels]) {
+    if (!used.has(file)) errors.push(`svg_i18n.json: ${file} is not a picture with Russian text`);
+  }
 
   if (errors.length) fail(`\n  ${errors.join('\n  ')}`);
   fs.writeFileSync(OUT_TS, lines.join('\n'));

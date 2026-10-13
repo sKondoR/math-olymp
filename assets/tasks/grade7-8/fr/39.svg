@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="250" viewBox="0 0 460 250"><defs><linearGradient id="ggrade7809c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade7809g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade7809w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade7809s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade7809b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade7809b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade7809b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade7809bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="460" height="250" rx="20" fill="url(#ggrade7809bg)"/>
+
+<text x="115" y="28" font-size="20" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Horloge de Petia</text><!--icon:часы--><g transform="translate(3.1 3.7)" opacity=".95"><circle cx="115" cy="140" r="94" fill="#E6CF3C" filter="url(#ggrade7809b7)"/></g>
+<circle cx="115" cy="140" r="94" fill="url(#ggrade7809c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<circle cx="115" cy="140" r="86" fill="url(#ggrade7809w)" stroke="#E3925A" stroke-width="4" stroke-opacity=".85"/>
+<text x="148.54000000000002" y="85.90701591413986" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">1</text>
+<text x="173.09298408586014" y="110.46000000000001" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">2</text>
+<text x="182.07999999999998" y="144.0" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">3</text>
+<text x="173.09298408586014" y="177.54" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">4</text>
+<text x="148.54000000000002" y="202.09298408586014" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">5</text>
+<text x="115.0" y="211.07999999999998" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">6</text>
+<text x="81.46000000000001" y="202.09298408586014" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">7</text>
+<text x="56.907015914139855" y="177.54" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">8</text>
+<text x="47.92" y="144.0" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">9</text>
+<text x="56.90701591413986" y="110.46" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">10</text>
+<text x="81.45999999999998" y="85.90701591413988" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">11</text>
+<text x="114.99999999999999" y="76.92" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">12</text>
+<line x1="115" y1="140" x2="85.4" y2="115.1" stroke="#2A1F1A" stroke-width="4" stroke-linecap="round"/>
+<line x1="115" y1="140" x2="165.6" y2="169.2" stroke="#2A1F1A" stroke-width="3" stroke-linecap="round"/>
+<circle cx="115" cy="140" r="5" fill="#2A1F1A"/><text x="345" y="28" font-size="20" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Horloge de Macha</text><!--icon:часы--><g transform="translate(3.1 3.7)" opacity=".95"><circle cx="345" cy="140" r="94" fill="#E6CF3C" filter="url(#ggrade7809b7)"/></g>
+<circle cx="345" cy="140" r="94" fill="url(#ggrade7809c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<circle cx="345" cy="140" r="86" fill="url(#ggrade7809w)" stroke="#E3925A" stroke-width="4" stroke-opacity=".85"/>
+<text x="378.54" y="85.90701591413986" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">1</text>
+<text x="403.09298408586017" y="110.46000000000001" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">2</text>
+<text x="412.08" y="144.0" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">3</text>
+<text x="403.09298408586017" y="177.54" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">4</text>
+<text x="378.54" y="202.09298408586014" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">5</text>
+<text x="345.0" y="211.07999999999998" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">6</text>
+<text x="311.46000000000004" y="202.09298408586014" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">7</text>
+<text x="286.90701591413983" y="177.54" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">8</text>
+<text x="277.92" y="144.0" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">9</text>
+<text x="286.90701591413983" y="110.46" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">10</text>
+<text x="311.46" y="85.90701591413988" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">11</text>
+<text x="345.0" y="76.92" font-size="18" font-weight="bold" fill="#2A1F1A" text-anchor="middle">12</text>
+<line x1="345" y1="140" x2="309.9" y2="123.6" stroke="#2A1F1A" stroke-width="4" stroke-linecap="round"/>
+<line x1="345" y1="140" x2="294.4" y2="110.8" stroke="#2A1F1A" stroke-width="3" stroke-linecap="round"/>
+<circle cx="345" cy="140" r="5" fill="#2A1F1A"/>
+</svg>

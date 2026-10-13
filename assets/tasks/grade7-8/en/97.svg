@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200"><defs><linearGradient id="ggrade7804c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade7804g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade7804w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade7804s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade7804b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade7804b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade7804b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade7804bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="320" height="200" rx="20" fill="url(#ggrade7804bg)"/>
+
+<!--icon:расписание--><g transform="translate(2.4 2.9)" opacity=".95"><rect x="20" y="15" width="170" height="34" fill="#B98BEA" data-ink="1" filter="url(#ggrade7804b5)"/></g>
+<rect x="20" y="15" width="170" height="34" fill="url(#ggrade7804c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="105.0" y="37.44" font-size="15" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Player</text>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="190" y="15" width="110" height="34" fill="#B98BEA" data-ink="1" filter="url(#ggrade7804b5)"/></g>
+<rect x="190" y="15" width="110" height="34" fill="url(#ggrade7804c)" stroke="#2A1F1A" stroke-width="2" data-ink="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="245.0" y="37.44" font-size="15" font-weight="bold" fill="#2A1F1A" text-anchor="middle">Points</text>
+<rect x="20" y="49" width="170" height="34" fill="url(#ggrade7804w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="105.0" y="71.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">Anya</text>
+<rect x="190" y="49" width="110" height="34" fill="url(#ggrade7804w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="245.0" y="71.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">5</text>
+<rect x="20" y="83" width="170" height="34" fill="url(#ggrade7804w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="105.0" y="105.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">Borya</text>
+<rect x="190" y="83" width="110" height="34" fill="url(#ggrade7804w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="245.0" y="105.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">4</text>
+<rect x="20" y="117" width="170" height="34" fill="url(#ggrade7804w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="105.0" y="139.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">Vika</text>
+<rect x="190" y="117" width="110" height="34" fill="url(#ggrade7804w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="245.0" y="139.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">2</text>
+<rect x="20" y="151" width="170" height="34" fill="url(#ggrade7804w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="105.0" y="173.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">Gosha</text>
+<rect x="190" y="151" width="110" height="34" fill="url(#ggrade7804w)" stroke="#2A1F1A" stroke-width="1.5" data-ink="1" stroke-opacity=".85"/>
+<text x="245.0" y="173.44" font-size="15" fill="#2A1F1A" text-anchor="middle" font-weight="600">?</text>
+</svg>

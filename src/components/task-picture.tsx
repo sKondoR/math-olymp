@@ -3,6 +3,7 @@ import { StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 
 import { topicFamily, type TopicFamily } from '@/data/groups';
 import type { Task } from '@/data/types';
+import { useLocalize } from '@/i18n';
 import { useTheme } from '@/theme';
 
 import { Icon, type IconName } from './icon';
@@ -34,11 +35,12 @@ export function TaskPicture({
   style?: StyleProp<ViewStyle>;
 }) {
   const c = useTheme();
+  const localize = useLocalize();
   return (
     <View style={[styles.box, style]}>
       {task.image ? (
         <Image
-          source={task.image}
+          source={localize(task.image)}
           contentFit="contain"
           style={[StyleSheet.absoluteFill, { margin: inset }]}
           accessible={!!label}

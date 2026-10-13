@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="670" height="175" viewBox="0 0 670 175"><defs><linearGradient id="ggrade105c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".62"/><stop offset="1" stop-color="#fff" stop-opacity=".1"/></linearGradient><linearGradient id="ggrade105g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ggrade105w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".82"/><stop offset="1" stop-color="#fff" stop-opacity=".42"/></linearGradient><linearGradient id="ggrade105s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient><filter id="ggrade105b3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><filter id="ggrade105b5" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter><filter id="ggrade105b7" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="ggrade105bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7C3F6"/><stop offset=".55" stop-color="#F4EFBE"/><stop offset="1" stop-color="#E3BDF3"/></linearGradient></defs><style>text{font-family:Manrope,'Segoe UI',sans-serif}</style><rect width="670" height="175" rx="20" fill="url(#ggrade105bg)"/>
+
+<!--icon:фигурка_из_клеток_повороты--><g transform="translate(2.4 2.9)" opacity=".95"><rect x="20" y="30" width="34" height="34" fill="#E3925A" filter="url(#ggrade105b5)"/></g>
+<rect x="20" y="30" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="54" y="30" width="34" height="34" fill="#E3925A" filter="url(#ggrade105b5)"/></g>
+<rect x="54" y="30" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="88" y="30" width="34" height="34" fill="#E3925A" filter="url(#ggrade105b5)"/></g>
+<rect x="88" y="30" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="20" y="64" width="34" height="34" fill="#E3925A" filter="url(#ggrade105b5)"/></g>
+<rect x="20" y="64" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="88" y="64" width="34" height="34" fill="#E3925A" filter="url(#ggrade105b5)"/></g>
+<rect x="88" y="64" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<line x1="150" y1="10" x2="150" y2="150" stroke="#C9A27E" stroke-width="2" stroke-dasharray="6 5"/>
+<!--icon:фигурка_из_клеток_повороты--><g transform="translate(2.4 2.9)" opacity=".95"><rect x="191.0" y="24.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="191.0" y="24.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="191.0" y="58.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="191.0" y="58.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="191.0" y="92.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="191.0" y="92.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="225.0" y="92.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="225.0" y="92.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="225" y="160" font-size="20" font-weight="bold" fill="#2A1F1A" text-anchor="middle">A</text>
+<!--icon:фигурка_из_клеток_повороты--><g transform="translate(2.4 2.9)" opacity=".95"><rect x="299.0" y="41.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="299.0" y="41.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="333.0" y="41.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="333.0" y="41.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="333.0" y="75.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="333.0" y="75.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="367.0" y="75.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="367.0" y="75.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="350" y="160" font-size="20" font-weight="bold" fill="#2A1F1A" text-anchor="middle">B</text>
+<!--icon:фигурка_из_клеток_повороты--><g transform="translate(2.4 2.9)" opacity=".95"><rect x="441.0" y="41.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="441.0" y="41.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="475.0" y="41.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="475.0" y="41.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="441.0" y="75.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="441.0" y="75.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="475.0" y="75.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="475.0" y="75.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="475" y="160" font-size="20" font-weight="bold" fill="#2A1F1A" text-anchor="middle">C</text>
+<!--icon:фигурка_из_клеток_повороты--><g transform="translate(2.4 2.9)" opacity=".95"><rect x="549.0" y="41.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="549.0" y="41.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="583.0" y="41.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="583.0" y="41.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="617.0" y="41.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="617.0" y="41.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<g transform="translate(2.4 2.9)" opacity=".95"><rect x="583.0" y="75.0" width="34" height="34" fill="#9EBCEA" filter="url(#ggrade105b5)"/></g>
+<rect x="583.0" y="75.0" width="34" height="34" fill="url(#ggrade105c)" stroke="#2A1F1A" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+<text x="600" y="160" font-size="20" font-weight="bold" fill="#2A1F1A" text-anchor="middle">D</text>
+</svg>

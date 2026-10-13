@@ -3,8 +3,8 @@ import type { ImageSourcePropType } from 'react-native';
 export const Langs = ['ru', 'en', 'es', 'fr'] as const;
 export type Lang = (typeof Langs)[number];
 
-/** Text in several languages; tasks exist in Russian only for now, so `ru` is required. */
-export type Localized = { ru: string } & Partial<Record<Exclude<Lang, 'ru'>, string>>;
+/** Content in several languages; `ru` is the base and the fallback, so it is required. */
+export type Localized<T = string> = { ru: T } & Partial<Record<Exclude<Lang, 'ru'>, T>>;
 
 /** Data key of an age group: the school grade the tasks were written for. */
 export type GradeKey = '1' | '2' | '3-4' | '5-6' | '7-8' | '9-10';
@@ -40,10 +40,12 @@ export type StoredTask = {
 export type Task = Omit<StoredTask, 'image'> & {
   grade: GradeKey;
   source: TaskSourceKind;
-  image: ImageSourcePropType | null;
+  /** a picture with text has a copy per language; the others are shared */
+  image: Localized<ImageSourcePropType> | null;
 };
 
 export type BuiltinBank = Record<
   GradeKey,
+  /** images by file name: `NN.svg`, and `<lang>/NN.svg` for a translated copy */
   { tasks: StoredTask[]; images: Record<string, ImageSourcePropType> }
 >;

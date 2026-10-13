@@ -9,15 +9,15 @@ export function useStrings() {
   return StringsByLang[useSettings().settings.lang];
 }
 
-/** Task content in the chosen language, Russian until it is translated. */
-export function localize(text: Localized, lang: Lang) {
-  return text[lang] ?? text.ru;
+/** Task content (text or picture) in the chosen language, Russian when there is no copy. */
+export function localize<T>(content: Localized<T>, lang: Lang): T {
+  return content[lang] ?? content.ru;
 }
 
 /** `localize` bound to the chosen language. */
 export function useLocalize() {
   const lang = useSettings().settings.lang;
-  return (text: Localized) => localize(text, lang);
+  return <T>(content: Localized<T>) => localize(content, lang);
 }
 
 /** The letter shown for an option: А–Д in Russian, A–E otherwise. */

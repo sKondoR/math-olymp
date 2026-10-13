@@ -1,5 +1,7 @@
+import type { ImageSourcePropType } from 'react-native';
+
 import { builtinBank } from './builtin.generated';
-import type { GradeKey, Task, TaskSourceKind } from './types';
+import { Langs, type GradeKey, type Localized, type Task, type TaskSourceKind } from './types';
 
 /**
  * The task bank: the built-in set plus any other source added later (paid downloads after v1).
@@ -18,10 +20,21 @@ const builtin: TaskSource = {
       ...t,
       grade,
       source: 'builtin',
-      image: t.image ? (images[t.image] ?? null) : null,
+      image: t.image ? pictureOf(images, t.image) : null,
     }));
   },
 };
+
+/** The picture and its translated copies (`en/NN.svg`…), when the picture has text. */
+function pictureOf(images: Record<string, ImageSourcePropType>, file: string) {
+  const ru = images[file];
+  if (!ru) return null;
+  const picture: Localized<ImageSourcePropType> = { ru };
+  for (const lang of Langs) {
+    if (lang !== 'ru' && images[`${lang}/${file}`]) picture[lang] = images[`${lang}/${file}`];
+  }
+  return picture;
+}
 
 const sources: TaskSource[] = [builtin];
 const cache = new Map<GradeKey, Task[]>();
