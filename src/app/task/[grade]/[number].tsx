@@ -1,5 +1,5 @@
 import { Redirect, useLocalSearchParams, useRouter } from 'expo-router';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { AccessibilityInfo, ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { ZoomIn, useReducedMotion } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -8,15 +8,17 @@ import { AnswerOptions, WrittenAnswer } from '@/components/answers';
 import { AppBar } from '@/components/app-bar';
 import { PrimaryButton } from '@/components/buttons';
 import { Chip, useWeightLabel } from '@/components/difficulty';
-import { Icon } from '@/components/icon';
+import { Icon, type IconName } from '@/components/icon';
 import { FamilyIcon, TaskPicture } from '@/components/task-picture';
 import { Font, Text } from '@/components/text';
 import { findTask, tasksOf } from '@/data/bank';
 import { ageGroup, topicFamily } from '@/data/groups';
 import type { Task } from '@/data/types';
 import { optionLetter, useLocalize, useStrings } from '@/i18n';
-import { TRIES, nextTaskAfter, recordOf, type TaskRecord } from '@/state/progress';
+import { TRIES, type AttemptNote } from '@/state/attempt';
+import { nextTaskAfter } from '@/state/progress';
 import { useProgress } from '@/state/store';
+import { useAttempt } from '@/state/use-attempt';
 import { alpha, useTheme } from '@/theme';
 
 /**
@@ -38,35 +40,27 @@ function TaskContent({ task }: { task: Task }) {
   const t = useStrings();
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const store = useProgress();
+  const { progress } = useProgress();
   const localize = useLocalize();
   const weight = useWeightLabel();
-  const record = recordOf(store.progress[task.grade], task);
-  const [pick, setPick] = useState<string | null>(null);
-  const [shake, setShake] = useState<{ key: string; token: number } | null>(null);
+  const attempt = useAttempt(task);
+  const { written, left, done } = attempt;
   const scroll = useRef<ScrollView>(null);
 
-  const written = !task.options;
-  const left = TRIES - record.wrong.length;
-  const repeated = !!pick && record.wrong.includes(pick);
-
   const check = () => {
-    if (!pick || repeated) return;
-    const ok = store.answer(task, pick);
-    if (ok) {
-      AccessibilityInfo.announceForAccessibility(t.right);
-    } else {
-      setShake({ key: pick, token: (shake?.token ?? 0) + 1 });
-      const leftNow = left - 1;
-      AccessibilityInfo.announceForAccessibility(leftNow ? t.missed(leftNow) : t.failedTitle);
+    const result = attempt.check();
+    if (!result) return;
+    const { outcome } = result;
+    AccessibilityInfo.announceForAccessibility(
+      outcome === 'solved' ? t.right : outcome === 'failed' ? t.failedTitle : t.missed(result.left),
+    );
+    if (outcome !== 'missed') {
+      setTimeout(() => scroll.current?.scrollToEnd({ animated: true }), 250);
     }
-    setPick(null);
-    if (ok || left === 1) setTimeout(() => scroll.current?.scrollToEnd({ animated: true }), 250);
   };
 
   const goNext = () => {
-    const progress = store.progress[task.grade];
-    const next = nextTaskAfter(progress, tasksOf(task.grade), task);
+    const next = nextTaskAfter(progress[task.grade], tasksOf(task.grade), task);
     if (!next) {
       router.dismissTo({ pathname: '/age/[grade]', params: { grade: task.grade } });
       return;
@@ -77,12 +71,13 @@ function TaskContent({ task }: { task: Task }) {
     });
   };
 
-  let note: { icon: 'replay' | 'touch_app'; text: string } | null = null;
-  if (!record.done) {
-    if (repeated) note = { icon: 'replay', text: t.repeated };
-    else if (record.wrong.length) note = { icon: 'replay', text: t.missed(left) };
-    else if (!pick) note = { icon: 'touch_app', text: written ? t.typeHint : t.pickHint };
-  }
+  const notes: Record<AttemptNote, { icon: IconName; text: string }> = {
+    pick: { icon: 'touch_app', text: t.pickHint },
+    type: { icon: 'touch_app', text: t.typeHint },
+    missed: { icon: 'replay', text: t.missed(left) },
+    repeated: { icon: 'replay', text: t.repeated },
+  };
+  const note = attempt.note && notes[attempt.note];
   const family = topicFamily(task.topics);
 
   return (
@@ -121,18 +116,22 @@ function TaskContent({ task }: { task: Task }) {
         </Text>
         {written ? (
           <WrittenAnswer
-            task={task}
-            record={record}
-            pick={pick}
-            onChange={setPick}
-            shakeToken={shake?.token ?? 0}
+            done={done}
+            shown={attempt.shown}
+            onKey={attempt.type}
+            shakeToken={attempt.shake?.token ?? 0}
           />
         ) : (
-          <AnswerOptions task={task} record={record} pick={pick} onPick={setPick} shake={shake} />
+          <AnswerOptions
+            task={task}
+            statuses={attempt.options}
+            onPick={attempt.choose}
+            shake={attempt.shake}
+          />
         )}
-        {written && !record.done && record.wrong.length > 0 && (
+        {attempt.misses.length > 0 && (
           <View style={styles.misses}>
-            {record.wrong.map((w) => (
+            {attempt.misses.map((w) => (
               <Text
                 key={w}
                 variant="small"
@@ -152,7 +151,7 @@ function TaskContent({ task }: { task: Task }) {
             </Text>
           </View>
         )}
-        {record.done && <Verdict task={task} record={record} />}
+        {done && <Verdict task={task} solved={done === 'solved'} />}
       </ScrollView>
       <View
         style={[
@@ -164,14 +163,14 @@ function TaskContent({ task }: { task: Task }) {
           },
         ]}
       >
-        {record.done ? (
+        {done ? (
           <PrimaryButton label={t.nextTask} onPress={goNext} />
         ) : (
           <PrimaryButton
             label={t.check}
             icon="check"
             onPress={check}
-            disabled={!pick || repeated}
+            disabled={!attempt.canCheck}
           />
         )}
       </View>
@@ -200,12 +199,11 @@ function Tries({ left, label }: { left: number; label: string }) {
 }
 
 /** After the answer: «Верно!» or the right answer, then how to solve it. */
-function Verdict({ task, record }: { task: Task; record: TaskRecord }) {
+function Verdict({ task, solved }: { task: Task; solved: boolean }) {
   const c = useTheme();
   const t = useStrings();
   const localize = useLocalize();
   const quiet = useReducedMotion();
-  const solved = record.done === 'solved';
   const option = task.options?.find((o) => o.key === task.answer);
   const answer = option
     ? `${optionLetter(task, task.answer, t.letters)}: ${localize(option.text)}`

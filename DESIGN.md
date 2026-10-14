@@ -2,141 +2,141 @@
 name: MathOlymp
 description: Тренажёр олимпиадной математики для детей 6–15 лет. Дизайн «Тихий», три темы — море (основная), сирень, камень.
 colors:
-  sea-ink: "#0f2a3d"
-  sea-ink-muted: "#2b6c80"
-  sea-page: "#e9f7f7"
-  sea-panel: "#ffffffb3"
-  sea-hairline: "#0f2a3d33"
-  sea-deep: "#1f5d80"
-  sea-progress: "#2a7590"
-  sea-apricot: "#f5a065"
-  sea-logo-orange: "#e3600f"
-  sea-shallow: "#cdebee"
-  sea-sand: "#f6ebcd"
-  sea-pearl: "#fff6df"
-  sea-tile-empty: "#d9f0f2"
-  lilac-ink: "#2b2730"
-  lilac-ink-muted: "#6b6474"
-  lilac-page: "#f3f0f5"
-  lilac-panel: "#fbfafc"
-  lilac-hairline: "#2b273033"
-  lilac-violet: "#8f73b8"
-  lilac-action: "#7a5fa6"
-  lilac-progress: "#9a86bf"
-  lilac-logo-gold: "#a87e12"
-  lilac-mist: "#ebe4f1"
-  lilac-lemon: "#f0eedd"
-  lilac-cream: "#f6f2f1"
-  stone-ink: "#2d2a28"
-  stone-ink-muted: "#5b5550"
-  stone-page: "#efeeea"
-  stone-panel: "#faf9f6"
-  stone-hairline: "#2d2a2838"
-  stone-sage: "#48655f"
-  stone-logo-terracotta: "#b0694f"
-  stone-sage-mist: "#dfe8e4"
-  stone-warm: "#ebe5dc"
-  stone-chalk: "#f8f6f2"
-  stone-tile-empty: "#e4eae7"
+  sea-ink: '#0f2a3d'
+  sea-ink-muted: '#2b6c80'
+  sea-page: '#e9f7f7'
+  sea-panel: '#ffffffb3'
+  sea-hairline: '#0f2a3d33'
+  sea-deep: '#1f5d80'
+  sea-progress: '#2a7590'
+  sea-apricot: '#f5a065'
+  sea-logo-orange: '#e3600f'
+  sea-shallow: '#cdebee'
+  sea-sand: '#f6ebcd'
+  sea-pearl: '#fff6df'
+  sea-tile-empty: '#d9f0f2'
+  lilac-ink: '#2b2730'
+  lilac-ink-muted: '#6b6474'
+  lilac-page: '#f3f0f5'
+  lilac-panel: '#fbfafc'
+  lilac-hairline: '#2b273033'
+  lilac-violet: '#8f73b8'
+  lilac-action: '#7a5fa6'
+  lilac-progress: '#9a86bf'
+  lilac-logo-gold: '#a87e12'
+  lilac-mist: '#ebe4f1'
+  lilac-lemon: '#f0eedd'
+  lilac-cream: '#f6f2f1'
+  stone-ink: '#2d2a28'
+  stone-ink-muted: '#5b5550'
+  stone-page: '#efeeea'
+  stone-panel: '#faf9f6'
+  stone-hairline: '#2d2a2838'
+  stone-sage: '#48655f'
+  stone-logo-terracotta: '#b0694f'
+  stone-sage-mist: '#dfe8e4'
+  stone-warm: '#ebe5dc'
+  stone-chalk: '#f8f6f2'
+  stone-tile-empty: '#e4eae7'
 typography:
   display:
-    fontFamily: "Manrope, Roboto, sans-serif"
-    fontSize: "38px"
+    fontFamily: 'Manrope, Roboto, sans-serif'
+    fontSize: '38px'
     fontWeight: 700
     lineHeight: 1.02
-    letterSpacing: "-0.035em"
+    letterSpacing: '-0.035em'
   headline:
-    fontFamily: "Manrope, Roboto, sans-serif"
-    fontSize: "28px"
+    fontFamily: 'Manrope, Roboto, sans-serif'
+    fontSize: '28px'
     fontWeight: 800
     lineHeight: 1
-    letterSpacing: "-0.03em"
+    letterSpacing: '-0.03em'
   title:
-    fontFamily: "Manrope, Roboto, sans-serif"
-    fontSize: "22px"
+    fontFamily: 'Manrope, Roboto, sans-serif'
+    fontSize: '22px'
     fontWeight: 800
     lineHeight: 1.2
-    letterSpacing: "-0.02em"
+    letterSpacing: '-0.02em'
   task:
-    fontFamily: "Manrope, Roboto, sans-serif"
-    fontSize: "20px"
+    fontFamily: 'Manrope, Roboto, sans-serif'
+    fontSize: '20px'
     fontWeight: 600
     lineHeight: 1.35
-    letterSpacing: "-0.01em"
+    letterSpacing: '-0.01em'
   body:
-    fontFamily: "Manrope, Roboto, sans-serif"
-    fontSize: "17px"
+    fontFamily: 'Manrope, Roboto, sans-serif'
+    fontSize: '17px'
     fontWeight: 500
     lineHeight: 1.45
   label:
-    fontFamily: "Manrope, Roboto, sans-serif"
-    fontSize: "17px"
+    fontFamily: 'Manrope, Roboto, sans-serif'
+    fontSize: '17px'
     fontWeight: 700
     lineHeight: 1.2
-    letterSpacing: "-0.01em"
+    letterSpacing: '-0.01em'
   caption:
-    fontFamily: "Manrope, Roboto, sans-serif"
-    fontSize: "13px"
+    fontFamily: 'Manrope, Roboto, sans-serif'
+    fontSize: '13px'
     fontWeight: 700
     lineHeight: 1.3
 rounded:
-  chip: "99px"
-  key: "14px"
-  tile: "16px"
-  card: "20px"
-  sheet: "28px"
+  chip: '99px'
+  key: '14px'
+  tile: '16px'
+  card: '20px'
+  sheet: '28px'
 spacing:
-  xs: "6px"
-  sm: "8px"
-  md: "12px"
-  lg: "16px"
-  xl: "24px"
+  xs: '6px'
+  sm: '8px'
+  md: '12px'
+  lg: '16px'
+  xl: '24px'
 components:
   button-primary:
-    backgroundColor: "{colors.sea-apricot}"
-    textColor: "{colors.sea-ink}"
-    typography: "{typography.label}"
-    rounded: "{rounded.sheet}"
-    height: "56px"
+    backgroundColor: '{colors.sea-apricot}'
+    textColor: '{colors.sea-ink}'
+    typography: '{typography.label}'
+    rounded: '{rounded.sheet}'
+    height: '56px'
   button-primary-lilac:
-    backgroundColor: "{colors.lilac-action}"
-    textColor: "#ffffff"
-    rounded: "{rounded.sheet}"
-    height: "56px"
+    backgroundColor: '{colors.lilac-action}'
+    textColor: '#ffffff'
+    rounded: '{rounded.sheet}'
+    height: '56px'
   button-primary-stone:
-    backgroundColor: "{colors.stone-sage}"
-    textColor: "#ffffff"
-    rounded: "{rounded.sheet}"
-    height: "56px"
+    backgroundColor: '{colors.stone-sage}'
+    textColor: '#ffffff'
+    rounded: '{rounded.sheet}'
+    height: '56px'
   button-secondary:
-    backgroundColor: "{colors.sea-panel}"
-    textColor: "{colors.sea-ink}"
-    rounded: "{rounded.sheet}"
-    height: "48px"
-    padding: "0 20px"
+    backgroundColor: '{colors.sea-panel}'
+    textColor: '{colors.sea-ink}'
+    rounded: '{rounded.sheet}'
+    height: '48px'
+    padding: '0 20px'
   card:
-    backgroundColor: "{colors.sea-shallow}"
-    textColor: "{colors.sea-ink}"
-    rounded: "{rounded.card}"
-    padding: "16px"
+    backgroundColor: '{colors.sea-shallow}'
+    textColor: '{colors.sea-ink}'
+    rounded: '{rounded.card}'
+    padding: '16px'
   task-tile:
-    backgroundColor: "{colors.sea-pearl}"
-    rounded: "{rounded.tile}"
+    backgroundColor: '{colors.sea-pearl}'
+    rounded: '{rounded.tile}'
   answer-option:
-    backgroundColor: "{colors.sea-panel}"
-    textColor: "{colors.sea-ink}"
-    rounded: "{rounded.tile}"
-    height: "64px"
+    backgroundColor: '{colors.sea-panel}'
+    textColor: '{colors.sea-ink}'
+    rounded: '{rounded.tile}'
+    height: '64px'
   answer-option-correct:
-    backgroundColor: "{colors.sea-progress}"
-    textColor: "#ffffff"
-    rounded: "{rounded.tile}"
+    backgroundColor: '{colors.sea-progress}'
+    textColor: '#ffffff'
+    rounded: '{rounded.tile}'
   chip:
-    backgroundColor: "#ffffff"
-    textColor: "{colors.sea-ink}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.chip}"
-    padding: "5px 11px"
+    backgroundColor: '#ffffff'
+    textColor: '{colors.sea-ink}'
+    typography: '{typography.caption}'
+    rounded: '{rounded.chip}'
+    padding: '5px 11px'
 ---
 
 # Design System: MathOlymp
@@ -152,6 +152,7 @@ components:
 Компоненты сдержанные и точные: тонкие края, минимум заливок, акцент — только на главном действии и на отметках состояния. Платформа — Android, структура и поведение по Material 3 (верхняя панель, нижняя панель, диалог, снекбар, системное «Назад»), бренд живёт в цветах, шрифте и формах.
 
 **Key Characteristics:**
+
 - Один светлый плоский фон, без узоров, градиентов и теней.
 - Одна тёплая кнопка действия на экран; синий/фиолетовый/шалфейный — для прогресса и состояний.
 - Рисунки задач всегда целиком (`contain`), никогда не обрезаются: на них данные задачи.
@@ -163,14 +164,17 @@ components:
 Приглушённые светлые поверхности одного семейства и два голоса: тёплый для действия, холодный тёмный для прогресса и состояний. Значения — в frontmatter; ниже роли на примере «моря», в скобках — соответствия других тем.
 
 ### Primary
+
 - **Абрикос** (`sea-apricot`; в «сирени» — фиолетовый `lilac-action`, в «камне» — шалфей `stone-sage`): только главное действие — «Решать», «Проверить», «Следующая задача» — и отметка следующей задачи. На абрикосе тёмный текст `sea-ink` (6.9:1); на фиолетовом и шалфее — белый.
 - **Морская синева** (`sea-progress`; `lilac-progress` / `stone-sage`): заливка прогресса, отметка «решено», рамка следующей задачи, фокус, верный ответ. Не ниже 3:1 к фону.
 
 ### Secondary
+
 - **Глубина** (`sea-deep`; `lilac-violet` / `stone-sage`): плитки логотипа, иконки внутри компонентов, звёзды сложности, акцентные иконки в карточках.
 - **Оранжевый лого** (`sea-logo-orange`; `lilac-logo-gold` / `stone-logo-terracotta`): только рамка «A» и надпись Olymp в логотипе. Не ниже 3:1 к фону темы.
 
 ### Neutral
+
 - **Чернила** (`sea-ink`): весь основной текст, 13:1 к фону.
 - **Приглушённые чернила** (`sea-ink-muted`): подписи, счётчики, второстепенный текст, не ниже 4.5:1 на всех поверхностях темы.
 - **Фон** (`sea-page`): один фон всего экрана.
@@ -179,6 +183,7 @@ components:
 - **Мелководье / песок / жемчуг** (`sea-shallow`, `sea-sand`, `sea-pearl`): заливки карточек возрастов, блока следующей задачи и плиток с рисунком. `sea-tile-empty` — плитка без рисунка.
 
 ### Named Rules
+
 **The One Warm Voice Rule.** Тёплый цвет действия встречается на экране один раз — на главной кнопке (плюс маленькая отметка следующей задачи). Ошибка, «не получилось», предупреждения его не используют.
 
 **The Sand Means One Thing Rule.** Каждая заливка карточки закреплена за одним смыслом; один цвет не служит одновременно карточкой возраста и меткой сложности.
@@ -193,6 +198,7 @@ components:
 **Character:** Один гротеск с тёплыми округлыми формами и плотными жирными начертаниями: крупные числа читаются как цифры на парте, а не как цифры в отчёте. Размеры в sp, чтобы текст следовал системной настройке.
 
 ### Hierarchy
+
 - **Display** (700, 38px, 1.02): приветствие на первом экране; крупные числа возраста на карточках (46px, 700).
 - **Headline** (800, 28–30px, 1): «Задача N» в блоке следующей задачи.
 - **Title** (800, 22px): заголовок верхней панели, заголовки нижней панели и диалога.
@@ -202,6 +208,7 @@ components:
 - **Caption** (700–800, 13–14px): счётчики «20 из 99», чипы, номера плиток «№ 31». Минимум 13px.
 
 ### Named Rules
+
 **The Big Numbers Rule.** Числа, которые ребёнок должен увидеть сразу (возраст, номер задачи, вариант ответа, набранный ответ), — жирные 800 и крупные (22–46px); подписи к ним — 13–14px.
 
 ## Layout
@@ -213,6 +220,7 @@ components:
 Плоская система: теней нет. Глубина передаётся тоном (фон → заливка карточки → белая панель) и тонким краем 1 px (`*-hairline`). Единственные «приподнятые» слои — нижняя панель и диалог: они лежат на затемнении (scrim 40–45%), сами без тени.
 
 ### Named Rules
+
 **The Flat Desk Rule.** Никаких `box-shadow` для красоты, градиентов и стекла. Если элемент нужно отделить — край 1 px или шаг тона.
 
 ## Shapes
@@ -222,16 +230,19 @@ components:
 ## Components
 
 ### Buttons
+
 - **Shape:** пилюля (радиус = половина высоты).
 - **Primary:** заливка цветом действия темы, высота 56 dp, текст 17/800, справа круг 34 dp с иконкой-стрелкой. Неактивная — 10% чернил, текст 42%, без стрелки.
 - **Secondary:** белая панель с краем 1.5 px, высота 48 dp, отступы 20 dp («Показать все», «Начать заново» — контурная).
 - **Pressed:** сжатие до 0.98 за 150 мс; анимации отключаются при «Убрать анимацию».
 
 ### Chips
+
 - **Style:** белая пилюля, текст 13/800; внутри звёзды сложности 16 px или значок темы.
 - **State:** в нижней панели выбор языка и темы — сегменты 48 dp; выбранный — заливка мелководья и рамка 2 px цветом прогресса.
 
 ### Cards / Containers
+
 - **Corner Style:** 20 dp.
 - **Background:** мелководье / песок / жемчуг; блок следующей задачи — мелководье.
 - **Shadow Strategy:** нет, см. Elevation.
@@ -239,26 +250,32 @@ components:
 - **Internal Padding:** 14–16 dp.
 
 ### Task tile (signature)
+
 Квадрат 16 dp с рисунком целиком и номером «№ N» в белой пилюле снизу слева. Без рисунка — значок темы задачи (счёт, логика, фигуры, перебор, время) вместо номера крупно. Состояния — круги 28 dp: решена — залитая галочка (цвет прогресса), следующая — стрелка цвета действия + рамка 3 px, не получилось — контурная книжка (можно посмотреть разбор). Решённые не бледнеют.
 
 ### Answer option (signature)
+
 Панель 16 dp, мин. высота 64 dp (в ряд — 92 dp), буква А–Д в круге 30 dp + значение 19–22/800. Выбран — рамка 3 px цветом прогресса и залитый круг буквы. Неверный — короткое горизонтальное «вздрагивание» 440 мс, затем прозрачная заливка, текст 42% и зачёркивание, крестик вместо буквы, больше не нажимается. Верный — заливка цветом прогресса, белый текст, галочка. После трёх ошибок верный обводится рамкой 3 px.
 
 ### Inputs / Fields
+
 - **Style:** поле ответа 76 dp, радиус 16, число 40/800 по центру; свои цифровые клавиши 3×4 по 52 dp (без системной клавиатуры).
 - **Focus:** рамка 3 px цветом прогресса, пока поле не пустое.
 
 ### Navigation
+
 - **Верхняя панель:** «←» 48 dp слева, заголовок 22/800, справа — счётчик прогресса или три точки попыток (12 px, использованная — пустой круг).
 - **Меню:** значок «≡» 32 px в правом верхнем углу первого экрана, открывает нижнюю панель (язык, тема, «Мои результаты»).
 - **Диалог подтверждения:** радиус 28, заголовок 22/800, текст 15px, действия справа: текстовая «Отмена» и залитая главная.
 
 ### Progress meter
+
 Дорожка 8 dp (12% чернил) с заливкой цветом прогресса и подписью «N из M» 13/700. В итоге экрана возраста — карточка с медалью и полной шириной дорожки.
 
 ## Do's and Don'ts
 
 ### Do:
+
 - **Do** держать один тёплый цвет действия на экран и не использовать его для ошибок.
 - **Do** показывать рисунок задачи целиком (`object-fit: contain`, отступ 8–12 dp).
 - **Do** отмечать состояние не только цветом: галочка, стрелка + рамка 3 px, книжка, зачёркивание.
@@ -267,6 +284,7 @@ components:
 - **Do** называть сложность словами и звёздами («Лёгкие ★»), баллы — тихой подписью.
 
 ### Don't:
+
 - **Don't** добавлять тени, градиенты, стекло и узоры на фон.
 - **Don't** обрезать рисунки задач (`cover`) — на них данные задачи.
 - **Don't** бледнить решённые задачи и прятать сделанное.

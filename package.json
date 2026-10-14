@@ -36,7 +36,8 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.7",
     "prettier": "^3.9.10",
-    "typescript": "~6.0.3"
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.4"
   },
   "scripts": {
     "start": "expo start",
@@ -49,7 +50,9 @@
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
     "tasks:sync": "node scripts/sync-tasks.mjs",
-    "icons": "node scripts/make-icons.mjs"
+    "icons": "node scripts/make-icons.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "private": true
 }

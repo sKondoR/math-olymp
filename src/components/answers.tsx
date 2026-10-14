@@ -10,7 +10,7 @@ import Animated, {
 
 import type { Task } from '@/data/types';
 import { optionLetter, useLocalize, useStrings } from '@/i18n';
-import type { TaskRecord } from '@/state/progress';
+import type { AttemptView, OptionStatus } from '@/state/attempt';
 import { alpha, pressedScale, useTheme } from '@/theme';
 
 import { Icon } from './icon';
@@ -51,14 +51,12 @@ function Shake({
  */
 export function AnswerOptions({
   task,
-  record,
-  pick,
+  statuses,
   onPick,
   shake,
 }: {
   task: Task;
-  record: TaskRecord;
-  pick: string | null;
+  statuses: { key: string; status: OptionStatus }[];
   onPick: (key: string) => void;
   shake: { key: string; token: number } | null;
 }) {
@@ -67,6 +65,7 @@ export function AnswerOptions({
   const localize = useLocalize();
   const options = task.options ?? [];
   const texts = options.map((o) => localize(o.text));
+  const statusOf = (key: string) => statuses.find((s) => s.key === key)?.status ?? 'open';
   const longest = Math.max(...texts.map((s) => s.length));
   const form = longest <= 3 ? 'row' : longest <= 11 ? 'two' : 'list';
 
@@ -78,11 +77,12 @@ export function AnswerOptions({
     >
       {options.map((o, i) => {
         const letter = optionLetter(task, o.key, t.letters);
-        const wrong = record.wrong.includes(o.key);
-        const right = record.done === 'solved' && o.key === task.answer;
-        const reveal = record.done === 'failed' && o.key === task.answer;
-        const picked = !record.done && pick === o.key;
-        const off = !!record.done || wrong;
+        const status = statusOf(o.key);
+        const wrong = status === 'wrong';
+        const right = status === 'right';
+        const reveal = status === 'revealed';
+        const picked = status === 'picked';
+        const off = status !== 'open' && status !== 'picked';
         const lastOdd = form === 'two' && i === options.length - 1 && options.length % 2 === 1;
         const mark = `${wrong ? `, ${t.wrongMark}` : ''}${right || reveal ? `, ${t.rightMark}` : ''}`;
         return (
@@ -154,26 +154,20 @@ export function AnswerOptions({
 
 /** A written answer (6 years): the number and own digit keys, no system keyboard over the task. */
 export function WrittenAnswer({
-  task,
-  record,
-  pick,
-  onChange,
+  done,
+  shown,
+  onKey,
   shakeToken,
 }: {
-  task: Task;
-  record: TaskRecord;
-  pick: string | null;
-  onChange: (v: string | null) => void;
+  done: AttemptView['done'];
+  /** the typed number, or the right one once done */
+  shown: string | null;
+  /** a digit or `del` */
+  onKey: (key: string) => void;
   shakeToken: number;
 }) {
   const c = useTheme();
   const t = useStrings();
-  const shown = record.done ? task.answer : pick;
-  const press = (key: string) => {
-    const cur = pick ?? '';
-    if (key === 'del') onChange(cur.slice(0, -1) || null);
-    else onChange((cur + key).replace(/^0+(?=\d)/, '').slice(0, 3));
-  };
   return (
     <View style={{ gap: 8 }}>
       <Shake token={shakeToken}>
@@ -183,21 +177,17 @@ export function WrittenAnswer({
           style={[
             styles.ans,
             { backgroundColor: c.panel, borderColor: c.hairline },
-            !!pick && !record.done && { borderColor: c.progress, borderWidth: 3 },
-            record.done === 'solved' && { backgroundColor: c.progress, borderColor: c.progress },
-            record.done === 'failed' && { borderColor: c.progress, borderWidth: 3 },
+            !!shown && !done && { borderColor: c.progress, borderWidth: 3 },
+            done === 'solved' && { backgroundColor: c.progress, borderColor: c.progress },
+            done === 'failed' && { borderColor: c.progress, borderWidth: 3 },
           ]}
         >
           {shown ? (
             <>
-              {record.done && (
-                <Icon
-                  name="check"
-                  size={30}
-                  color={record.done === 'solved' ? c.onDark : c.progress}
-                />
+              {done && (
+                <Icon name="check" size={30} color={done === 'solved' ? c.onDark : c.progress} />
               )}
-              <Text style={styles.ansValue} color={record.done === 'solved' ? c.onDark : c.ink}>
+              <Text style={styles.ansValue} color={done === 'solved' ? c.onDark : c.ink}>
                 {shown}
               </Text>
             </>
@@ -208,7 +198,7 @@ export function WrittenAnswer({
           )}
         </View>
       </Shake>
-      {!record.done && (
+      {!done && (
         <View style={styles.pad} accessibilityLabel={t.digits}>
           {['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', 'del'].map((k) =>
             k ? (
@@ -216,7 +206,7 @@ export function WrittenAnswer({
                 key={k}
                 accessibilityRole="button"
                 accessibilityLabel={k === 'del' ? t.erase : k}
-                onPress={() => press(k)}
+                onPress={() => onKey(k)}
                 style={({ pressed }) => [
                   styles.key,
                   { backgroundColor: pressed ? c.shallow : c.panel, borderColor: c.hairline },

@@ -7,13 +7,8 @@ import { tasksOf } from '@/data/bank';
 import { AgeGroups, ageGroup } from '@/data/groups';
 import { Langs, type GradeKey, type Lang, type Task } from '@/data/types';
 
-import {
-  answer as applyAnswer,
-  countProgress,
-  nextTask,
-  recordOf,
-  type GradeProgress,
-} from './progress';
+import { answer as applyAnswer } from './attempt';
+import { countProgress, nextTask, recordOf, type GradeProgress, type TaskRecord } from './progress';
 
 /**
  * Everything the app remembers, kept on the device only (no accounts in v1).
@@ -45,8 +40,8 @@ type SettingsStore = {
 
 type ProgressStore = {
   progress: AllProgress;
-  /** gives an answer to a task, returns whether it was right */
-  answer(task: Task, value: string): boolean;
+  /** gives an answer to a task, returns its record after the answer */
+  answer(task: Task, value: string): TaskRecord;
   /** «Начать заново»: every task of the age group is open again, results are gone */
   resetGrade(grade: GradeKey): void;
 };
@@ -131,7 +126,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       const after = applyAnswer(before, task, value);
       if (after !== before)
         updateProgress(task.grade, { ...progress[task.grade], [task.id]: after });
-      return after.done === 'solved';
+      return after;
     },
     resetGrade: (grade) => updateProgress(grade, {}),
   };

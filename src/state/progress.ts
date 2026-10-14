@@ -1,8 +1,5 @@
 import type { Task } from '@/data/types';
 
-/** Attempts per task; after the third miss the task closes unsolved. */
-export const TRIES = 3;
-
 /** What happened to one task. Absent — not touched yet. */
 export type TaskRecord = {
   /** wrong answers in the order given; they can't be picked again */
@@ -67,12 +64,4 @@ export function countProgress(progress: GradeProgress, tasks: Task[]): Counts {
     c.byWeight[k][t.weight - 1]++;
   }
   return c;
-}
-
-/** Applies one answer to a record; the caller stores the result. */
-export function answer(record: TaskRecord, task: Task, value: string): TaskRecord {
-  if (record.done || record.wrong.includes(value)) return record;
-  if (value === task.answer) return { ...record, done: 'solved' };
-  const wrong = [...record.wrong, value];
-  return wrong.length >= TRIES ? { wrong, done: 'failed' } : { wrong };
 }
