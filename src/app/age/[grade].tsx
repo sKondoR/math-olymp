@@ -1,4 +1,4 @@
-import { Redirect, useLocalSearchParams, useRouter } from 'expo-router';
+import { Redirect, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -14,6 +14,7 @@ import { Font, Text } from '@/components/text';
 import { ageGroup } from '@/data/groups';
 import type { GradeKey, Task } from '@/data/types';
 import { useLocalize, useStrings } from '@/i18n';
+import { useNav } from '@/navigation';
 import { useGradeSummary, useSettings } from '@/state/store';
 import type { Level, TaskState } from '@/state/summary';
 import { useTheme } from '@/theme';
@@ -37,13 +38,11 @@ export default function AgeScreen() {
 function AgeContent({ grade, age }: { grade: GradeKey; age: string }) {
   const c = useTheme();
   const t = useStrings();
-  const router = useRouter();
+  const nav = useNav();
   const insets = useSafeAreaInsets();
   const localize = useLocalize();
   const { levels, counts, next, stateOf } = useGradeSummary(grade);
   const weight = useWeightLabel();
-  const open = (task: Task) =>
-    router.push({ pathname: '/task/[grade]/[number]', params: { grade, number: task.number } });
 
   return (
     <View style={{ flex: 1 }}>
@@ -70,7 +69,7 @@ function AgeContent({ grade, age }: { grade: GradeKey; age: string }) {
             <Text variant="bodyStrong" numberOfLines={3} style={{ marginHorizontal: 4 }}>
               {localize(next.text)}
             </Text>
-            <PrimaryButton label={t.solve} onPress={() => open(next)} />
+            <PrimaryButton label={t.solve} onPress={() => nav.openTask(next)} />
           </View>
         ) : (
           <View style={[styles.next, { backgroundColor: c.shallow, borderColor: c.hairline }]}>
@@ -80,13 +79,13 @@ function AgeContent({ grade, age }: { grade: GradeKey; age: string }) {
               label={t.results}
               icon="bar_chart"
               iconFirst
-              onPress={() => router.push('/results')}
+              onPress={nav.openResults}
             />
           </View>
         )}
 
         {levels.map((level) => (
-          <WeightGroup key={level.weight} level={level} stateOf={stateOf} onOpen={open} />
+          <WeightGroup key={level.weight} level={level} stateOf={stateOf} onOpen={nav.openTask} />
         ))}
 
         <View style={[styles.sum, { backgroundColor: c.panel }]} accessible>

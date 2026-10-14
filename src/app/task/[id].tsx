@@ -1,4 +1,4 @@
-import { Redirect, useLocalSearchParams, useRouter } from 'expo-router';
+import { Redirect, useLocalSearchParams } from 'expo-router';
 import { useRef } from 'react';
 import { AccessibilityInfo, ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { ZoomIn, useReducedMotion } from 'react-native-reanimated';
@@ -11,10 +11,10 @@ import { Chip, useWeightLabel } from '@/components/difficulty';
 import { Icon, type IconName } from '@/components/icon';
 import { FamilyIcon, TaskPicture } from '@/components/task-picture';
 import { Font, Text } from '@/components/text';
-import { findTask } from '@/data/bank';
-import { ageGroup } from '@/data/groups';
+import { useTask } from '@/data/bank';
 import type { Task } from '@/data/types';
 import { optionLetter, useLocalize, useStrings } from '@/i18n';
+import { useNav } from '@/navigation';
 import { TRIES, type AttemptNote } from '@/state/attempt';
 import { useGradeSummary } from '@/state/store';
 import { useAttempt } from '@/state/use-attempt';
@@ -26,9 +26,8 @@ import { alpha, useTheme } from '@/theme';
  * A closed task opens read-only.
  */
 export default function TaskScreen() {
-  const { grade, number } = useLocalSearchParams<{ grade: string; number: string }>();
-  const group = ageGroup(grade);
-  const task = group ? findTask(group.grade, Number(number)) : undefined;
+  const { id } = useLocalSearchParams<{ id: string }>();
+  const task = useTask(id);
   if (!task) return <Redirect href="/" />;
   // a new key per task resets the pick and the scroll when «Следующая задача» swaps the task
   return <TaskContent key={task.id} task={task} />;
@@ -37,7 +36,7 @@ export default function TaskScreen() {
 function TaskContent({ task }: { task: Task }) {
   const c = useTheme();
   const t = useStrings();
-  const router = useRouter();
+  const nav = useNav();
   const insets = useSafeAreaInsets();
   const { nextAfter } = useGradeSummary(task.grade);
   const localize = useLocalize();
@@ -58,17 +57,7 @@ function TaskContent({ task }: { task: Task }) {
     }
   };
 
-  const goNext = () => {
-    const next = nextAfter(task);
-    if (!next) {
-      router.dismissTo({ pathname: '/age/[grade]', params: { grade: task.grade } });
-      return;
-    }
-    router.replace({
-      pathname: '/task/[grade]/[number]',
-      params: { grade: task.grade, number: next.number },
-    });
-  };
+  const goNext = () => nav.nextTask(task, nextAfter(task));
 
   const notes: Record<AttemptNote, { icon: IconName; text: string }> = {
     pick: { icon: 'touch_app', text: t.pickHint },
@@ -82,11 +71,7 @@ function TaskContent({ task }: { task: Task }) {
     <View style={{ flex: 1 }}>
       <AppBar
         title={t.task(task.number)}
-        onBack={() =>
-          router.canGoBack()
-            ? router.back()
-            : router.replace({ pathname: '/age/[grade]', params: { grade: task.grade } })
-        }
+        onBack={() => nav.leaveTask(task)}
         right={<Tries left={left} label={t.triesLeft(left, TRIES)} />}
       />
       <ScrollView ref={scroll} contentContainerStyle={styles.body}>

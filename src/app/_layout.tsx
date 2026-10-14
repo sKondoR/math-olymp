@@ -14,6 +14,7 @@ import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { SnackbarProvider } from '@/components/overlays';
+import { deviceLang, deviceStorage } from '@/state/device';
 import { StoreProvider } from '@/state/store';
 import { ThemeRoot, useTheme } from '@/theme';
 
@@ -32,7 +33,7 @@ export default function RootLayout() {
   });
   return (
     <SafeAreaProvider>
-      <StoreProvider>
+      <StoreProvider storage={deviceStorage} deviceLang={deviceLang()}>
         {(fontsLoaded || fontError) && (
           <ThemeRoot>
             <SnackbarProvider>

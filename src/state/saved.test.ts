@@ -1,20 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
+import { memoryStorage as memory } from './memory-storage';
 import { loadState, saveProgress, saveSettings, type Storage } from './saved';
-
-/** The storage as a plain map: the adapter tests use instead of AsyncStorage. */
-function memory(initial: Record<string, unknown> = {}) {
-  const data = new Map(
-    Object.entries(initial).map(([k, v]) => [k, typeof v === 'string' ? v : JSON.stringify(v)]),
-  );
-  const storage: Storage = {
-    multiGet: async (keys) => keys.map((k) => [k, data.get(k) ?? null] as const),
-    setItem: async (key, value) => {
-      data.set(key, value);
-    },
-  };
-  return { storage, data };
-}
 
 const broken: Storage = {
   multiGet: () => Promise.reject(new Error('disk')),

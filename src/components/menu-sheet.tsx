@@ -1,9 +1,9 @@
-import { useRouter } from 'expo-router';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { Palettes, ThemeNames } from '@/constants/tokens';
 import { Langs } from '@/data/types';
 import { LangNames, useStrings } from '@/i18n';
+import { useNav } from '@/navigation';
 import { useSettings } from '@/state/store';
 import { pressedScale, useTheme } from '@/theme';
 
@@ -15,7 +15,7 @@ import { Font, Text } from './text';
 export function MenuSheet({ visible, onClose }: { visible: boolean; onClose: () => void }) {
   const c = useTheme();
   const t = useStrings();
-  const router = useRouter();
+  const nav = useNav();
   const { settings, setLang, setTheme } = useSettings();
 
   return (
@@ -65,7 +65,7 @@ export function MenuSheet({ visible, onClose }: { visible: boolean; onClose: () 
         accessibilityRole="button"
         onPress={() => {
           onClose();
-          router.push('/results');
+          nav.openResults();
         }}
         style={({ pressed }) => [
           styles.row,

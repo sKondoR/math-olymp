@@ -1,4 +1,3 @@
-import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -11,6 +10,7 @@ import { TaskPicture } from '@/components/task-picture';
 import { Font, Text } from '@/components/text';
 import { AgeGroups, ageGroup, type AgeGroup } from '@/data/groups';
 import { useStrings } from '@/i18n';
+import { useNav } from '@/navigation';
 import { useGradeSummary, useSettings } from '@/state/store';
 import { pressedScale, useTheme } from '@/theme';
 
@@ -57,15 +57,9 @@ export default function Home() {
 function ResumeCard({ group }: { group: AgeGroup }) {
   const c = useTheme();
   const t = useStrings();
-  const router = useRouter();
+  const nav = useNav();
   const { counts, next } = useGradeSummary(group.grade);
-  const go = () =>
-    next
-      ? router.push({
-          pathname: '/task/[grade]/[number]',
-          params: { grade: group.grade, number: next.number },
-        })
-      : router.push({ pathname: '/age/[grade]', params: { grade: group.grade } });
+  const go = () => nav.resume(group.grade, next);
 
   return (
     <View style={[styles.resume, { backgroundColor: c.shallow, borderColor: c.hairline }]}>
@@ -90,7 +84,7 @@ function ResumeCard({ group }: { group: AgeGroup }) {
 function AgeCard({ group }: { group: AgeGroup }) {
   const c = useTheme();
   const t = useStrings();
-  const router = useRouter();
+  const nav = useNav();
   const { tasks, counts } = useGradeSummary(group.grade);
   const pics = tasks.filter((x) => x.image).filter((_, i) => i === 1 || i === 6);
 
@@ -98,7 +92,7 @@ function AgeCard({ group }: { group: AgeGroup }) {
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={`${t.ageLabel(group.age)}, ${t.solvedOf(counts.solved, counts.total)}`}
-      onPress={() => router.push({ pathname: '/age/[grade]', params: { grade: group.grade } })}
+      onPress={() => nav.openAge(group.grade)}
       style={({ pressed }) => [
         styles.ageCard,
         { backgroundColor: c[group.tone], borderColor: c.hairline },

@@ -1,14 +1,19 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { getLocales } from 'expo-localization';
 import { createContext, use, useEffect, useState, type ReactNode } from 'react';
 
 import type { ThemeName } from '@/constants/tokens';
-import { tasksOf } from '@/data/bank';
-import { Langs, type GradeKey, type Lang, type Task } from '@/data/types';
+import { useTasks } from '@/data/bank';
+import type { GradeKey, Lang, Task } from '@/data/types';
 
 import { answer as applyAnswer } from './attempt';
 import { recordOf, type GradeProgress, type TaskRecord } from './progress';
-import { loadState, saveProgress, saveSettings, type AllProgress, type Settings } from './saved';
+import {
+  loadState,
+  saveProgress,
+  saveSettings,
+  type AllProgress,
+  type Settings,
+  type Storage,
+} from './saved';
 import { summarize } from './summary';
 
 export type { Settings } from './saved';
@@ -35,38 +40,41 @@ type ProgressStore = {
 const SettingsContext = createContext<SettingsStore | null>(null);
 const ProgressContext = createContext<ProgressStore | null>(null);
 
-function deviceLang(): Lang {
-  const code = getLocales()[0]?.languageCode;
-  return Langs.find((l) => l === code) ?? 'ru';
-}
-
 /**
- * Renders nothing until the saved state is read, so children can rely on it.
- * AsyncStorage lives in the app's database folder, which Android Auto Backup includes,
- * so progress survives a reinstall or a new phone.
+ * Renders nothing until the saved state is read, so children can rely on it. The storage and the
+ * device language come from outside: the device's in the app (`state/device.ts`), a map in tests.
  */
-export function StoreProvider({ children }: { children: ReactNode }) {
+export function StoreProvider({
+  storage,
+  deviceLang,
+  children,
+}: {
+  storage: Storage;
+  /** the language when none was chosen yet */
+  deviceLang: Lang;
+  children: ReactNode;
+}) {
   const [settings, setSettings] = useState<Settings | null>(null);
   const [progress, setProgress] = useState<AllProgress | null>(null);
 
   useEffect(() => {
-    loadState(AsyncStorage, deviceLang()).then((st) => {
+    loadState(storage, deviceLang).then((st) => {
       setSettings(st.settings);
       setProgress(st.progress);
     });
-  }, []);
+  }, [storage, deviceLang]);
 
   if (!settings || !progress) return null;
 
   const updateSettings = (patch: Partial<Settings>) => {
     const next = { ...settings, ...patch };
     setSettings(next);
-    saveSettings(AsyncStorage, next);
+    saveSettings(storage, next);
   };
 
   const updateProgress = (grade: GradeKey, next: GradeProgress) => {
     setProgress({ ...progress, [grade]: next });
-    saveProgress(AsyncStorage, grade, next);
+    saveProgress(storage, grade, next);
   };
 
   const settingsStore: SettingsStore = {
@@ -111,5 +119,5 @@ export function useProgress() {
 
 /** Summary of an age group: what is done, what is ahead, the task to solve next. */
 export function useGradeSummary(grade: GradeKey) {
-  return summarize(tasksOf(grade), useProgress().progress[grade]);
+  return summarize(useTasks(grade), useProgress().progress[grade]);
 }
