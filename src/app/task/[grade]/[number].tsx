@@ -11,13 +11,12 @@ import { Chip, useWeightLabel } from '@/components/difficulty';
 import { Icon, type IconName } from '@/components/icon';
 import { FamilyIcon, TaskPicture } from '@/components/task-picture';
 import { Font, Text } from '@/components/text';
-import { findTask, tasksOf } from '@/data/bank';
+import { findTask } from '@/data/bank';
 import { ageGroup, topicFamily } from '@/data/groups';
 import type { Task } from '@/data/types';
 import { optionLetter, useLocalize, useStrings } from '@/i18n';
 import { TRIES, type AttemptNote } from '@/state/attempt';
-import { nextTaskAfter } from '@/state/progress';
-import { useProgress } from '@/state/store';
+import { useGradeSummary } from '@/state/store';
 import { useAttempt } from '@/state/use-attempt';
 import { alpha, useTheme } from '@/theme';
 
@@ -40,7 +39,7 @@ function TaskContent({ task }: { task: Task }) {
   const t = useStrings();
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { progress } = useProgress();
+  const { nextAfter } = useGradeSummary(task.grade);
   const localize = useLocalize();
   const weight = useWeightLabel();
   const attempt = useAttempt(task);
@@ -60,7 +59,7 @@ function TaskContent({ task }: { task: Task }) {
   };
 
   const goNext = () => {
-    const next = nextTaskAfter(progress[task.grade], tasksOf(task.grade), task);
+    const next = nextAfter(task);
     if (!next) {
       router.dismissTo({ pathname: '/age/[grade]', params: { grade: task.grade } });
       return;

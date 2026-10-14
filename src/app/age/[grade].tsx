@@ -14,8 +14,8 @@ import { Font, Text } from '@/components/text';
 import { ageGroup } from '@/data/groups';
 import type { GradeKey, Task } from '@/data/types';
 import { useLocalize, useStrings } from '@/i18n';
-import { countProgress, isClosed, taskState, type GradeProgress } from '@/state/progress';
 import { useGradeSummary, useSettings } from '@/state/store';
+import type { Level, TaskState } from '@/state/summary';
 import { useTheme } from '@/theme';
 
 const PREVIEW = 6;
@@ -40,7 +40,7 @@ function AgeContent({ grade, age }: { grade: GradeKey; age: string }) {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const localize = useLocalize();
-  const { tasks, progress: p, counts, next } = useGradeSummary(grade);
+  const { levels, counts, next, stateOf } = useGradeSummary(grade);
   const weight = useWeightLabel();
   const open = (task: Task) =>
     router.push({ pathname: '/task/[grade]/[number]', params: { grade, number: task.number } });
@@ -85,15 +85,8 @@ function AgeContent({ grade, age }: { grade: GradeKey; age: string }) {
           </View>
         )}
 
-        {([1, 2, 3] as const).map((w) => (
-          <WeightGroup
-            key={w}
-            weight={w}
-            tasks={tasks.filter((x) => x.weight === w)}
-            progress={p}
-            next={next}
-            onOpen={open}
-          />
+        {levels.map((level) => (
+          <WeightGroup key={level.weight} level={level} stateOf={stateOf} onOpen={open} />
         ))}
 
         <View style={[styles.sum, { backgroundColor: c.panel }]} accessible>
@@ -113,28 +106,18 @@ function AgeContent({ grade, age }: { grade: GradeKey; age: string }) {
 }
 
 function WeightGroup({
-  weight,
-  tasks,
-  progress,
-  next,
+  level,
+  stateOf,
   onOpen,
 }: {
-  weight: 1 | 2 | 3;
-  tasks: Task[];
-  progress: GradeProgress;
-  next: Task | undefined;
+  level: Level;
+  stateOf: (task: Task) => TaskState;
   onOpen: (t: Task) => void;
 }) {
   const t = useStrings();
   const [expanded, setExpanded] = useState(false);
-  if (!tasks.length) return null;
-
-  const { solved } = countProgress(progress, tasks);
-  // the preview starts two tasks before the first open one, so what was done stays in sight
-  const front = tasks.findIndex((x) => !isClosed(progress, x));
-  const start = front > 2 ? Math.min(front - 2, Math.max(0, tasks.length - PREVIEW)) : 0;
-  const shown = expanded ? tasks : tasks.slice(start, start + PREVIEW);
-  const points = tasks[0].points;
+  const { weight, tasks, solved, points } = level;
+  const shown = expanded ? tasks : level.preview(PREVIEW);
   const aside = `${points ? `${t.points(points)} · ` : ''}${
     solved ? t.ofTotal(solved, tasks.length) : t.tasksCount(tasks.length)
   }`;
@@ -161,7 +144,7 @@ function WeightGroup({
             <TaskTile
               key={task.id}
               task={task}
-              state={taskState(progress, task, next)}
+              state={stateOf(task)}
               onPress={() => onOpen(task)}
             />
           ))}

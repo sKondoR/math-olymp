@@ -2,7 +2,7 @@ import { Pressable, StyleSheet, View } from 'react-native';
 
 import type { Task } from '@/data/types';
 import { useStrings } from '@/i18n';
-import type { TaskState } from '@/state/progress';
+import type { TaskState } from '@/state/summary';
 import { pressedScale, useTheme } from '@/theme';
 
 import { useWeightLabel } from './difficulty';

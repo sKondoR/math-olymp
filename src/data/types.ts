@@ -46,6 +46,6 @@ export type Task = Omit<StoredTask, 'image'> & {
 
 export type BuiltinBank = Record<
   GradeKey,
-  /** images by file name: `NN.svg`, and `<lang>/NN.svg` for a translated copy */
-  { tasks: StoredTask[]; images: Record<string, ImageSourcePropType> }
+  /** pictures by the file name in `StoredTask.image`, each with its translated copies */
+  { tasks: StoredTask[]; pictures: Record<string, Localized<ImageSourcePropType>> }
 >;
