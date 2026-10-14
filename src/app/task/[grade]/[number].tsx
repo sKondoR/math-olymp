@@ -12,7 +12,7 @@ import { Icon, type IconName } from '@/components/icon';
 import { FamilyIcon, TaskPicture } from '@/components/task-picture';
 import { Font, Text } from '@/components/text';
 import { findTask } from '@/data/bank';
-import { ageGroup, topicFamily } from '@/data/groups';
+import { ageGroup } from '@/data/groups';
 import type { Task } from '@/data/types';
 import { optionLetter, useLocalize, useStrings } from '@/i18n';
 import { TRIES, type AttemptNote } from '@/state/attempt';
@@ -77,7 +77,6 @@ function TaskContent({ task }: { task: Task }) {
     repeated: { icon: 'replay', text: t.repeated },
   };
   const note = attempt.note && notes[attempt.note];
-  const family = topicFamily(task.topics);
 
   return (
     <View style={{ flex: 1 }}>
@@ -93,7 +92,7 @@ function TaskContent({ task }: { task: Task }) {
       <ScrollView ref={scroll} contentContainerStyle={styles.body}>
         <View style={styles.meta}>
           <Chip stars={task.weight} label={weight(task)} />
-          <Chip icon={FamilyIcon[family]} label={t.families[family]} />
+          <Chip icon={FamilyIcon[task.family]} label={t.families[task.family]} />
         </View>
         {task.image && (
           <TaskPicture

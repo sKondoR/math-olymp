@@ -25,6 +25,47 @@ const TYPES = {
   'Первые примеры': 'first-examples',
 };
 const LEVELS = { лёгкая: 1, средняя: 2, трудная: 3 };
+/**
+ * Catalogue topic → topic family (TopicFamily in src/data/types.ts): groups a child can tell apart.
+ * A task takes the family of its first topic; a topic missing here fails the sync.
+ */
+export const TOPIC_FAMILIES = {
+  арифметика: 'count',
+  'числа-и-цифры': 'count',
+  'текстовая-задача': 'count',
+  деньги: 'count',
+  измерения: 'count',
+  ребусы: 'count',
+  'неравенства-и-оценки': 'count',
+  'делимость-и-остатки': 'count',
+  'дроби-и-проценты': 'count',
+  'уравнения-и-алгебра': 'count',
+  'степени-и-корни': 'count',
+  движение: 'count',
+  вероятность: 'count',
+  логика: 'logic',
+  'истина-и-ложь': 'logic',
+  'задачи-с-буквами': 'logic',
+  'сравнение-и-порядок': 'logic',
+  'таблицы-и-квадраты': 'logic',
+  весы: 'logic',
+  'геометрия-фигуры': 'shape',
+  'клетчатая-геометрия': 'shape',
+  'симметрия-и-повороты': 'shape',
+  'разрезание-и-складывание': 'shape',
+  'пространство-кубики': 'shape',
+  'углы-и-треугольники': 'shape',
+  'площадь-и-периметр': 'shape',
+  окружности: 'shape',
+  'координаты-и-графики': 'shape',
+  закономерности: 'pattern',
+  'комбинаторика-перебор': 'pattern',
+  'маршруты-и-лабиринты': 'pattern',
+  графы: 'pattern',
+  'игры-и-стратегии': 'pattern',
+  'время-и-часы': 'time',
+  календарь: 'time',
+};
 // Translations live in raw.i18n.<lang> as { text, options, solution }; Russian is the base.
 const LANGS = ['en', 'es', 'fr'];
 // Letter labels in pictures (and in translated texts) go Latin by position: А→A, Б→B, В→C…
@@ -146,6 +187,11 @@ function convert(raw, grade, errors) {
     // the keys take at most WRITTEN_DIGITS digits and drop leading zeros
     errors.push(`${where}: written answer "${answer}" can't be typed on the keys`);
   }
+  const topics = raw.topics ?? [];
+  if (!topics.length) errors.push(`${where}: no topics`);
+  for (const topic of topics) {
+    if (!TOPIC_FAMILIES[topic]) errors.push(`${where}: unknown topic "${topic}"`);
+  }
   if (!raw.text || !raw.solution) errors.push(`${where}: text or solution missing`);
   return {
     id: raw.id,
@@ -153,7 +199,8 @@ function convert(raw, grade, errors) {
     points: raw.points ?? null,
     weight,
     type,
-    topics: raw.topics ?? [],
+    topics,
+    family: TOPIC_FAMILIES[topics[0]],
     text: localized(raw, raw.text, (tr) => tr.text, `${where} text`, errors),
     options,
     answer,

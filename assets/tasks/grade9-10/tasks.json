@@ -6,6 +6,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["степени-и-корни", "арифметика"],
+    "family": "count",
     "text": {
       "ru": "Чему равна четверть квадрата утроенного куба числа 2?",
       "en": "What is a quarter of the square of three times the cube of 2?",
@@ -75,6 +76,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["углы-и-треугольники", "геометрия-фигуры"],
+    "family": "shape",
     "text": {
       "ru": "Внутри правильного пятиугольника ABCDE построен квадрат ABPQ (см. рисунок). Чему равен угол AQE?",
       "en": "A square ABPQ is built inside a regular pentagon ABCDE (see picture). What is angle AQE?",
@@ -144,6 +146,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["числа-и-цифры", "комбинаторика-перебор"],
+    "family": "count",
     "text": {
       "ru": "Белка Маруся выписала подряд все натуральные числа от 1 до 100. Сколько раз она написала цифру 7?",
       "en": "Marusya the squirrel wrote down all natural numbers from 1 to 100 in a row. How many times did she write the digit 7?",
@@ -213,6 +216,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["дроби-и-проценты"],
+    "family": "count",
     "text": {
       "ru": "30 % от 40 % числа N равны 6. Чему равны 40 % от 30 % числа 2N?",
       "en": "30 % of 40 % of a number N is 6. What is 40 % of 30 % of the number 2N?",
@@ -282,6 +286,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["логика"],
+    "family": "logic",
     "text": {
       "ru": "У Оли есть брат Петя, и других детей у их родителей нет. Кем приходится Оле дочь сестры отца Пети?",
       "en": "Olya has a brother Petya, and their parents have no other children. Who is the daughter of Petya's father's sister to Olya?",
@@ -351,6 +356,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["площадь-и-периметр"],
+    "family": "shape",
     "text": {
       "ru": "На каждой стороне квадрата со стороной 6 отмечена точка, делящая сторону на отрезки 2 и 4 (см. рисунок). Чему равна площадь закрашенного четырёхугольника с вершинами в этих точках?",
       "en": "On each side of a square with side 6 a point is marked dividing the side into segments 2 and 4 (see picture). What is the area of the shaded quadrilateral with vertices at these points?",
@@ -420,6 +426,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["календарь"],
+    "family": "time",
     "text": {
       "ru": "В некотором невисокосном году 1 марта пришлось на среду. Каким днём недели было 1 февраля этого года?",
       "en": "In a certain non-leap year 1 March fell on a Wednesday. What day of the week was 1 February of that year?",
@@ -489,6 +496,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["уравнения-и-алгебра"],
+    "family": "count",
     "text": {
       "ru": "Известно, что (a + b)² = 49 и (a − b)² = 9. Чему равно ab?",
       "en": "It is known that (a + b)² = 49 and (a − b)² = 9. What is ab?",
@@ -558,6 +566,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["координаты-и-графики"],
+    "family": "shape",
     "text": {
       "ru": "На рисунке изображён график линейной функции. Какой формулой она задаётся?",
       "en": "The picture shows the graph of a linear function. Which formula defines it?",
@@ -627,6 +636,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["измерения", "время-и-часы"],
+    "family": "count",
     "text": {
       "ru": "Сколько гектоминут в одной неделе? (Приставка «гекто» означает «сто».)",
       "en": "How many hectominutes are in one week? (The prefix 'hecto' means 'hundred'.)",
@@ -696,6 +706,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["окружности", "углы-и-треугольники"],
+    "family": "shape",
     "text": {
       "ru": "Четырёхугольник ABCD вписан в окружность, его диагональ AC — диаметр. Известно, что ∠BAC = 25° и ∠ACD = 35° (см. рисунок). Чему равен угол BCD?",
       "en": "Quadrilateral ABCD is inscribed in a circle, and its diagonal AC is a diameter. It is known that ∠BAC = 25° and ∠ACD = 35° (see picture). What is angle BCD?",
@@ -765,6 +776,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["делимость-и-остатки", "степени-и-корни"],
+    "family": "count",
     "text": {
       "ru": "Какой остаток даёт число 2²⁰²⁶ при делении на 7?",
       "en": "What is the remainder when 2²⁰²⁶ is divided by 7?",
@@ -834,6 +846,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["пространство-кубики"],
+    "family": "shape",
     "text": {
       "ru": "Брусок 3 × 4 × 5 покрасили снаружи и распилили на кубики 1 × 1 × 1 (см. рисунок). Сколько кубиков окажутся покрашенными ровно с одной стороны?",
       "en": "A 3 × 4 × 5 block was painted on the outside and sawn into 1 × 1 × 1 cubes (see picture). How many cubes are painted on exactly one side?",
@@ -903,6 +916,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["неравенства-и-оценки", "степени-и-корни"],
+    "family": "count",
     "text": {
       "ru": "Сколько существует натуральных чисел x, для которых 3 < √x < 6?",
       "en": "How many natural numbers x satisfy 3 < √x < 6?",
@@ -972,6 +986,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["степени-и-корни", "сравнение-и-порядок"],
+    "family": "count",
     "text": {
       "ru": "Какое из чисел самое большое?",
       "en": "Which of the numbers is the largest?",
@@ -1041,6 +1056,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["разрезание-и-складывание", "неравенства-и-оценки"],
+    "family": "shape",
     "text": {
       "ru": "Ёж Гоша режет круглый блин прямыми разрезами (блин не перекладывают). На рисунке показано, как тремя разрезами получить 7 кусков. Какое наибольшее число кусков можно получить пятью разрезами?",
       "en": "Gosha the hedgehog cuts a round pancake with straight cuts (the pancake is not rearranged). The picture shows how three cuts give 7 pieces. What is the largest number of pieces that can be obtained with five cuts?",
@@ -1110,6 +1126,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["площадь-и-периметр", "углы-и-треугольники"],
+    "family": "shape",
     "text": {
       "ru": "Площадь треугольника ABC равна 24. Точка D лежит на стороне AB, причём AD : DB = 1 : 2, а точка E лежит на стороне BC, причём BE : EC = 1 : 3 (см. рисунок). Чему равна площадь треугольника DBE?",
       "en": "The area of triangle ABC is 24. Point D lies on side AB with AD : DB = 1 : 2, and point E lies on side BC with BE : EC = 1 : 3 (see picture). What is the area of triangle DBE?",
@@ -1179,6 +1196,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["истина-и-ложь", "логика"],
+    "family": "logic",
     "text": {
       "ru": "На острове живут рыцари, которые всегда говорят правду, и лжецы, которые всегда лгут. Встретились шесть островитян, и каждый сказал: «Среди остальных пятерых ровно два лжеца». Сколько лжецов среди этих шестерых?",
       "en": "An island is inhabited by knights, who always tell the truth, and liars, who always lie. Six islanders met, and each said: \"Among the other five there are exactly two liars.\" How many liars are among these six?",
@@ -1248,6 +1266,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["движение", "текстовая-задача"],
+    "family": "count",
     "text": {
       "ru": "Поезд проезжает мимо светофора за 10 секунд, а мост длиной 400 м — за 30 секунд (от момента, когда локомотив въехал на мост, до момента, когда последний вагон с него съехал). Чему равна длина поезда?",
       "en": "A train passes a traffic light in 10 seconds and a 400 m bridge in 30 seconds (from the moment the locomotive enters the bridge until the last carriage leaves it). How long is the train?",
@@ -1317,6 +1336,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["клетчатая-геометрия", "комбинаторика-перебор"],
+    "family": "shape",
     "text": {
       "ru": "На рисунке отмечены 16 точек — узлы квадратной сетки 4 × 4. Сколько существует квадратов, все вершины которых находятся в отмеченных точках? Один из таких квадратов закрашен.",
       "en": "The picture shows 16 marked points — the nodes of a 4 × 4 square grid. How many squares have all their vertices at the marked points? One such square is shaded.",
@@ -1386,6 +1406,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["уравнения-и-алгебра"],
+    "family": "count",
     "text": {
       "ru": "Числа a и b — корни уравнения x² − 5x + 3 = 0. Чему равно a³ + b³?",
       "en": "The numbers a and b are the roots of the equation x² − 5x + 3 = 0. What is a³ + b³?",
@@ -1455,6 +1476,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["делимость-и-остатки"],
+    "family": "count",
     "text": {
       "ru": "Какое наименьшее натуральное число имеет ровно 12 натуральных делителей?",
       "en": "What is the smallest natural number with exactly 12 natural divisors?",
@@ -1524,6 +1546,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["неравенства-и-оценки"],
+    "family": "count",
     "text": {
       "ru": "Натуральные числа a < b < c < d < e в сумме дают 100. Какое наибольшее значение может принимать c?",
       "en": "Natural numbers a < b < c < d < e add up to 100. What is the largest possible value of c?",
@@ -1593,6 +1616,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["окружности", "степени-и-корни"],
+    "family": "shape",
     "text": {
       "ru": "В квадрат со стороной 2 вписан круг. В угол квадрата вписан маленький круг, касающийся большого (см. рисунок). Чему равен радиус маленького круга?",
       "en": "A circle is inscribed in a square with side 2. A small circle touching the big one is inscribed in a corner of the square (see picture). What is the radius of the small circle?",
@@ -1662,6 +1686,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["углы-и-треугольники"],
+    "family": "shape",
     "text": {
       "ru": "В треугольнике ABC угол A равен 70°, угол C равен 30°. Из вершины B проведены высота BH и биссектриса BL (см. рисунок). Чему равен угол HBL?",
       "en": "In triangle ABC angle A is 70° and angle C is 30°. The altitude BH and the bisector BL are drawn from vertex B (see picture). What is angle HBL?",
@@ -1731,6 +1756,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["вероятность", "делимость-и-остатки"],
+    "family": "count",
     "text": {
       "ru": "Лисёнок Рыжик бросает две обычные игральные кости. Какова вероятность того, что одно из выпавших чисел делится на другое (например, 3 и 6, как на рисунке, или 4 и 4)?",
       "en": "Ryzhik the fox cub rolls two ordinary dice. What is the probability that one of the numbers rolled is divisible by the other (for example, 3 and 6, as in the picture, or 4 and 4)?",
@@ -1800,6 +1826,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["координаты-и-графики", "уравнения-и-алгебра"],
+    "family": "shape",
     "text": {
       "ru": "На рисунке изображён график функции y = |x² − 4|. При скольких целых значениях a уравнение |x² − 4| = a имеет ровно четыре корня?",
       "en": "The picture shows the graph of the function y = |x² − 4|. For how many integer values of a does the equation |x² − 4| = a have exactly four roots?",
@@ -1869,6 +1896,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["закономерности", "дроби-и-проценты"],
+    "family": "pattern",
     "text": {
       "ru": "Первые два числа последовательности — 1 и 2, а каждое следующее равно предыдущему, делённому на предпредыдущее: 1, 2, 2, 1, 1/2, … Чему равна сумма первых 2026 членов этой последовательности?",
       "en": "The first two terms of a sequence are 1 and 2, and each next term equals the previous one divided by the one before it: 1, 2, 2, 1, 1/2, … What is the sum of the first 2026 terms of this sequence?",
@@ -1938,6 +1966,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["игры-и-стратегии", "делимость-и-остатки"],
+    "family": "pattern",
     "text": {
       "ru": "В куче 2026 орехов. Бурундуки Вова и Ваня по очереди берут из неё 1, 3 или 4 ореха. Начинает Вова; проигрывает тот, кто не может сделать ход. Сколько орехов может взять Вова первым ходом, чтобы при правильной игре гарантированно выиграть?",
       "en": "A pile has 2026 nuts. The chipmunks Vova and Vanya take turns taking 1, 3 or 4 nuts from it. Vova starts; whoever cannot move loses. How many nuts can Vova take on his first move to be sure of winning with correct play?",
@@ -2007,6 +2036,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["неравенства-и-оценки", "логика"],
+    "family": "count",
     "text": {
       "ru": "В восьми коробках лежат шарики. Известно, что в любых трёх коробках вместе не больше 10 шариков. Какое наибольшее количество шариков может быть во всех коробках?",
       "en": "Eight boxes contain balls. It is known that any three boxes together contain at most 10 balls. What is the largest possible number of balls in all the boxes?",
@@ -2076,6 +2106,7 @@
     "weight": 1,
     "type": "time",
     "topics": ["время-и-часы", "углы-и-треугольники"],
+    "family": "time",
     "text": {
       "ru": "За какое время часовая стрелка часов поворачивается на 1°?",
       "en": "How long does it take the hour hand to turn 1°?",
@@ -2145,6 +2176,7 @@
     "weight": 1,
     "type": "time",
     "topics": ["время-и-часы", "углы-и-треугольники"],
+    "family": "time",
     "text": {
       "ru": "Часы показывают 9:45 (см. рисунок). Чему равен угол между часовой и минутной стрелками?",
       "en": "The clock shows 9:45 (see picture). What is the angle between the hour and minute hands?",
@@ -2214,6 +2246,7 @@
     "weight": 1,
     "type": "time",
     "topics": ["время-и-часы"],
+    "family": "time",
     "text": {
       "ru": "Кот Марсель во Владивостоке начал видеозвонок с бабушкой из Калининграда в 21:30 по владивостокскому времени (см. рисунок). Разговор длился 50 минут. Время во Владивостоке на 8 часов опережает калининградское. Который час был в Калининграде, когда звонок закончился?",
       "en": "Marcel the cat in Vladivostok started a video call with his grandma in Kaliningrad at 21:30 Vladivostok time (see picture). The call lasted 50 minutes. Vladivostok time is 8 hours ahead of Kaliningrad time. What time was it in Kaliningrad when the call ended?",
@@ -2283,6 +2316,7 @@
     "weight": 2,
     "type": "time",
     "topics": ["время-и-часы", "углы-и-треугольники"],
+    "family": "time",
     "text": {
       "ru": "Сколько раз за сутки (от 00:00 до 24:00, не считая момента 24:00) часовая и минутная стрелки направлены в противоположные стороны (лежат на одной прямой по разные стороны от центра)?",
       "en": "How many times in a day (from 00:00 to 24:00, not counting 24:00) do the hour and minute hands point in opposite directions (lie on one line on opposite sides of the centre)?",
@@ -2352,6 +2386,7 @@
     "weight": 2,
     "type": "time",
     "topics": ["время-и-часы", "текстовая-задача"],
+    "family": "time",
     "text": {
       "ru": "Стрелочные часы Фазана отстают на 6 секунд в час. Их поставили точно в полдень. Через сколько суток они впервые снова покажут точное время?",
       "en": "The Pheasant's clock with hands loses 6 seconds an hour. It was set exactly at noon. After how many days will it first show the exact time again?",
@@ -2421,6 +2456,7 @@
     "weight": 2,
     "type": "time",
     "topics": ["время-и-часы", "комбинаторика-перебор"],
+    "family": "time",
     "text": {
       "ru": "Электронные часы показывают время от 00:00 до 23:59. Наибольшая сумма цифр на табло — 24, в 19:59 (см. рисунок). Сколько раз за сутки сумма цифр на табло равна 23?",
       "en": "A digital clock shows times from 00:00 to 23:59. The largest digit sum on the display is 24, at 19:59 (see picture). How many times a day is the digit sum on the display equal to 23?",
@@ -2490,6 +2526,7 @@
     "weight": 3,
     "type": "time",
     "topics": ["время-и-часы", "углы-и-треугольники"],
+    "family": "time",
     "text": {
       "ru": "У часов Мартышки часовая и минутная стрелки одинаковой длины и формы. Сколько раз за 12 часов (от 0:00 до 12:00, не считая 12:00) по положению стрелок нельзя однозначно определить, который час?",
       "en": "The Monkey's clock has hour and minute hands of the same length and shape. How many times in 12 hours (from 0:00 to 12:00, not counting 12:00) is it impossible to tell the time unambiguously from the position of the hands?",
@@ -2559,6 +2596,7 @@
     "weight": 3,
     "type": "time",
     "topics": ["время-и-часы", "текстовая-задача"],
+    "family": "time",
     "text": {
       "ru": "Енот Федя летал из Хабаровска в Москву и обратно (расписание на рисунке, время везде местное). Хабаровское время на 7 часов опережает московское. Обратный полёт был на 1 час короче, чем полёт туда. В котором часу по хабаровскому времени Федя приземлился в Хабаровске?",
       "en": "Fedya the raccoon flew from Khabarovsk to Moscow and back (timetable in the picture, all times local). Khabarovsk time is 7 hours ahead of Moscow time. The return flight was 1 hour shorter than the flight there. At what time Khabarovsk time did Fedya land in Khabarovsk?",
@@ -2628,6 +2666,7 @@
     "weight": 3,
     "type": "time",
     "topics": ["время-и-часы", "календарь"],
+    "family": "time",
     "text": {
       "ru": "Часы-ходики Барсука спешат на 20 секунд в сутки. Их поставили точно в полдень 1 марта 2027 года. Какого числа они впервые снова покажут точное время?",
       "en": "The Badger's pendulum wall clock gains 20 seconds a day. It was set exactly at noon on 1 March 2027. On what date will it first show the exact time again?",
@@ -2697,6 +2736,7 @@
     "weight": 1,
     "type": "calendar",
     "topics": ["календарь", "делимость-и-остатки"],
+    "family": "time",
     "text": {
       "ru": "Год високосный, если его номер делится на 4, кроме годов, кратных 100: из них високосные только те, что делятся на 400. Какой из этих годов високосный (в нём, как на рисунке, есть 29 февраля)?",
       "en": "A year is a leap year if its number is divisible by 4, except years that are multiples of 100: of these only those divisible by 400 are leap years. Which of these years is a leap year (has 29 February, as in the picture)?",
@@ -2766,6 +2806,7 @@
     "weight": 1,
     "type": "calendar",
     "topics": ["календарь"],
+    "family": "time",
     "text": {
       "ru": "1 марта 2100 года будет понедельником (см. рисунок). Каким днём недели будет 1 февраля 2100 года?",
       "en": "1 March 2100 will be a Monday (see picture). What day of the week will 1 February 2100 be?",
@@ -2835,6 +2876,7 @@
     "weight": 1,
     "type": "calendar",
     "topics": ["календарь", "арифметика"],
+    "family": "time",
     "text": {
       "ru": "Сегодня 3 октября 2026 года (см. рисунок). Через сколько дней наступит 1 января 2027 года?",
       "en": "Today is 3 October 2026 (see picture). In how many days will 1 January 2027 come?",
@@ -2904,6 +2946,7 @@
     "weight": 2,
     "type": "calendar",
     "topics": ["календарь", "арифметика"],
+    "family": "time",
     "text": {
       "ru": "Сколько дней прошло с 1 января 2000 года до 1 января 2100 года?",
       "en": "How many days passed from 1 January 2000 to 1 January 2100?",
@@ -2973,6 +3016,7 @@
     "weight": 2,
     "type": "calendar",
     "topics": ["календарь", "делимость-и-остатки"],
+    "family": "time",
     "text": {
       "ru": "1 января 2026 года было четвергом. Каким днём недели будет 1 января 2126 года?",
       "en": "1 January 2026 was a Thursday. What day of the week will 1 January 2126 be?",
@@ -3042,6 +3086,7 @@
     "weight": 2,
     "type": "calendar",
     "topics": ["календарь", "делимость-и-остатки"],
+    "family": "time",
     "text": {
       "ru": "2024 год високосный и начался в понедельник (на рисунке — его февраль). В каком ближайшем году календарь полностью совпадёт с календарём 2024 года (все даты придутся на те же дни недели)?",
       "en": "2024 is a leap year and began on a Monday (the picture shows its February). In what nearest year will the calendar completely coincide with that of 2024 (all dates on the same weekdays)?",
@@ -3111,6 +3156,7 @@
     "weight": 3,
     "type": "calendar",
     "topics": ["календарь", "делимость-и-остатки"],
+    "family": "time",
     "text": {
       "ru": "29 февраля 2096 года будет средой (см. рисунок). Когда в следующий раз в календаре будет 29 февраля и каким днём недели?",
       "en": "29 February 2096 will be a Wednesday (see picture). When will the calendar next have 29 February, and on what day of the week?",
@@ -3180,6 +3226,7 @@
     "weight": 3,
     "type": "calendar",
     "topics": ["календарь", "делимость-и-остатки"],
+    "family": "time",
     "text": {
       "ru": "Каково наименьшее натуральное N такое, что для любого года календарь года через N лет полностью совпадает с календарём этого года (те же даты в те же дни недели и та же длина февраля)?",
       "en": "What is the smallest natural N such that for any year the calendar of the year N years later completely coincides with the calendar of that year (same dates on the same weekdays and the same length of February)?",
@@ -3249,6 +3296,7 @@
     "weight": 3,
     "type": "calendar",
     "topics": ["календарь", "арифметика"],
+    "family": "time",
     "text": {
       "ru": "Ёж Тимофей родился 1 января 2000 года. Какого числа ему исполнилось ровно 10 000 дней?",
       "en": "Timofey the hedgehog was born on 1 January 2000. On what date did he turn exactly 10 000 days old?",
@@ -3318,6 +3366,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["числа-и-цифры", "комбинаторика-перебор"],
+    "family": "count",
     "text": {
       "ru": "Сколько существует четырёхзначных чисел, у которых все цифры нечётные, а их сумма равна 8?",
       "en": "How many four-digit numbers have all digits odd with a digit sum of 8?",
@@ -3387,6 +3436,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["углы-и-треугольники"],
+    "family": "shape",
     "text": {
       "ru": "Сторону AC треугольника ABC продолжили за точку C (см. рисунок). Угол A равен 52°, а внешний угол при вершине C равен 124°. Чему равен угол B?",
       "en": "Side AC of triangle ABC was extended beyond point C (see picture). Angle A is 52°, and the exterior angle at vertex C is 124°. What is angle B?",
@@ -3456,6 +3506,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["неравенства-и-оценки"],
+    "family": "count",
     "text": {
       "ru": "Сколько целых чисел x удовлетворяют неравенству |x − 3| < 5?",
       "en": "How many integers x satisfy the inequality |x − 3| < 5?",
@@ -3525,6 +3576,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["логика", "истина-и-ложь"],
+    "family": "logic",
     "text": {
       "ru": "Ровно один из четырёх ребят разбил вазу. Аня сказала: «Это Боря». Боря: «Это не я». Вика: «Это не я». Гена: «Это Аня». Оказалось, что правду сказал только один из них. Кто разбил вазу?",
       "en": "Exactly one of four children broke a vase. Anya said: \"It was Borya.\" Borya: \"It wasn't me.\" Vika: \"It wasn't me.\" Gena: \"It was Anya.\" It turned out that only one of them told the truth. Who broke the vase?",
@@ -3594,6 +3646,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["дроби-и-проценты", "текстовая-задача"],
+    "family": "count",
     "text": {
       "ru": "В кружке робототехники девочки составляли 60 % всех участников. Когда в кружок записались ещё три мальчика, девочки стали составлять ровно половину участников. Сколько участников стало в кружке?",
       "en": "In a robotics club girls made up 60 % of all members. When three more boys joined, girls made up exactly half of the members. How many members are in the club now?",
@@ -3663,6 +3716,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["пространство-кубики"],
+    "family": "shape",
     "text": {
       "ru": "Бобр Борис сложил из одинаковых кубиков сплошную лесенку без пустот (см. рисунок). Какое наименьшее количество таких же кубиков ему нужно добавить, чтобы получился сплошной куб?",
       "en": "Boris the beaver built a solid staircase with no gaps from identical cubes (see picture). What is the smallest number of such cubes he must add to get a solid cube?",
@@ -3732,6 +3786,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["площадь-и-периметр", "углы-и-треугольники"],
+    "family": "shape",
     "text": {
       "ru": "Сторона квадрата ABCD равна 12, точка M — середина стороны CD. Отрезок AM пересекает диагональ BD в точке P (см. рисунок). Чему равна площадь закрашенного четырёхугольника BCMP?",
       "en": "The side of square ABCD is 12, and point M is the midpoint of side CD. Segment AM intersects diagonal BD at point P (see picture). What is the area of the shaded quadrilateral BCMP?",
@@ -3801,6 +3856,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["маршруты-и-лабиринты", "комбинаторика-перебор"],
+    "family": "pattern",
     "text": {
       "ru": "Муравей Тимоша ползёт по линиям сетки из точки A в точку B, двигаясь только вправо и вверх. Узел, залитый клеем, и звено с лужей проходить нельзя (см. рисунок). Сколько различных путей у Тимоши?",
       "en": "Timosha the ant crawls along the grid lines from point A to point B, moving only right and up. He cannot pass the node flooded with glue or the segment with a puddle (see picture). How many different routes does Timosha have?",
@@ -3870,6 +3926,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["симметрия-и-повороты", "координаты-и-графики"],
+    "family": "shape",
     "text": {
       "ru": "Точку A(2; 5) отразили симметрично относительно прямой y = x, полученную точку — относительно оси ординат, затем снова относительно прямой y = x, потом снова относительно оси ординат и так далее, по очереди. Какие координаты будут у точки после 2026 отражений?",
       "en": "Point A(2; 5) was reflected in the line y = x, the resulting point in the y-axis, then again in the line y = x, then again in the y-axis, and so on alternately. What will the coordinates of the point be after 2026 reflections?",
@@ -3939,6 +3996,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["степени-и-корни", "числа-и-цифры"],
+    "family": "count",
     "text": {
       "ru": "Сколькими нулями оканчивается число 4¹⁰ · 25⁸?",
       "en": "How many zeros does the number 4¹⁰ · 25⁸ end with?",
@@ -4008,6 +4066,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["измерения"],
+    "family": "count",
     "text": {
       "ru": "Площадь дачного участка ежа Тимура — 6 соток (1 сотка — это 100 м²). Сколько это гектаров? (1 гектар — площадь квадрата со стороной 100 м.)",
       "en": "The area of Timur the hedgehog's garden plot is 6 'sotkas' (1 sotka is 100 m²). How many hectares is that? (1 hectare is the area of a square with side 100 m.)",
@@ -4077,6 +4136,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["маршруты-и-лабиринты", "комбинаторика-перебор"],
+    "family": "pattern",
     "text": {
       "ru": "Мышонок Пик бежит по дорожкам из норки А в норку И, всё время двигаясь слева направо (см. рисунок). Сколько у него различных маршрутов?",
       "en": "Pik the little mouse runs along the paths from burrow A to burrow I, always moving from left to right (see picture). How many different routes does he have?",
@@ -4146,6 +4206,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["неравенства-и-оценки", "уравнения-и-алгебра"],
+    "family": "count",
     "text": {
       "ru": "Какое наибольшее значение может принимать выражение 10x − x² − 20?",
       "en": "What is the largest value of the expression 10x − x² − 20?",
@@ -4215,6 +4276,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["числа-и-цифры", "арифметика"],
+    "family": "count",
     "text": {
       "ru": "Чему равна сумма цифр числа 10¹⁰ − 2026?",
       "en": "What is the digit sum of the number 10¹⁰ − 2026?",
@@ -4284,6 +4346,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["окружности", "степени-и-корни"],
+    "family": "shape",
     "text": {
       "ru": "Две окружности радиусов 5 и 3 касаются друг друга внешним образом и касаются прямой в точках A и B (см. рисунок). Чему равно расстояние AB?",
       "en": "Two circles of radii 5 and 3 touch each other externally and touch a line at points A and B (see picture). What is the distance AB?",
@@ -4353,6 +4416,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["пространство-кубики", "неравенства-и-оценки"],
+    "family": "shape",
     "text": {
       "ru": "Куб 3 × 3 × 3 сложен из 27 единичных кубиков (см. рисунок). Через центр большого куба провели плоскость, перпендикулярную его диагонали. Сколько единичных кубиков разрезает эта плоскость?",
       "en": "A 3 × 3 × 3 cube is made of 27 unit cubes (see picture). A plane perpendicular to its diagonal was drawn through the centre of the big cube. How many unit cubes does this plane cut?",
@@ -4422,6 +4486,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["дроби-и-проценты", "закономерности"],
+    "family": "count",
     "text": {
       "ru": "У пчёлки Полины был мёд. В первый день она отдала треть мёда, во второй — четверть остатка, в третий — пятую часть нового остатка и так далее, а в 2025-й день — 1/2027 часть того, что у неё было. После этого у Полины осталось 2 г мёда. Сколько граммов мёда было у неё сначала?",
       "en": "Polina the bee had some honey. On the first day she gave away a third of the honey, on the second a quarter of the rest, on the third a fifth of the new rest, and so on, and on the 2025th day 1/2027 of what she had. After that Polina had 2 g of honey left. How many grams of honey did she have at first?",
@@ -4491,6 +4556,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["истина-и-ложь", "логика"],
+    "family": "logic",
     "text": {
       "ru": "За круглым столом сидят 10 островитян — рыцари, которые всегда говорят правду, и лжецы, которые всегда лгут. Каждый из них сказал: «Оба моих соседа — лжецы». Какое наименьшее число рыцарей могло быть за столом?",
       "en": "10 islanders sit at a round table — knights, who always tell the truth, and liars, who always lie. Each of them said: \"Both my neighbours are liars.\" What is the smallest possible number of knights at the table?",
@@ -4560,6 +4626,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["неравенства-и-оценки", "дроби-и-проценты"],
+    "family": "count",
     "text": {
       "ru": "Сколько существует дробей вида n/7 с натуральным n, которые больше 1, но меньше 2?",
       "en": "How many fractions of the form n/7 with natural n are greater than 1 but less than 2?",
@@ -4629,6 +4696,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["углы-и-треугольники", "геометрия-фигуры"],
+    "family": "shape",
     "text": {
       "ru": "Каждый угол правильного многоугольника равен 150°. Сколько у него сторон?",
       "en": "Each angle of a regular polygon is 150°. How many sides does it have?",
@@ -4698,6 +4766,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["разрезание-и-складывание", "клетчатая-геометрия"],
+    "family": "shape",
     "text": {
       "ru": "Прямоугольник 6 × 4 (см. рисунок) нужно разрезать по линиям сетки на квадраты, не обязательно одинаковые. Какое наименьшее число квадратов может получиться?",
       "en": "A 6 × 4 rectangle (see picture) must be cut along the grid lines into squares, not necessarily equal. What is the smallest possible number of squares?",
@@ -4767,6 +4836,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["логика", "весы"],
+    "family": "logic",
     "text": {
       "ru": "Среди 30 одинаковых на вид монет одна фальшивая — она легче остальных. Какое наименьшее число взвешиваний на чашечных весах без гирь нужно, чтобы наверняка найти фальшивую монету?",
       "en": "Among 30 identical-looking coins one is fake — it is lighter than the others. What is the smallest number of weighings on a balance scale without weights needed to be sure to find the fake coin?",
@@ -4836,6 +4906,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["таблицы-и-квадраты", "уравнения-и-алгебра"],
+    "family": "logic",
     "text": {
       "ru": "В клетки квадрата 3 × 3 вписали числа так, что суммы чисел во всех строках, во всех столбцах и на обеих диагоналях одинаковы. Потом некоторые числа стёрли (см. рисунок). Какое число было в клетке со знаком вопроса?",
       "en": "Numbers were written in the cells of a 3 × 3 square so that the sums in all rows, all columns and both diagonals are the same. Then some numbers were erased (see picture). What number was in the cell with the question mark?",
@@ -4905,6 +4976,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["уравнения-и-алгебра"],
+    "family": "count",
     "text": {
       "ru": "Известно, что x + 1/x = 3. Чему равно x³ + 1/x³?",
       "en": "It is known that x + 1/x = 3. What is x³ + 1/x³?",
@@ -4974,6 +5046,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["числа-и-цифры", "комбинаторика-перебор"],
+    "family": "count",
     "text": {
       "ru": "Назовём четырёхзначное число счастливым, если сумма двух его первых цифр равна сумме двух последних (например, 2763 или 4040). Сколько существует счастливых четырёхзначных чисел?",
       "en": "Call a four-digit number lucky if the sum of its first two digits equals the sum of its last two (for example, 2763 or 4040). How many lucky four-digit numbers are there?",
@@ -5043,6 +5116,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["координаты-и-графики", "клетчатая-геометрия"],
+    "family": "shape",
     "text": {
       "ru": "Сколько точек с целыми координатами лежит строго внутри треугольника с вершинами (0; 0), (20; 0) и (0; 12)?",
       "en": "How many points with integer coordinates lie strictly inside the triangle with vertices (0; 0), (20; 0) and (0; 12)?",
@@ -5112,6 +5186,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["неравенства-и-оценки", "логика"],
+    "family": "count",
     "text": {
       "ru": "В классе 30 учеников, и каждый решил хотя бы одну из трёх задач олимпиады. Первую задачу решили 20 человек, вторую — 18, третью — 16. Какое наибольшее число учеников могли решить все три задачи?",
       "en": "A class has 30 pupils, and each solved at least one of the three olympiad problems. 20 people solved the first problem, 18 the second, 16 the third. What is the largest number of pupils who could have solved all three problems?",
@@ -5181,6 +5256,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["логика"],
+    "family": "logic",
     "text": {
       "ru": "В ящике у енота Феди лежат 5 чёрных, 6 белых и 7 серых носков. Какое наименьшее число носков нужно достать не глядя, чтобы среди них наверняка оказались два белых?",
       "en": "Fedya the raccoon's drawer contains 5 black, 6 white and 7 grey socks. What is the smallest number of socks he must take out without looking to be sure to have two white ones?",
@@ -5250,6 +5326,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["площадь-и-периметр", "уравнения-и-алгебра"],
+    "family": "shape",
     "text": {
       "ru": "Из четырёх одинаковых прямоугольников сложили квадрат с квадратной дыркой в центре (см. рисунок). Сторона большого квадрата равна 4, а сторона дырки — 2. Чему равна площадь одного прямоугольника?",
       "en": "Four identical rectangles were put together to form a square with a square hole in the centre (see picture). The side of the big square is 4, and the side of the hole is 2. What is the area of one rectangle?",
@@ -5319,6 +5396,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["симметрия-и-повороты", "геометрия-фигуры"],
+    "family": "shape",
     "text": {
       "ru": "Какая из фигур имеет центр симметрии, но не имеет ни одной оси симметрии?",
       "en": "Which of the figures has a centre of symmetry but no axis of symmetry?",
@@ -5388,6 +5466,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["степени-и-корни"],
+    "family": "count",
     "text": {
       "ru": "Чему равно √(7 + 4√3)?",
       "en": "What is √(7 + 4√3)?",
@@ -5457,6 +5536,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["клетчатая-геометрия", "площадь-и-периметр"],
+    "family": "shape",
     "text": {
       "ru": "На клетчатой бумаге со стороной клетки 1 нарисован пятиугольник (см. рисунок). Чему равна его площадь?",
       "en": "A pentagon is drawn on squared paper with cell side 1 (see picture). What is its area?",
@@ -5526,6 +5606,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["углы-и-треугольники"],
+    "family": "shape",
     "text": {
       "ru": "Пять отрезков образуют «звезду» (см. рисунок). Чему равна сумма пяти отмеченных углов при её вершинах?",
       "en": "Five segments form a 'star' (see picture). What is the sum of the five marked angles at its vertices?",
@@ -5595,6 +5676,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["делимость-и-остатки"],
+    "family": "count",
     "text": {
       "ru": "Для скольких натуральных n от 1 до 1000 число n³ − n делится на 24?",
       "en": "For how many natural n from 1 to 1000 is n³ − n divisible by 24?",
@@ -5664,6 +5746,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["измерения", "площадь-и-периметр"],
+    "family": "count",
     "text": {
       "ru": "На карте масштаба 1 : 50 000 лесной участок изображён прямоугольником 2 см × 3 см. Какова площадь этого участка на местности? (1 гектар — площадь квадрата со стороной 100 м.)",
       "en": "On a map with scale 1 : 50 000 a forest plot is shown as a 2 cm × 3 cm rectangle. What is the area of this plot on the ground? (1 hectare is the area of a square with side 100 m.)",
@@ -5733,6 +5816,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["геометрия-фигуры", "уравнения-и-алгебра"],
+    "family": "shape",
     "text": {
       "ru": "У выпуклого многоугольника диагоналей ровно в 4 раза больше, чем сторон. Сколько у него диагоналей?",
       "en": "A convex polygon has exactly 4 times as many diagonals as sides. How many diagonals does it have?",
@@ -5802,6 +5886,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["уравнения-и-алгебра", "дроби-и-проценты"],
+    "family": "count",
     "text": {
       "ru": "Известно, что a : b = 3 : 4. Чему равно (a + b)/(a − b)?",
       "en": "It is known that a : b = 3 : 4. What is (a + b)/(a − b)?",
@@ -5871,6 +5956,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["сравнение-и-порядок", "степени-и-корни"],
+    "family": "logic",
     "text": {
       "ru": "Какое из чисел самое большое?",
       "en": "Which of the numbers is the largest?",
@@ -5940,6 +6026,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["текстовая-задача", "уравнения-и-алгебра"],
+    "family": "count",
     "text": {
       "ru": "Сова Соня и филин Фома вместе весят 3 кг, Соня и сыч Сеня — 2,5 кг, а Фома и Сеня — 2,1 кг. Сколько весит филин Фома?",
       "en": "Sonya the owl and Foma the eagle-owl together weigh 3 kg, Sonya and Senya the little owl 2.5 kg, and Foma and Senya 2.1 kg. How much does Foma weigh?",
@@ -6009,6 +6096,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["окружности", "степени-и-корни"],
+    "family": "shape",
     "text": {
       "ru": "Две перпендикулярные хорды окружности пересекаются и делят друг друга на отрезки 2 и 6, 3 и 4 (см. рисунок). Чему равен радиус окружности?",
       "en": "Two perpendicular chords of a circle intersect and divide each other into segments 2 and 6, 3 and 4 (see picture). What is the radius of the circle?",
@@ -6078,6 +6166,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["площадь-и-периметр", "уравнения-и-алгебра"],
+    "family": "shape",
     "text": {
       "ru": "Прямоугольник площади 50 разрезали двумя прямыми, параллельными его сторонам, на четыре прямоугольника. Площади двух из них равны 8 и 18 (см. рисунок, он не в масштабе). Чему равна площадь прямоугольника, отмеченного знаком вопроса?",
       "en": "A rectangle of area 50 was cut by two lines parallel to its sides into four rectangles. The areas of two of them are 8 and 18 (see picture, not to scale). What is the area of the rectangle marked with the question mark?",
@@ -6147,6 +6236,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["пространство-кубики", "разрезание-и-складывание"],
+    "family": "shape",
     "text": {
       "ru": "Из развёртки на рисунке склеили кубик. Чему равна сумма чисел на четырёх гранях, соседних с гранью, на которой написано число 1?",
       "en": "A cube was glued together from the net in the picture. What is the sum of the numbers on the four faces adjacent to the face with the number 1?",
@@ -6216,6 +6306,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["неравенства-и-оценки"],
+    "family": "count",
     "text": {
       "ru": "Какое наименьшее значение принимает выражение |x − 1| + |x − 2| + |x − 3| + … + |x − 9|?",
       "en": "What is the smallest value of the expression |x − 1| + |x − 2| + |x − 3| + … + |x − 9|?",
@@ -6285,6 +6376,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["закономерности", "числа-и-цифры"],
+    "family": "pattern",
     "text": {
       "ru": "Ёж Тимофей выписывает числа: одну единицу, две двойки, три тройки и так далее: 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, … Сколько чётных чисел среди первых 2026 выписанных?",
       "en": "Timofey the hedgehog writes numbers: one 1, two 2s, three 3s and so on: 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, … How many even numbers are among the first 2026 written?",
@@ -6354,6 +6446,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["логика", "неравенства-и-оценки"],
+    "family": "logic",
     "text": {
       "ru": "В шахматном турнире шесть участников, каждый сыграл с каждым по одной партии (за победу — 1 очко, за ничью — ½ очка, за поражение — 0). Все участники набрали разное количество очков. Какое наименьшее число очков мог набрать победитель турнира?",
       "en": "A chess tournament has six players; each played one game against every other (a win gives 1 point, a draw ½ point, a loss 0). All players scored different numbers of points. What is the smallest number of points the winner could have scored?",
@@ -6423,6 +6516,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["числа-и-цифры", "комбинаторика-перебор"],
+    "family": "count",
     "text": {
       "ru": "Сколько существует двузначных чисел, у которых цифра десятков больше цифры единиц?",
       "en": "How many two-digit numbers have a tens digit greater than the units digit?",
@@ -6492,6 +6586,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["углы-и-треугольники", "уравнения-и-алгебра"],
+    "family": "shape",
     "text": {
       "ru": "Углы треугольника относятся как 2 : 3 : 4 (см. рисунок). На сколько градусов наибольший угол треугольника больше наименьшего?",
       "en": "The angles of a triangle are in the ratio 2 : 3 : 4 (see picture). By how many degrees is the largest angle greater than the smallest?",
@@ -6561,6 +6656,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["комбинаторика-перебор", "задачи-с-буквами"],
+    "family": "pattern",
     "text": {
       "ru": "Белка Маруся выложила из карточек слово КОКОС (см. рисунок). Сколько различных «слов» (не обязательно осмысленных) она может выложить из этих пяти карточек, включая само слово КОКОС?",
       "en": "Marusya the squirrel laid out the Russian word КОКОС (coconut) with cards (see picture). How many different 'words' (not necessarily meaningful) can she lay out with these five cards, including КОКОС itself?",
@@ -6630,6 +6726,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["неравенства-и-оценки", "числа-и-цифры"],
+    "family": "count",
     "text": {
       "ru": "Число 100 представили в виде суммы нескольких различных натуральных чисел. Какое наибольшее количество слагаемых может быть в такой сумме?",
       "en": "The number 100 was written as a sum of several different natural numbers. What is the largest possible number of addends in such a sum?",
@@ -6699,6 +6796,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["уравнения-и-алгебра"],
+    "family": "count",
     "text": {
       "ru": "При каком значении a уравнения x² + ax + 1 = 0 и x² + x + a = 0 имеют общий действительный корень?",
       "en": "For what value of a do the equations x² + ax + 1 = 0 and x² + x + a = 0 have a common real root?",
@@ -6768,6 +6866,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["степени-и-корни", "неравенства-и-оценки"],
+    "family": "count",
     "text": {
       "ru": "Сколько целых чисел расположено между числами ∛2026 и √2026?",
       "en": "How many integers lie between ∛2026 and √2026?",

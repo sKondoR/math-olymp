@@ -1,5 +1,4 @@
-import type { TopicFamily } from '@/data/groups';
-import type { Lang } from '@/data/types';
+import type { Lang, TopicFamily } from '@/data/types';
 
 type Plural = (n: number) => string;
 type Weights = [string, string, string];

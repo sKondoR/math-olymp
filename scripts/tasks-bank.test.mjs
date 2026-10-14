@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 
+import { StringsByLang } from '../src/i18n/strings';
 import { WRITTEN_DIGITS as APP_WRITTEN_DIGITS } from '../src/state/attempt';
-import { WRITTEN_DIGITS, buildBank } from './tasks-bank.mjs';
+import { TOPIC_FAMILIES, WRITTEN_DIGITS, buildBank } from './tasks-bank.mjs';
 
 const tr = (s) => ({ text: `${s} text`, solution: `${s} solution` });
 
@@ -47,6 +48,8 @@ describe('tasks', () => {
       points: 3,
       weight: 1,
       type: 'mixed',
+      topics: ['логика'],
+      family: 'logic',
       answer: 'Б',
       text: { ru: 'Условие', en: 'en text', es: 'es text', fr: 'fr text' },
       image: null,
@@ -104,6 +107,24 @@ describe('content rules', () => {
     const t = raw();
     delete t.i18n.fr.text;
     expect(errorsOf(t)).toEqual(['2 #1 text: no fr translation']);
+  });
+
+  it('gives a task the family of its first topic', () => {
+    const bank = build([raw({ topics: ['весы', 'арифметика'] })]);
+    expect(bank.errors).toEqual([]);
+    expect(JSON.parse(file(bank, 'grade2/tasks.json'))[0].family).toBe('logic');
+  });
+
+  it('needs every topic known and at least one', () => {
+    expect(errorsOf(raw({ topics: ['логика', 'астрология'] }))).toEqual([
+      '2 #1: unknown topic "астрология"',
+    ]);
+    expect(errorsOf(raw({ topics: [] }))).toEqual(['2 #1: no topics']);
+  });
+
+  it('uses the same topic families as the app', () => {
+    const app = Object.keys(StringsByLang.ru.families).sort();
+    expect([...new Set(Object.values(TOPIC_FAMILIES))].sort()).toEqual(app);
   });
 
   it('needs a known type and points or a level', () => {

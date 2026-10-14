@@ -11,6 +11,12 @@ export type GradeKey = '1' | '2' | '3-4' | '5-6' | '7-8' | '9-10';
 
 export type TaskType = 'mixed' | 'time' | 'calendar' | 'first-examples';
 
+/**
+ * Topic families: catalogue topics folded into groups a child can tell apart. The task bank build
+ * (scripts/tasks-bank.mjs) gives each task the family of its first topic.
+ */
+export type TopicFamily = 'count' | 'logic' | 'shape' | 'pattern' | 'time';
+
 /** Where a task came from: bundled with the app or downloaded later (after v1). */
 export type TaskSourceKind = 'builtin' | 'downloaded';
 
@@ -26,6 +32,7 @@ export type StoredTask = {
   weight: 1 | 2 | 3;
   type: TaskType;
   topics: string[];
+  family: TopicFamily;
   text: Localized;
   /** null — the answer is a number typed on digit keys */
   options: TaskOption[] | null;

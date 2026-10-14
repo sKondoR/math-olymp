@@ -6,6 +6,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["закономерности"],
+    "family": "pattern",
     "text": {
       "ru": "Фигуры выложены в ряд по одному и тому же правилу. Какая фигура будет на 11-м месте?",
       "en": "Shapes are laid out in a row following the same rule. Which shape will be in 11th place?",
@@ -75,6 +76,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["время-и-часы"],
+    "family": "time",
     "text": {
       "ru": "Часы показывают, когда Петя сел за уроки. Он закончил через 2 часа 15 минут. Когда Петя закончил уроки?",
       "en": "The clock shows when Petya sat down to do his homework. He finished 2 hours 15 minutes later. When did Petya finish his homework?",
@@ -144,6 +146,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["сравнение-и-порядок"],
+    "family": "logic",
     "text": {
       "ru": "Аня выше Бори. Боря выше Вити. Гена выше Ани. Кто из ребят самый низкий?",
       "en": "Anya is taller than Borya. Borya is taller than Vitya. Gena is taller than Anya. Which of the children is the shortest?",
@@ -213,6 +216,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["арифметика"],
+    "family": "count",
     "text": {
       "ru": "Сколько будет 20 + 26 − 6?",
       "en": "What is 20 + 26 − 6?",
@@ -282,6 +286,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["геометрия-фигуры"],
+    "family": "shape",
     "text": {
       "ru": "Сколько всего треугольников на рисунке?",
       "en": "How many triangles are there in the picture altogether?",
@@ -351,6 +356,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["симметрия-и-повороты", "задачи-с-буквами"],
+    "family": "shape",
     "text": {
       "ru": "Какая из этих букв не изменится, если посмотреть на неё в зеркало, поставленное сбоку?",
       "en": "Which of these Russian letters will not change when seen in a mirror placed to the side?",
@@ -420,6 +426,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["календарь"],
+    "family": "time",
     "text": {
       "ru": "Сегодня среда. Какой день недели будет через 10 дней?",
       "en": "Today is Wednesday. What day of the week will it be in 10 days?",
@@ -489,6 +496,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["деньги"],
+    "family": "count",
     "text": {
       "ru": "Шоколадка стоит 37 рублей. У Пети есть только монеты по 10 рублей. Какое наименьшее число монет ему придётся отдать продавцу, чтобы купить шоколадку?",
       "en": "A chocolate bar costs 37 rubles. Petya has only 10-ruble coins. What is the smallest number of coins he must give the seller to buy the chocolate?",
@@ -558,6 +566,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["маршруты-и-лабиринты"],
+    "family": "pattern",
     "text": {
       "ru": "Лягушонок прыгает по клеткам и выполняет команды по порядку: каждая стрелка — прыжок на одну клетку в эту сторону. В какой клетке он окажется?",
       "en": "A little frog jumps over the cells following the commands in order: each arrow is a jump of one cell in that direction. In which cell will it end up?",
@@ -627,6 +636,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["числа-и-цифры"],
+    "family": "count",
     "text": {
       "ru": "Какое самое большое двузначное число можно записать цифрами 3, 8 и 5, если каждую цифру можно использовать не больше одного раза?",
       "en": "What is the largest two-digit number that can be written with the digits 3, 8 and 5 if each digit can be used at most once?",
@@ -696,6 +706,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["весы", "арифметика"],
+    "family": "logic",
     "text": {
       "ru": "Первые и вторые весы находятся в равновесии. Сколько яблок надо положить на правую чашу третьих весов, чтобы и они оказались в равновесии?",
       "en": "The first and second scales are balanced. How many apples must be put on the right pan of the third scales to balance them too?",
@@ -765,6 +776,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["текстовая-задача", "логика"],
+    "family": "count",
     "text": {
       "ru": "В классе 25 учеников. 14 из них любят мороженое, 16 любят торт, а каждый ученик любит хотя бы что-то одно. Сколько учеников любят и мороженое, и торт?",
       "en": "There are 25 pupils in a class. 14 of them like ice cream, 16 like cake, and every pupil likes at least one of them. How many pupils like both ice cream and cake?",
@@ -834,6 +846,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["комбинаторика-перебор"],
+    "family": "pattern",
     "text": {
       "ru": "У Тани 3 юбки и 4 кофты. Сколько разных нарядов «юбка и кофта» она может составить?",
       "en": "Tanya has 3 skirts and 4 blouses. How many different 'skirt and blouse' outfits can she make?",
@@ -903,6 +916,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["клетчатая-геометрия", "измерения"],
+    "family": "shape",
     "text": {
       "ru": "Какая из фигур занимает больше всего клеточек?",
       "en": "Which figure covers the most cells?",
@@ -972,6 +986,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["разрезание-и-складывание"],
+    "family": "shape",
     "text": {
       "ru": "Прямоугольник из бумаги надо разрезать на 12 квадратиков, как показано на рисунке. Каждый разрез — по прямой от края до края, части после разреза не перекладывают. Сколько разрезов понадобится?",
       "en": "A paper rectangle must be cut into 12 small squares, as shown in the picture. Each cut goes in a straight line from edge to edge, and the pieces are not rearranged after a cut. How many cuts are needed?",
@@ -1041,6 +1056,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["числа-и-цифры"],
+    "family": "count",
     "text": {
       "ru": "Вова выписал подряд все числа от 1 до 25. Сколько раз он написал цифру 2?",
       "en": "Vova wrote down all the numbers from 1 to 25 in a row. How many times did he write the digit 2?",
@@ -1110,6 +1126,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["пространство-кубики"],
+    "family": "shape",
     "text": {
       "ru": "На гранях кубика написаны числа от 1 до 6, и на противоположных гранях сумма чисел всегда равна 7. Чему равна сумма чисел на трёх гранях, которых не видно?",
       "en": "The faces of a die show the numbers 1 to 6, and the numbers on opposite faces always add up to 7. What is the sum of the numbers on the three faces you cannot see?",
@@ -1179,6 +1196,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["время-и-часы", "текстовая-задача"],
+    "family": "time",
     "text": {
       "ru": "Урок начался в 8:45 и длился 40 минут. После него была перемена 15 минут. Во сколько начался следующий урок?",
       "en": "A lesson began at 8:45 and lasted 40 minutes. After it there was a 15-minute break. At what time did the next lesson begin?",
@@ -1248,6 +1266,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["ребусы", "арифметика"],
+    "family": "count",
     "text": {
       "ru": "Одинаковые фигурки обозначают одинаковые числа. Какое число спрятано за кружком?",
       "en": "Identical figures stand for identical numbers. Which number is hidden behind the circle?",
@@ -1317,6 +1336,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["логика"],
+    "family": "logic",
     "text": {
       "ru": "Аня, Боря, Вика и Гоша сели на скамейку в ряд. Боря сидит с краю. Аня сидит рядом с Борей и рядом с Гошей. Кто сидит на другом краю скамейки?",
       "en": "Anya, Borya, Vika and Gosha sat in a row on a bench. Borya sits at an end. Anya sits next to Borya and next to Gosha. Who sits at the other end of the bench?",
@@ -1386,6 +1406,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["истина-и-ложь", "логика"],
+    "family": "logic",
     "text": {
       "ru": "В одной из трёх коробок лежит конфета. На коробках есть надписи, но правдива только одна из них. В какой коробке конфета?",
       "en": "A sweet is in one of three boxes. The boxes have labels, but only one of them is true. Which box is the sweet in?",
@@ -1455,6 +1476,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["комбинаторика-перебор", "числа-и-цифры"],
+    "family": "pattern",
     "text": {
       "ru": "Сколько существует двузначных чисел, у которых сумма цифр равна 5?",
       "en": "How many two-digit numbers have a digit sum of 5?",
@@ -1524,6 +1546,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["текстовая-задача"],
+    "family": "count",
     "text": {
       "ru": "У Маши и Пети вместе 20 конфет. Если Маша отдаст Пете 3 конфеты, конфет у них станет поровну. Сколько конфет у Маши?",
       "en": "Masha and Petya have 20 sweets together. If Masha gives Petya 3 sweets, they will have equal numbers. How many sweets does Masha have?",
@@ -1593,6 +1616,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["геометрия-фигуры", "клетчатая-геометрия"],
+    "family": "shape",
     "text": {
       "ru": "Сколько всего квадратов можно найти на этом рисунке?",
       "en": "How many squares can be found in this picture altogether?",
@@ -1662,6 +1686,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["закономерности"],
+    "family": "pattern",
     "text": {
       "ru": "Числа записаны по правилу: 1, 2, 4, 7, 11, 16, … Какое число будет следующим?",
       "en": "Numbers are written following a rule: 1, 2, 4, 7, 11, 16, … What number comes next?",
@@ -1731,6 +1756,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["календарь", "логика"],
+    "family": "time",
     "text": {
       "ru": "В одном месяце три воскресенья пришлись на чётные числа. Каким днём недели было 20-е число этого месяца?",
       "en": "In one month three Sundays fell on even dates. What day of the week was the 20th of that month?",
@@ -1800,6 +1826,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["весы", "текстовая-задача"],
+    "family": "logic",
     "text": {
       "ru": "Два яблока и груша весят 300 г, а яблоко и две груши — 330 г. Сколько весят одно яблоко и одна груша вместе?",
       "en": "Two apples and a pear weigh 300 g, and an apple and two pears weigh 330 g. How much do one apple and one pear weigh together?",
@@ -1869,6 +1896,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["арифметика", "ребусы"],
+    "family": "count",
     "text": {
       "ru": "Между цифрами 1 2 3 4 5 поставили знаки «+» и «−» (цифры не склеивают), и получилось 7. Сколько знаков «−» поставили?",
       "en": "Signs '+' and '−' were placed between the digits 1 2 3 4 5 (the digits are not joined together), and the result was 7. How many '−' signs were placed?",
@@ -1938,6 +1966,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["симметрия-и-повороты", "числа-и-цифры"],
+    "family": "shape",
     "text": {
       "ru": "Миша написал на листке число 186 и повернул листок вверх ногами. Какое число он увидел?",
       "en": "Misha wrote the number 186 on a sheet and turned the sheet upside down. What number did he see?",
@@ -2007,6 +2036,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["маршруты-и-лабиринты", "комбинаторика-перебор"],
+    "family": "pattern",
     "text": {
       "ru": "Даша идёт от дома (Д) в школу (Ш) по улицам, двигаясь только вправо или вверх. Сколько у неё разных путей?",
       "en": "Dasha walks from home (H) to school (S) along the streets, moving only right or up. How many different routes does she have?",
@@ -2076,6 +2106,7 @@
     "weight": 1,
     "type": "time",
     "topics": ["время-и-часы"],
+    "family": "time",
     "text": {
       "ru": "Какое время показывают часы?",
       "en": "What time does the clock show?",
@@ -2145,6 +2176,7 @@
     "weight": 1,
     "type": "time",
     "topics": ["время-и-часы", "арифметика"],
+    "family": "time",
     "text": {
       "ru": "Песочные часы отмеряют 5 минут. Сколько раз подряд нужно запустить эти часы, чтобы отмерить 20 минут?",
       "en": "An hourglass measures 5 minutes. How many times in a row must it be started to measure 20 minutes?",
@@ -2214,6 +2246,7 @@
     "weight": 1,
     "type": "time",
     "topics": ["время-и-часы"],
+    "family": "time",
     "text": {
       "ru": "Таня посмотрела на электронные часы. Урок начинается в 9:00. Сколько минут осталось до начала урока?",
       "en": "Tanya looked at the digital clock. The lesson starts at 9:00. How many minutes are left until the lesson starts?",
@@ -2283,6 +2316,7 @@
     "weight": 2,
     "type": "time",
     "topics": ["время-и-часы", "таблицы-и-квадраты"],
+    "family": "time",
     "text": {
       "ru": "Дима пришёл на остановку в 7:45. Сколько минут ему придётся ждать ближайшего автобуса?",
       "en": "Dima came to the bus stop at 7:45. How many minutes will he have to wait for the next bus?",
@@ -2352,6 +2386,7 @@
     "weight": 2,
     "type": "time",
     "topics": ["время-и-часы"],
+    "family": "time",
     "text": {
       "ru": "Часы в комнате Лёвы спешат на 10 минут. Сейчас они показывают 12:05. Сколько времени на самом деле?",
       "en": "The clock in Lyova's room is 10 minutes fast. Now it shows 12:05. What is the real time?",
@@ -2421,6 +2456,7 @@
     "weight": 2,
     "type": "time",
     "topics": ["время-и-часы", "текстовая-задача"],
+    "family": "time",
     "text": {
       "ru": "Одна серия мультфильма длится 25 минут. Соня посмотрела подряд 3 серии. Сколько времени она смотрела мультфильм?",
       "en": "One episode of a cartoon lasts 25 minutes. Sonya watched 3 episodes in a row. How long did she watch the cartoon?",
@@ -2490,6 +2526,7 @@
     "weight": 3,
     "type": "time",
     "topics": ["время-и-часы", "текстовая-задача"],
+    "family": "time",
     "text": {
       "ru": "Секундомер показывает, за сколько секунд Заяц пробегает один круг по стадиону. Пока Черепаха проходит один круг, Заяц успевает пробежать 3 круга. За сколько времени Черепаха проходит один круг?",
       "en": "The stopwatch shows how many seconds it takes the Hare to run one lap of the stadium. While the Tortoise walks one lap, the Hare manages to run 3 laps. How long does it take the Tortoise to walk one lap?",
@@ -2559,6 +2596,7 @@
     "weight": 3,
     "type": "time",
     "topics": ["время-и-часы", "арифметика"],
+    "family": "time",
     "text": {
       "ru": "Часы на башне каждый час бьют столько раз, сколько часов показывают (в час дня — 1 раз, в 12 — 12 раз). Сколько всего ударов сделают часы с 9 часов утра до 12 часов дня, если считать удары и в 9, и в 12 часов?",
       "en": "The tower clock strikes every hour as many times as the hour it shows (at 1 p.m. once, at 12 twelve times). How many strikes will the clock make from 9 a.m. to 12 noon, counting the strikes at both 9 and 12?",
@@ -2628,6 +2666,7 @@
     "weight": 3,
     "type": "time",
     "topics": ["время-и-часы"],
+    "family": "time",
     "text": {
       "ru": "Электронные часы показывают такое время. Что они покажут через 3 часа 40 минут?",
       "en": "The digital clock shows this time. What will it show in 3 hours 40 minutes?",
@@ -2697,6 +2736,7 @@
     "weight": 1,
     "type": "calendar",
     "topics": ["календарь"],
+    "family": "time",
     "text": {
       "ru": "Сколько дней в феврале 2026 года?",
       "en": "How many days are there in February 2026?",
@@ -2766,6 +2806,7 @@
     "weight": 1,
     "type": "calendar",
     "topics": ["календарь"],
+    "family": "time",
     "text": {
       "ru": "Вот листок календаря на сегодня. Какое число будет в следующий четверг?",
       "en": "Here is today's calendar page. What date will it be next Thursday?",
@@ -2835,6 +2876,7 @@
     "weight": 1,
     "type": "calendar",
     "topics": ["календарь"],
+    "family": "time",
     "text": {
       "ru": "Какой месяц будет через 3 месяца после ноября?",
       "en": "Which month comes 3 months after November?",
@@ -2904,6 +2946,7 @@
     "weight": 2,
     "type": "calendar",
     "topics": ["календарь"],
+    "family": "time",
     "text": {
       "ru": "Сколько месяцев в году состоят из 31 дня?",
       "en": "How many months of the year have 31 days?",
@@ -2973,6 +3016,7 @@
     "weight": 2,
     "type": "calendar",
     "topics": ["календарь"],
+    "family": "time",
     "text": {
       "ru": "Посмотри на календарь. Сколько в этом месяце выходных дней (суббот и воскресений)?",
       "en": "Look at the calendar. How many weekend days (Saturdays and Sundays) are there this month?",
@@ -3042,6 +3086,7 @@
     "weight": 2,
     "type": "calendar",
     "topics": ["календарь"],
+    "family": "time",
     "text": {
       "ru": "Сегодня пятница. Какой день недели будет через 10 дней?",
       "en": "Today is Friday. What day of the week will it be in 10 days?",
@@ -3111,6 +3156,7 @@
     "weight": 3,
     "type": "calendar",
     "topics": ["календарь", "текстовая-задача"],
+    "family": "time",
     "text": {
       "ru": "Таня родилась 30 декабря, а её брат Миша — через 5 дней после неё, но уже в следующем году. Какого числа родился Миша?",
       "en": "Tanya was born on 30 December, and her brother Misha 5 days after her date, but in the following year. On what date was Misha born?",
@@ -3180,6 +3226,7 @@
     "weight": 3,
     "type": "calendar",
     "topics": ["календарь", "логика"],
+    "family": "time",
     "text": {
       "ru": "В месяце 31 день, и 1-е число — понедельник. Каким днём недели будет последний день этого месяца?",
       "en": "A month has 31 days, and the 1st is a Monday. What day of the week will the last day of the month be?",
@@ -3249,6 +3296,7 @@
     "weight": 3,
     "type": "calendar",
     "topics": ["календарь", "арифметика"],
+    "family": "time",
     "text": {
       "ru": "Осенние каникулы у Полины начались 28 октября, а закончились 5 ноября. Сколько дней длились каникулы, если считать и первый, и последний день?",
       "en": "Polina's autumn holidays began on 28 October and ended on 5 November. How many days did the holidays last, counting both the first and the last day?",
@@ -3318,6 +3366,7 @@
     "weight": 1,
     "type": "first-examples",
     "topics": ["закономерности"],
+    "family": "pattern",
     "text": {
       "ru": "Маша нанизывает бусины на нитку, повторяя одни и те же цвета в одном и том же порядке. Какого цвета будет 14-я бусина?",
       "en": "Masha strings beads on a thread, repeating the same colours in the same order. What colour will the 14th bead be?",
@@ -3387,6 +3436,7 @@
     "weight": 2,
     "type": "first-examples",
     "topics": ["весы", "арифметика"],
+    "family": "logic",
     "text": {
       "ru": "Первые и вторые весы находятся в равновесии. Сколько яблок надо положить на правую чашу третьих весов, чтобы они тоже оказались в равновесии?",
       "en": "The first and second scales are balanced. How many apples must be put on the right pan of the third scales so that they are balanced too?",
@@ -3456,6 +3506,7 @@
     "weight": 3,
     "type": "first-examples",
     "topics": ["таблицы-и-квадраты", "логика"],
+    "family": "logic",
     "text": {
       "ru": "В каждую пустую клетку таблицы надо вписать одно из чисел 1, 2 или 3 так, чтобы в каждой строчке и в каждом столбце все числа были разными. Найди сумму чисел в закрашенных клетках.",
       "en": "Write one of the numbers 1, 2 or 3 in each empty cell of the table so that all numbers in each row and each column are different. Find the sum of the numbers in the shaded cells.",
@@ -3525,6 +3576,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["логика"],
+    "family": "logic",
     "text": {
       "ru": "Ёжик Петя, белка Маруся и заяц Сеня живут в трёх домиках: красном, синем и жёлтом, каждый в своём. Маруся живёт не в красном и не в синем домике. Петя живёт не в красном. Кто живёт в красном домике?",
       "en": "Petya the hedgehog, Marusya the squirrel and Senya the hare live in three houses: red, blue and yellow, each in their own. Marusya lives neither in the red nor in the blue house. Petya does not live in the red one. Who lives in the red house?",
@@ -3594,6 +3646,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["арифметика"],
+    "family": "count",
     "text": {
       "ru": "Какое число надо поставить вместо звёздочки, чтобы равенство стало верным: 15 + ★ = 30 − 6?",
       "en": "What number must replace the star to make the equation true: 15 + ★ = 30 − 6?",
@@ -3663,6 +3716,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["числа-и-цифры"],
+    "family": "count",
     "text": {
       "ru": "Сколько существует двузначных чисел, у которых обе цифры одинаковые (например, 33)?",
       "en": "How many two-digit numbers have both digits the same (for example, 33)?",
@@ -3732,6 +3786,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["текстовая-задача", "арифметика"],
+    "family": "count",
     "text": {
       "ru": "В автобусе ехали 12 человек. На первой остановке 5 человек вышли и 3 вошли. На второй остановке 4 человека вышли и 6 вошли. Сколько человек стало в автобусе?",
       "en": "12 people were on a bus. At the first stop 5 people got off and 3 got on. At the second stop 4 people got off and 6 got on. How many people are on the bus now?",
@@ -3801,6 +3856,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["сравнение-и-порядок", "логика"],
+    "family": "logic",
     "text": {
       "ru": "Пять мышат пили чай. Тим выпил больше Ули, но меньше Веры. Гоша выпил больше Веры. Дана выпила меньше всех. Кто из мышат выпил чая меньше двоих мышат, но больше двоих других?",
       "en": "Five little mice were drinking tea. Tim drank more than Ulya but less than Vera. Gosha drank more than Vera. Dana drank the least. Which mouse drank less tea than two mice but more than the other two?",
@@ -3870,6 +3926,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["геометрия-фигуры", "комбинаторика-перебор"],
+    "family": "shape",
     "text": {
       "ru": "Сколько всего прямоугольников на рисунке? (Квадрат — тоже прямоугольник.)",
       "en": "How many rectangles are there in the picture altogether? (A square is also a rectangle.)",
@@ -3939,6 +3996,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["пространство-кубики"],
+    "family": "shape",
     "text": {
       "ru": "Из 27 одинаковых кубиков сложили большой куб. Потом из него вынули все угловые кубики (см. рисунок). Сколько кубиков осталось?",
       "en": "A big cube was built from 27 identical small cubes. Then all the corner cubes were removed (see picture). How many cubes are left?",
@@ -4008,6 +4066,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["комбинаторика-перебор"],
+    "family": "pattern",
     "text": {
       "ru": "Пять друзей встретились во дворе, и каждый пожал руку каждому другу по одному разу. Сколько всего было рукопожатий?",
       "en": "Five friends met in the yard, and each shook hands with each other friend once. How many handshakes were there in total?",
@@ -4077,6 +4136,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["логика"],
+    "family": "logic",
     "text": {
       "ru": "В корзинке у ёжика 5 белых грибов и 7 подосиновиков. Какое наименьшее число грибов нужно взять из корзинки не глядя, чтобы среди них наверняка оказались 2 белых гриба?",
       "en": "The hedgehog's basket holds 5 porcini and 7 orange-cap boletes. What is the smallest number of mushrooms to take from the basket without looking to be sure of getting 2 porcini?",
@@ -4146,6 +4206,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["логика"],
+    "family": "logic",
     "text": {
       "ru": "У Кати есть одна сестра и один брат. Сколько сестёр у брата Кати?",
       "en": "Katya has one sister and one brother. How many sisters does Katya's brother have?",
@@ -4215,6 +4276,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["текстовая-задача", "арифметика"],
+    "family": "count",
     "text": {
       "ru": "Белка Маруся раскладывает 17 орехов по дуплам, в каждое дупло — ровно 5 орехов. Сколько орехов у неё останется, когда она заполнит столько дупел, сколько сможет?",
       "en": "Marusya the squirrel puts 17 nuts into tree hollows, exactly 5 nuts in each hollow. How many nuts will she have left after filling as many hollows as she can?",
@@ -4284,6 +4346,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["измерения"],
+    "family": "count",
     "text": {
       "ru": "Карандаш положили рядом с линейкой (см. рисунок). Какой длины карандаш?",
       "en": "A pencil was placed next to a ruler (see picture). How long is the pencil?",
@@ -4353,6 +4416,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["арифметика"],
+    "family": "count",
     "text": {
       "ru": "Чему равна разность (2 + 4 + 6 + 8 + 10) − (1 + 3 + 5 + 7 + 9)?",
       "en": "What is the difference (2 + 4 + 6 + 8 + 10) − (1 + 3 + 5 + 7 + 9)?",
@@ -4422,6 +4486,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["комбинаторика-перебор"],
+    "family": "pattern",
     "text": {
       "ru": "Надо сшить флажок из трёх полос — красной, белой и синей, — которые идут одна под другой. Один такой флажок показан на рисунке. Сколько всего разных флажков можно сшить?",
       "en": "A flag must be sewn from three stripes — red, white and blue — one below another. One such flag is shown in the picture. How many different flags can be sewn?",
@@ -4491,6 +4556,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["пространство-кубики"],
+    "family": "shape",
     "text": {
       "ru": "Брусок сложили из 6 одинаковых кубиков (см. рисунок) и покрасили со всех сторон, даже снизу. Потом брусок разобрали. Сколько кубиков оказались покрашены ровно с четырёх сторон?",
       "en": "A bar was built from 6 identical cubes (see picture) and painted on all sides, even the bottom. Then the bar was taken apart. How many cubes turned out to be painted on exactly four sides?",
@@ -4560,6 +4626,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["сравнение-и-порядок", "весы"],
+    "family": "logic",
     "text": {
       "ru": "Первые весы находятся в равновесии, а на вторых перевесил шар. Как расположить предметы от самого лёгкого к самому тяжёлому?",
       "en": "The first scales are balanced, and on the second the ball is heavier. How should the objects be arranged from the lightest to the heaviest?",
@@ -4629,6 +4696,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["числа-и-цифры"],
+    "family": "count",
     "text": {
       "ru": "Таня записала трёхзначное число, у которого все три цифры разные, а их сумма равна 6. Какое самое большое число могло у неё получиться?",
       "en": "Tanya wrote a three-digit number whose three digits are all different and add up to 6. What is the largest number she could have got?",
@@ -4698,6 +4766,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["логика"],
+    "family": "logic",
     "text": {
       "ru": "В трёх коробках лежат шарики: в одной — два белых, в другой — два чёрных, в третьей — белый и чёрный. Надписи на коробках перепутали, и теперь ни одна надпись не верна. Из какой коробки достаточно не глядя достать один шарик, чтобы узнать, что лежит во всех коробках?",
       "en": "Three boxes contain balls: one has two white, another two black, the third a white and a black. The labels on the boxes got mixed up, and now no label is correct. From which box is it enough to take out one ball without looking to know what is in all the boxes?",
@@ -4767,6 +4836,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["сравнение-и-порядок"],
+    "family": "logic",
     "text": {
       "ru": "Утята идут друг за другом. Утёнок Кряша идёт пятым, если считать спереди, и третьим, если считать сзади. Сколько всего утят?",
       "en": "Ducklings walk one behind another. Kryasha the duckling is fifth counting from the front and third counting from the back. How many ducklings are there?",
@@ -4836,6 +4906,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["геометрия-фигуры"],
+    "family": "shape",
     "text": {
       "ru": "Сколько фигур на рисунке имеют ровно 4 угла?",
       "en": "How many figures in the picture have exactly 4 corners?",
@@ -4905,6 +4976,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["задачи-с-буквами"],
+    "family": "logic",
     "text": {
       "ru": "Сколько разных букв в слове КОЛОКОЛЬЧИК?",
       "en": "How many different letters are there in the Russian word КОЛОКОЛЬЧИК (bluebell)?",
@@ -4974,6 +5046,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["логика"],
+    "family": "logic",
     "text": {
       "ru": "У Ани, Бори и Вовы живут кошка, собака и хомяк — у каждого свой питомец. Хомяк живёт у одного из мальчиков, но не у Вовы. У Ани живёт не собака. У кого живёт собака?",
       "en": "Anya, Borya and Vova have a cat, a dog and a hamster — each has their own pet. The hamster lives with one of the boys, but not with Vova. Anya does not have the dog. Who has the dog?",
@@ -5043,6 +5116,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["числа-и-цифры"],
+    "family": "count",
     "text": {
       "ru": "Какое самое маленькое двузначное число имеет сумму цифр 12?",
       "en": "What is the smallest two-digit number with a digit sum of 12?",
@@ -5112,6 +5186,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["симметрия-и-повороты", "время-и-часы"],
+    "family": "shape",
     "text": {
       "ru": "Так выглядят в зеркале настенные часы без цифр. Сколько времени они показывают на самом деле?",
       "en": "This is how a wall clock without numbers looks in a mirror. What time does it really show?",
@@ -5181,6 +5256,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["арифметика"],
+    "family": "count",
     "text": {
       "ru": "Сумма пяти чисел, идущих подряд (например, 3, 4, 5, 6, 7), равна 40. Чему равно самое большое из них?",
       "en": "The sum of five consecutive numbers (for example, 3, 4, 5, 6, 7) is 40. What is the largest of them?",
@@ -5250,6 +5326,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["маршруты-и-лабиринты", "комбинаторика-перебор"],
+    "family": "pattern",
     "text": {
       "ru": "Муравей ползёт по дорожкам из точки А в точку Б и движется только вправо или вверх. Через лужи (они показаны овалами) ползти нельзя. Сколько у муравья разных путей?",
       "en": "An ant crawls along the paths from point A to point B, moving only right or up. It cannot crawl through puddles (shown as ovals). How many different routes does the ant have?",
@@ -5319,6 +5396,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["разрезание-и-складывание"],
+    "family": "shape",
     "text": {
       "ru": "Верёвку сложили пополам, потом ещё раз пополам и разрезали ножницами ровно посередине получившейся связки. Сколько кусков верёвки получилось?",
       "en": "A rope was folded in half, then in half again, and cut with scissors exactly in the middle of the bundle. How many pieces of rope were there?",
@@ -5388,6 +5466,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["логика", "сравнение-и-порядок"],
+    "family": "logic",
     "text": {
       "ru": "Улитка Уля, жук Жора и муравей Мотя ползли наперегонки. Жора приполз не первым и не последним. Мотя приполз раньше Ули. Кто приполз первым?",
       "en": "Ulya the snail, Zhora the beetle and Motya the ant had a race. Zhora came neither first nor last. Motya arrived before Ulya. Who came first?",
@@ -5457,6 +5536,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["пространство-кубики"],
+    "family": "shape",
     "text": {
       "ru": "Ваня построил фигуру из одинаковых кубиков (см. рисунок). Каждый кубик стоит на столе или на другом кубике. Сколько кубиков в фигуре?",
       "en": "Vanya built a figure from identical cubes (see picture). Each cube stands on the table or on another cube. How many cubes are in the figure?",
@@ -5526,6 +5606,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["маршруты-и-лабиринты", "симметрия-и-повороты"],
+    "family": "pattern",
     "text": {
       "ru": "Зайчик Сеня стоит лицом к реке. За спиной у него дом, справа — лес, слева — поле. Сеня повернулся направо, потом ещё раз направо, а потом налево. Что теперь у Сени перед глазами?",
       "en": "Senya the bunny stands facing the river. Behind him is a house, on his right a forest, on his left a field. Senya turned right, then right again, and then left. What is in front of Senya now?",
@@ -5595,6 +5676,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["текстовая-задача"],
+    "family": "count",
     "text": {
       "ru": "У Лены на 4 марки больше, чем у Оли. Лена подарила Оле 4 марки. Что теперь верно?",
       "en": "Lena has 4 more stamps than Olya. Lena gave Olya 4 stamps. Which is now true?",
@@ -5664,6 +5746,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["клетчатая-геометрия"],
+    "family": "shape",
     "text": {
       "ru": "Сколько клеточек этого прямоугольника прилегают к его краю (хотя бы одной стороной лежат на краю)?",
       "en": "How many cells of this rectangle touch its edge (have at least one side on the edge)?",
@@ -5733,6 +5816,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["ребусы", "арифметика"],
+    "family": "count",
     "text": {
       "ru": "В ребусе разные буквы обозначают разные цифры, а одинаковые — одинаковые. Какую цифру обозначает буква А?",
       "en": "In the puzzle different letters stand for different digits, and the same letters for the same digits. Which digit does the letter А stand for?",
@@ -5802,6 +5886,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["геометрия-фигуры", "разрезание-и-складывание"],
+    "family": "shape",
     "text": {
       "ru": "Квадратный лист бумаги разрезали по прямой линии на две части. Какой фигуры среди этих частей быть не может?",
       "en": "A square sheet of paper was cut along a straight line into two parts. Which figure can NOT be among these parts?",
@@ -5871,6 +5956,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["комбинаторика-перебор", "деньги"],
+    "family": "pattern",
     "text": {
       "ru": "У Пети много монет по 1, 2 и 5 рублей. Сколькими разными способами он может набрать ровно 5 рублей? (Способы, которые отличаются только порядком монет, считаются одинаковыми.)",
       "en": "Petya has lots of 1-, 2- and 5-ruble coins. In how many different ways can he make exactly 5 rubles? (Ways that differ only in the order of the coins count as the same.)",
@@ -5940,6 +6026,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["симметрия-и-повороты"],
+    "family": "shape",
     "text": {
       "ru": "Стрелка показывает вверх (см. рисунок). Её 7 раз подряд повернули на четверть оборота по часовой стрелке. Куда теперь показывает стрелка?",
       "en": "An arrow points up (see picture). It was turned a quarter turn clockwise 7 times in a row. Where does the arrow point now?",
@@ -6009,6 +6096,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["арифметика"],
+    "family": "count",
     "text": {
       "ru": "Какое число надо поставить вместо звёздочки, чтобы равенство стало верным: 7 + 7 + 7 = 7 + ★?",
       "en": "What number must replace the star to make the equation true: 7 + 7 + 7 = 7 + ★?",
@@ -6078,6 +6166,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["закономерности", "арифметика"],
+    "family": "pattern",
     "text": {
       "ru": "Числа записаны по правилу: 3, 6, 9, 12, … Какое число будет на 10-м месте?",
       "en": "Numbers are written following a rule: 3, 6, 9, 12, … What number will be in 10th place?",
@@ -6147,6 +6236,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["разрезание-и-складывание"],
+    "family": "shape",
     "text": {
       "ru": "Лист бумаги сложили пополам, потом ещё раз пополам и проткнули иголкой насквозь. Сколько дырочек будет на развёрнутом листе?",
       "en": "A sheet of paper was folded in half, then in half again, and pierced right through with a needle. How many holes will there be in the unfolded sheet?",
@@ -6216,6 +6306,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["числа-и-цифры"],
+    "family": "count",
     "text": {
       "ru": "Вася задумал двузначное число. Если поменять его цифры местами, получится число на 9 больше. Какое число мог задумать Вася?",
       "en": "Vasya thought of a two-digit number. If its digits are swapped, the number becomes 9 greater. Which number could Vasya have thought of?",
@@ -6285,6 +6376,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["задачи-с-буквами", "закономерности"],
+    "family": "logic",
     "text": {
       "ru": "Таня пишет слово ПАРОВОЗ много раз подряд без пробелов. Какая буква окажется на 33-м месте?",
       "en": "Tanya writes the Russian word ПАРОВОЗ (steam engine) many times in a row without spaces. Which letter will be in 33rd place?",
@@ -6354,6 +6446,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["логика", "истина-и-ложь"],
+    "family": "logic",
     "text": {
       "ru": "Вова и Ваня — один из них всегда говорит правду, а другой всегда обманывает. Вова сказал: «Ваня — обманщик». Ваня сказал: «Мы оба всегда говорим правду». Кто из них обманщик?",
       "en": "Vova and Vanya: one of them always tells the truth and the other always lies. Vova said: \"Vanya is a liar.\" Vanya said: \"We both always tell the truth.\" Which of them is the liar?",
@@ -6423,6 +6516,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["текстовая-задача"],
+    "family": "count",
     "text": {
       "ru": "Чтобы подняться с 1-го этажа на 3-й, Ваня проходит 36 ступенек. Сколько ступенек ему надо пройти, чтобы подняться с 1-го этажа на 5-й? (Между любыми соседними этажами одинаковое число ступенек.)",
       "en": "To go up from the 1st floor to the 3rd, Vanya climbs 36 steps. How many steps must he climb to go from the 1st floor to the 5th? (There are the same number of steps between any two neighbouring floors.)",
@@ -6492,6 +6586,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["клетчатая-геометрия", "логика"],
+    "family": "shape",
     "text": {
       "ru": "Какое наибольшее число клеточек этого квадрата можно закрасить так, чтобы никакие две закрашенные клеточки не имели общей стороны?",
       "en": "What is the largest number of cells of this square that can be coloured so that no two coloured cells share a side?",
@@ -6561,6 +6656,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["логика", "сравнение-и-порядок"],
+    "family": "logic",
     "text": {
       "ru": "В пяти домиках с номерами от 1 до 5 живут заяц, лиса, сова, ёж и барсук — по одному в каждом домике. Номер домика совы больше, чем у лисы, но меньше, чем у ежа. Ёж живёт не в 5-м домике. Заяц и барсук живут в соседних домиках. Кто живёт в домике № 3?",
       "en": "In five houses numbered 1 to 5 live a hare, a fox, an owl, a hedgehog and a badger — one in each house. The owl's house number is greater than the fox's but less than the hedgehog's. The hedgehog does not live in house 5. The hare and the badger live in neighbouring houses. Who lives in house No. 3?",
@@ -6630,6 +6726,7 @@
     "weight": 1,
     "type": "mixed",
     "topics": ["сравнение-и-порядок", "весы"],
+    "family": "logic",
     "text": {
       "ru": "Посмотри на весы. Какой фрукт самый лёгкий?",
       "en": "Look at the scales. Which fruit is the lightest?",
@@ -6699,6 +6796,7 @@
     "weight": 2,
     "type": "mixed",
     "topics": ["закономерности"],
+    "family": "pattern",
     "text": {
       "ru": "Таня выкладывает фигурки по правилу: 1 кружок, 2 квадрата, 3 кружка, 4 квадрата, 5 кружков и так далее. Сколько кружков будет среди первых 20 фигурок?",
       "en": "Tanya lays out figures following a rule: 1 circle, 2 squares, 3 circles, 4 squares, 5 circles and so on. How many circles will there be among the first 20 figures?",
@@ -6768,6 +6866,7 @@
     "weight": 3,
     "type": "mixed",
     "topics": ["арифметика", "логика"],
+    "family": "count",
     "text": {
       "ru": "Числа 1, 2, 3, 4, 5, 6, 7, 8, 9 разложили на три кучки по три числа так, что суммы чисел во всех кучках получились одинаковыми. Чему равна сумма чисел в одной кучке?",
       "en": "The numbers 1, 2, 3, 4, 5, 6, 7, 8, 9 were split into three piles of three numbers so that the sums in all piles are the same. What is the sum of the numbers in one pile?",

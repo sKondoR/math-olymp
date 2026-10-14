@@ -1,8 +1,7 @@
 import { Image } from 'expo-image';
 import { StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 
-import { topicFamily, type TopicFamily } from '@/data/groups';
-import type { Task } from '@/data/types';
+import type { Task, TopicFamily } from '@/data/types';
 import { useLocalize } from '@/i18n';
 import { useTheme } from '@/theme';
 
@@ -48,7 +47,7 @@ export function TaskPicture({
           transition={120}
         />
       ) : (
-        <Icon name={FamilyIcon[topicFamily(task.topics)]} size={glyphSize} color={c.deep} />
+        <Icon name={FamilyIcon[task.family]} size={glyphSize} color={c.deep} />
       )}
     </View>
   );
