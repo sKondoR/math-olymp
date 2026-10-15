@@ -30,30 +30,29 @@ const builtin: TaskSource = {
 };
 
 const sources: TaskSource[] = [builtin];
-const byGrade = new Map<GradeKey, Task[]>();
-let byId: Map<string, Task> | null = null;
+let built: { byGrade: Map<GradeKey, Task[]>; byId: Map<string, Task> } | null = null;
 const listeners = new Set<() => void>();
 
 export function addTaskSource(source: TaskSource) {
   sources.push(source);
-  byGrade.clear();
-  byId = null;
+  built = null;
   listeners.forEach((l) => l());
 }
 
-/** Tasks of an age group by number; the same array until a source is added. */
-export function tasksOf(grade: GradeKey): Task[] {
-  let list = byGrade.get(grade);
-  if (!list) {
-    list = [];
-    const ids = new Set(allIds(grade));
+/** Every age group from every source in one pass, so an id taken anywhere is left out. */
+function build() {
+  if (built) return built;
+  const byGrade = new Map<GradeKey, Task[]>();
+  const byId = new Map<string, Task>();
+  for (const { grade } of AgeGroups) {
+    const list: Task[] = [];
     for (const source of sources) {
       for (const task of source.tasks(grade)) {
-        if (ids.has(task.id)) {
+        if (byId.has(task.id)) {
           console.warn(`task ${task.id} from ${source.kind} is already in the bank, left out`);
           continue;
         }
-        ids.add(task.id);
+        byId.set(task.id, task);
         list.push(task);
       }
     }
@@ -61,18 +60,16 @@ export function tasksOf(grade: GradeKey): Task[] {
     list.sort((a, b) => a.number - b.number);
     byGrade.set(grade, list);
   }
-  return list;
+  return (built = { byGrade, byId });
 }
 
-/** Ids already taken by the age groups listed before `grade`, so ids stay unique bank-wide. */
-function allIds(grade: GradeKey) {
-  const index = AgeGroups.findIndex((g) => g.grade === grade);
-  return AgeGroups.slice(0, index).flatMap((g) => tasksOf(g.grade).map((t) => t.id));
+/** Tasks of an age group by number; the same array until a source is added. */
+export function tasksOf(grade: GradeKey): Task[] {
+  return build().byGrade.get(grade) ?? [];
 }
 
 export function findTask(id: string): Task | undefined {
-  if (!byId) byId = new Map(AgeGroups.flatMap((g) => tasksOf(g.grade).map((t) => [t.id, t])));
-  return byId.get(id);
+  return build().byId.get(id);
 }
 
 function subscribe(listener: () => void) {

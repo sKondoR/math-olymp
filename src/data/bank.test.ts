@@ -3,55 +3,24 @@ import { act, renderHook } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import * as sharedBank from './bank';
+import { testTask } from './test-tasks';
 import type { GradeKey, Task } from './types';
 
 // A small built-in set instead of the generated one, which pulls assets through Metro's require.
-vi.mock('./builtin.generated', () => {
-  const stored = (id: string, number: number) => ({
-    id,
-    number,
-    points: 3,
-    weight: 1,
-    type: 'mixed',
-    topics: ['логика'],
-    family: 'logic',
-    text: { ru: '' },
-    options: null,
-    answer: '1',
-    solution: { ru: '' },
-    image: number === 1 ? '01.svg' : null,
-  });
-  const empty = { tasks: [], pictures: {} };
+vi.mock('./builtin.generated', async () => {
+  const { testBuiltinBank, testStoredTask } = await import('./test-tasks');
+  const stored = (id: string, number: number) =>
+    testStoredTask({ id, number, image: number === 1 ? '01.svg' : null });
   return {
-    builtinBank: {
+    builtinBank: testBuiltinBank({
       '1': { tasks: [stored('a1', 1)], pictures: { '01.svg': { ru: 'a1.svg' } } },
       '2': { tasks: [stored('b2', 2), stored('b1', 1)], pictures: { '01.svg': { ru: 'b1.svg' } } },
-      '3-4': empty,
-      '5-6': empty,
-      '7-8': empty,
-      '9-10': empty,
-    },
+    }),
   };
 });
 
-function task(id: string, number: number, grade: GradeKey = '2'): Task {
-  return {
-    id,
-    number,
-    points: 3,
-    weight: 1,
-    type: 'mixed',
-    topics: ['логика'],
-    family: 'logic',
-    text: { ru: '' },
-    options: null,
-    answer: '1',
-    solution: { ru: '' },
-    image: null,
-    grade,
-    source: 'downloaded',
-  };
-}
+const task = (id: string, number: number, grade: GradeKey = '2') =>
+  testTask({ id, number, grade, source: 'downloaded' });
 
 const downloaded = (byGrade: Partial<Record<GradeKey, Task[]>>) => ({
   kind: 'downloaded' as const,

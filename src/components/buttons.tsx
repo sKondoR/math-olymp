@@ -37,7 +37,7 @@ export function PrimaryButton({
         {label}
       </Text>
       {!disabled && (
-        <View style={[styles.arrow, { backgroundColor: alpha(c.onAction, 0.16) }]}>
+        <View style={[styles.arrow, { backgroundColor: c.actionTint }]}>
           <Icon name={icon} size={22} color={c.onAction} />
         </View>
       )}

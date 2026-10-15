@@ -12,7 +12,8 @@ import { Text } from './text';
 
 /**
  * Square tile of the task grid. States are marked by shape, not colour only:
- * solved — filled check, next — arrow badge + thick ring, closed unsolved — outlined book.
+ * solved — filled check, next — arrow badge + thick ring, closed unsolved — outlined book,
+ * locked (waits for an ad) — padlock over a faded picture.
  */
 export function TaskTile({
   task,
@@ -34,15 +35,20 @@ export function TaskTile({
       style={({ pressed }) => [
         styles.tile,
         {
-          backgroundColor: task.image ? (state === 'solved' ? '#ffffff' : c.pearl) : c.tileEmpty,
+          backgroundColor: task.image ? (state === 'solved' ? c.paper : c.pearl) : c.tileEmpty,
           borderColor: c.hairline,
         },
         state === 'next' && { borderWidth: 3, borderColor: c.progress },
         pressedScale(pressed, 0.96),
       ]}
     >
-      <TaskPicture task={task} inset={8} glyphSize={36} style={styles.pic} />
-      <View style={styles.no}>
+      <TaskPicture
+        task={task}
+        inset={8}
+        glyphSize={36}
+        style={[styles.pic, state === 'locked' && { opacity: 0.4 }]}
+      />
+      <View style={[styles.no, { backgroundColor: c.paper }]}>
         <Text variant="captionStrong" color={c.ink}>
           № {task.number}
         </Text>
@@ -57,12 +63,25 @@ export function TaskTile({
           <Icon name="arrow_forward" size={18} color={c.onAction} />
         </View>
       )}
+      {state === 'locked' && (
+        <View
+          style={[
+            styles.badge,
+            styles.right,
+            styles.outlined,
+            { backgroundColor: c.paper, borderColor: c.hairline },
+          ]}
+        >
+          <Icon name="lock" size={16} color={c.inkMuted} />
+        </View>
+      )}
       {state === 'failed' && (
         <View
           style={[
             styles.badge,
             styles.left,
-            { backgroundColor: '#ffffff', borderWidth: 1.5, borderColor: c.deep },
+            styles.outlined,
+            { backgroundColor: c.paper, borderColor: c.deep },
           ]}
         >
           <Icon name="menu_book" size={16} color={c.deep} />
@@ -88,7 +107,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 99,
-    backgroundColor: '#ffffff',
   },
   badge: {
     position: 'absolute',
@@ -99,6 +117,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  outlined: { borderWidth: 1.5 },
   right: { right: 6 },
   left: { left: 6 },
 });

@@ -8,6 +8,8 @@ import { PrimaryButton, SecondaryButton } from '@/components/buttons';
 import { Chip, Stars, useWeightLabel } from '@/components/difficulty';
 import { Icon } from '@/components/icon';
 import { Meter, Track } from '@/components/meter';
+import { ConfirmDialog } from '@/components/overlays';
+import { PortionCard, useWatchForPortion } from '@/components/portion';
 import { TaskPicture } from '@/components/task-picture';
 import { TaskTile } from '@/components/task-tile';
 import { Font, Text } from '@/components/text';
@@ -21,7 +23,10 @@ import { useTheme } from '@/theme';
 
 const PREVIEW = 6;
 
-/** Age group: the next task, tasks by difficulty, what is done. */
+/**
+ * Age group: the next task (or the next portion once every open task is closed), tasks by
+ * difficulty, what is done. Locked tasks show a padlock; a tap on one offers the next portion.
+ */
 export default function AgeScreen() {
   const { grade } = useLocalSearchParams<{ grade: string }>();
   const group = ageGroup(grade);
@@ -41,8 +46,13 @@ function AgeContent({ grade, age }: { grade: GradeKey; age: string }) {
   const nav = useNav();
   const insets = useSafeAreaInsets();
   const localize = useLocalize();
-  const { levels, counts, next, stateOf } = useGradeSummary(grade);
+  const { levels, counts, next, portion, stateOf } = useGradeSummary(grade);
   const weight = useWeightLabel();
+  const { watchFor } = useWatchForPortion(grade);
+  const [asking, setAsking] = useState(false);
+
+  const onTile = (task: Task) =>
+    stateOf(task) === 'locked' ? setAsking(true) : nav.openTask(task);
 
   return (
     <View style={{ flex: 1 }}>
@@ -71,6 +81,8 @@ function AgeContent({ grade, age }: { grade: GradeKey; age: string }) {
             </Text>
             <PrimaryButton label={t.solve} onPress={() => nav.openTask(next)} />
           </View>
+        ) : portion ? (
+          <PortionCard grade={grade} portion={portion} />
         ) : (
           <View style={[styles.next, { backgroundColor: c.shallow, borderColor: c.hairline }]}>
             <Text variant="headline">{t.allDoneTitle}</Text>
@@ -85,8 +97,14 @@ function AgeContent({ grade, age }: { grade: GradeKey; age: string }) {
         )}
 
         {levels.map((level) => (
-          <WeightGroup key={level.weight} level={level} stateOf={stateOf} onOpen={nav.openTask} />
+          <WeightGroup key={level.weight} level={level} stateOf={stateOf} onOpen={onTile} />
         ))}
+
+        {next && portion && (
+          <View style={{ marginTop: 18 }}>
+            <PortionCard grade={grade} portion={portion} />
+          </View>
+        )}
 
         <View style={[styles.sum, { backgroundColor: c.panel }]} accessible>
           <View style={[styles.sumIcon, { backgroundColor: c.shallow }]}>
@@ -100,6 +118,20 @@ function AgeContent({ grade, age }: { grade: GradeKey; age: string }) {
           </View>
         </View>
       </ScrollView>
+      {portion && (
+        <ConfirmDialog
+          visible={asking}
+          icon="lock"
+          title={t.portionAsk(portion)}
+          text={t.portionAskText}
+          confirm={t.watchAd}
+          onCancel={() => setAsking(false)}
+          onConfirm={() => {
+            setAsking(false);
+            watchFor(portion);
+          }}
+        />
+      )}
     </View>
   );
 }

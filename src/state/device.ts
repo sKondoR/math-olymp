@@ -1,7 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getLocales } from 'expo-localization';
 
-import { Langs, type Lang } from '@/data/types';
+import type { Lang } from '@/data/types';
+import { startLang } from '@/i18n/start-lang';
 
 import type { Storage } from './saved';
 
@@ -12,8 +13,8 @@ import type { Storage } from './saved';
  */
 export const deviceStorage: Storage = AsyncStorage;
 
-/** The system language when the app speaks it, Russian otherwise. */
+/** The language to start with, from the system's language and region (`startLang`). */
 export function deviceLang(): Lang {
-  const code = getLocales()[0]?.languageCode;
-  return Langs.find((l) => l === code) ?? 'ru';
+  const locale = getLocales()[0];
+  return startLang(locale?.languageCode ?? null, locale?.regionCode ?? null);
 }

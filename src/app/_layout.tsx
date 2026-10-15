@@ -13,6 +13,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { rewardedAds } from '@/ads';
 import { SnackbarProvider } from '@/components/overlays';
 import { deviceLang, deviceStorage } from '@/state/device';
 import { StoreProvider } from '@/state/store';
@@ -33,7 +34,7 @@ export default function RootLayout() {
   });
   return (
     <SafeAreaProvider>
-      <StoreProvider storage={deviceStorage} deviceLang={deviceLang()}>
+      <StoreProvider storage={deviceStorage} deviceLang={deviceLang()} ads={rewardedAds}>
         {(fontsLoaded || fontError) && (
           <ThemeRoot>
             <SnackbarProvider>

@@ -1,29 +1,13 @@
 import { describe, expect, it } from 'vitest';
 
+import { testTask } from '@/data/test-tasks';
 import type { Task } from '@/data/types';
 
 import { TRIES, answer, outcomeOf, typeKey, viewAttempt } from './attempt';
 import type { TaskRecord } from './progress';
 
-function task(over: Partial<Task> = {}): Task {
-  return {
-    id: 't1',
-    number: 1,
-    points: 3,
-    weight: 1,
-    type: 'mixed',
-    topics: ['логика'],
-    family: 'logic',
-    text: { ru: 'Условие' },
-    options: ['А', 'Б', 'В', 'Г'].map((key) => ({ key, text: { ru: key } })),
-    answer: 'В',
-    solution: { ru: 'Разбор' },
-    image: null,
-    grade: '2',
-    source: 'builtin',
-    ...over,
-  };
-}
+const task = (over: Partial<Task> = {}) =>
+  testTask({ text: { ru: 'Условие' }, solution: { ru: 'Разбор' }, ...over });
 
 const written = task({ options: null, answer: '12', points: null, grade: '1' });
 const fresh: TaskRecord = { wrong: [] };

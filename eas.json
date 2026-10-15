@@ -5,7 +5,10 @@
   },
   "build": {
     "base": {
-      "node": "24.12.0"
+      "node": "24.12.0",
+      "env": {
+        "EXPO_PUBLIC_STORE": "rustore"
+      }
     },
     "development": {
       "extends": "base",
@@ -21,7 +24,10 @@
     },
     "production": {
       "extends": "base",
-      "autoIncrement": true
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_YANDEX_REWARDED_ID": "R-M-20228054-1"
+      }
     }
   },
   "submit": {

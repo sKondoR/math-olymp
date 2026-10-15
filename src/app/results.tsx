@@ -81,9 +81,9 @@ function AgeResults({ group, onReset }: { group: AgeGroup; onReset: () => void }
         <Stat icon="menu_book" n={counts.failed} word={t.failedWord} by={counts.byWeight.failed} />
         <Stat
           icon="radio_button_unchecked"
-          n={counts.open}
+          n={counts.ahead}
           word={t.aheadWord}
-          by={counts.byWeight.open}
+          by={counts.byWeight.ahead}
         />
       </View>
       <SecondaryButton

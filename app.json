@@ -9,10 +9,10 @@
     "userInterfaceStyle": "light",
     "ios": {
       "icon": "./assets/expo.icon",
-      "bundleIdentifier": "com.kondrse.matholymp"
+      "bundleIdentifier": "ru.matholymp.mobile"
     },
     "android": {
-      "package": "com.kondrse.matholymp",
+      "package": "ru.matholymp.mobile",
       "adaptiveIcon": {
         "backgroundColor": "#e9f7f7",
         "foregroundImage": "./assets/images/android-icon-foreground.png",

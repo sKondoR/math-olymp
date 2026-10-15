@@ -6,6 +6,7 @@ import { IconButton, PrimaryButton } from '@/components/buttons';
 import { Logo } from '@/components/logo';
 import { MenuSheet } from '@/components/menu-sheet';
 import { Meter } from '@/components/meter';
+import { PortionCard } from '@/components/portion';
 import { TaskPicture } from '@/components/task-picture';
 import { Font, Text } from '@/components/text';
 import { AgeGroups, ageGroup, type AgeGroup } from '@/data/groups';
@@ -14,7 +15,10 @@ import { useNav } from '@/navigation';
 import { useGradeSummary, useSettings } from '@/state/store';
 import { pressedScale, useTheme } from '@/theme';
 
-/** First screen: greeting, «Решать» for the last opened age, the choice of age. */
+/**
+ * First screen: greeting, «Решать» for the last opened age (or its next portion once every open
+ * task there is closed), the choice of age.
+ */
 export default function Home() {
   const c = useTheme();
   const t = useStrings();
@@ -58,8 +62,22 @@ function ResumeCard({ group }: { group: AgeGroup }) {
   const c = useTheme();
   const t = useStrings();
   const nav = useNav();
-  const { counts, next } = useGradeSummary(group.grade);
+  const { counts, next, portion } = useGradeSummary(group.grade);
   const go = () => nav.resume(group.grade, next);
+
+  if (!next && portion) {
+    return (
+      <PortionCard
+        grade={group.grade}
+        portion={portion}
+        overline={
+          <Text variant="small" muted style={{ paddingHorizontal: 4 }}>
+            {t.ageLabel(group.age)}
+          </Text>
+        }
+      />
+    );
+  }
 
   return (
     <View style={[styles.resume, { backgroundColor: c.shallow, borderColor: c.hairline }]}>

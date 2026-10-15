@@ -1,4 +1,5 @@
 import type { Lang, TopicFamily } from '@/data/types';
+import { PORTION, type Portion } from '@/state/openings';
 
 type Plural = (n: number) => string;
 type Weights = [string, string, string];
@@ -45,7 +46,7 @@ export type Strings = {
   erase: string;
   wrongMark: string;
   rightMark: string;
-  tileState: { solved: string; failed: string; next: string; open: string };
+  tileState: { solved: string; failed: string; next: string; ahead: string; locked: string };
   language: string;
   theme: string;
   themes: { sea: string; lilac: string; stone: string };
@@ -62,6 +63,16 @@ export type Strings = {
   restartText: (age: string) => string;
   cancel: string;
   restarted: (age: string) => string;
+  /** the next portion of tasks: «Задачи 21–40» */
+  portionTitle: (p: Portion) => string;
+  portionText: string;
+  watchAd: string;
+  /** asked on a tap on a locked task */
+  portionAsk: (p: Portion) => string;
+  portionAskText: string;
+  portionOpened: (p: Portion) => string;
+  adOffline: string;
+  adDismissed: string;
   /** option letters as on the olympiad answer sheet */
   letters: string[];
 };
@@ -128,7 +139,8 @@ const ru: Strings = {
     solved: 'решена',
     failed: 'не решена, закрыта',
     next: 'следующая',
-    open: 'не решена',
+    ahead: 'не решена',
+    locked: 'под замком, откроется после рекламы',
   },
   language: 'Язык',
   theme: 'Тема',
@@ -136,7 +148,7 @@ const ru: Strings = {
   tasksOnlyRussian: '',
   results: 'Мои результаты',
   resultsSub: 'Сколько решено и начать возраст заново',
-  resultsNote: '«Начать заново» снова открывает все задачи возраста, даже те, что не получились.',
+  resultsNote: `«Начать заново» снова даёт решать все задачи возраста, даже те, что не получились. Задачи после ${PORTION}-й снова откроются после рекламы.`,
   solvedWord: ruPlural('решена', 'решены', 'решено'),
   failedWord: 'не получилось',
   aheadWord: 'впереди',
@@ -144,9 +156,17 @@ const ru: Strings = {
   restart: 'Начать заново',
   restartTitle: (age) => `Начать «${age} лет» заново?`,
   restartText: (age) =>
-    `Все задачи для ${age} лет снова станут нерешёнными, и их можно будет решать ещё раз. Результаты исчезнут, вернуть их нельзя.`,
+    `Все задачи для ${age} лет снова станут нерешёнными, и их можно будет решать ещё раз. Результаты исчезнут, вернуть их нельзя. Задачи после ${PORTION}-й снова откроются после рекламы.`,
   cancel: 'Отмена',
-  restarted: (age) => `${age} лет: все задачи снова открыты`,
+  restarted: (age) => `${age} лет: можно решать заново`,
+  portionTitle: ({ from, to }) => `Задачи ${from}–${to}`,
+  portionText: `Посмотри рекламу, и эти задачи откроются. Задачи открываются по порядку, по ${PORTION}.`,
+  watchAd: 'Смотреть рекламу',
+  portionAsk: ({ from, to }) => `Открыть задачи ${from}–${to}?`,
+  portionAskText: `Задачи открываются по порядку, по ${PORTION}. Чтобы открыть следующие, нужно посмотреть рекламу.`,
+  portionOpened: ({ from, to }) => `Задачи ${from}–${to} открыты`,
+  adOffline: 'Чтобы посмотреть рекламу, нужен интернет',
+  adDismissed: 'Задачи откроются, если досмотреть рекламу до конца',
   letters: ['А', 'Б', 'В', 'Г', 'Д'],
 };
 
@@ -202,15 +222,20 @@ const en: Strings = {
   erase: 'Erase',
   wrongMark: 'wrong',
   rightMark: 'right answer',
-  tileState: { solved: 'solved', failed: 'not solved, closed', next: 'next', open: 'not solved' },
+  tileState: {
+    solved: 'solved',
+    failed: 'not solved, closed',
+    next: 'next',
+    ahead: 'not solved',
+    locked: 'locked, opens after an ad',
+  },
   language: 'Language',
   theme: 'Theme',
   themes: { sea: 'Sea', lilac: 'Lilac', stone: 'Stone' },
   tasksOnlyRussian: 'Problems are in Russian for now: their translation is on the way.',
   results: 'My results',
   resultsSub: 'What is solved, and starting an age over',
-  resultsNote:
-    '“Start over” opens every problem of the age again, even the ones that didn’t work out.',
+  resultsNote: `“Start over” lets you solve every problem of the age again, even the ones that didn’t work out. Problems after ${PORTION} open again after an ad.`,
   solvedWord: () => 'solved',
   failedWord: 'didn’t work out',
   aheadWord: 'ahead',
@@ -218,9 +243,17 @@ const en: Strings = {
   restart: 'Start over',
   restartTitle: (age) => `Start “${age} years” over?`,
   restartText: (age) =>
-    `Every problem for ${age} years becomes unsolved again, and you can solve them once more. The results will be gone for good.`,
+    `Every problem for ${age} years becomes unsolved again, and you can solve them once more. The results will be gone for good. Problems after ${PORTION} will open again after an ad.`,
   cancel: 'Cancel',
-  restarted: (age) => `${age} years: all problems are open again`,
+  restarted: (age) => `${age} years: you can solve them again`,
+  portionTitle: ({ from, to }) => `Problems ${from}–${to}`,
+  portionText: `Watch an ad to open these problems. Problems open in order, ${PORTION} at a time.`,
+  watchAd: 'Watch an ad',
+  portionAsk: ({ from, to }) => `Open problems ${from}–${to}?`,
+  portionAskText: `Problems open in order, ${PORTION} at a time. To open the next ones, watch an ad.`,
+  portionOpened: ({ from, to }) => `Problems ${from}–${to} are open`,
+  adOffline: 'You need the internet to watch an ad',
+  adDismissed: 'The problems open when the ad is watched to the end',
   letters: LATIN,
 };
 
@@ -274,7 +307,8 @@ const es: Strings = {
     solved: 'resuelto',
     failed: 'no resuelto, cerrado',
     next: 'siguiente',
-    open: 'no resuelto',
+    ahead: 'no resuelto',
+    locked: 'bloqueado, se abre tras un anuncio',
   },
   language: 'Idioma',
   theme: 'Tema',
@@ -282,8 +316,7 @@ const es: Strings = {
   tasksOnlyRussian: 'Por ahora los problemas están en ruso: la traducción está en camino.',
   results: 'Mis resultados',
   resultsSub: 'Cuánto has resuelto y empezar una edad de nuevo',
-  resultsNote:
-    '«Empezar de nuevo» vuelve a abrir todos los problemas de la edad, incluso los que no salieron.',
+  resultsNote: `«Empezar de nuevo» te deja resolver otra vez todos los problemas de la edad, incluso los que no salieron. Los problemas después del ${PORTION} se vuelven a abrir tras un anuncio.`,
   solvedWord: enPlural('resuelto', 'resueltos'),
   failedWord: 'no salieron',
   aheadWord: 'por hacer',
@@ -291,9 +324,17 @@ const es: Strings = {
   restart: 'Empezar de nuevo',
   restartTitle: (age) => `¿Empezar «${age} años» de nuevo?`,
   restartText: (age) =>
-    `Todos los problemas de ${age} años volverán a estar sin resolver y podrás resolverlos otra vez. Los resultados se borrarán para siempre.`,
+    `Todos los problemas de ${age} años volverán a estar sin resolver y podrás resolverlos otra vez. Los resultados se borrarán para siempre. Los problemas después del ${PORTION} se abrirán otra vez tras un anuncio.`,
   cancel: 'Cancelar',
-  restarted: (age) => `${age} años: todos los problemas están abiertos otra vez`,
+  restarted: (age) => `${age} años: puedes resolverlos otra vez`,
+  portionTitle: ({ from, to }) => `Problemas ${from}–${to}`,
+  portionText: `Mira un anuncio y estos problemas se abrirán. Los problemas se abren en orden, de ${PORTION} en ${PORTION}.`,
+  watchAd: 'Ver anuncio',
+  portionAsk: ({ from, to }) => `¿Abrir los problemas ${from}–${to}?`,
+  portionAskText: `Los problemas se abren en orden, de ${PORTION} en ${PORTION}. Para abrir los siguientes, hay que ver un anuncio.`,
+  portionOpened: ({ from, to }) => `Problemas ${from}–${to} abiertos`,
+  adOffline: 'Para ver el anuncio necesitas internet',
+  adDismissed: 'Los problemas se abren si ves el anuncio hasta el final',
   letters: LATIN,
 };
 
@@ -348,15 +389,20 @@ const fr: Strings = {
   erase: 'Effacer',
   wrongMark: 'faux',
   rightMark: 'bonne réponse',
-  tileState: { solved: 'résolu', failed: 'non résolu, fermé', next: 'suivant', open: 'non résolu' },
+  tileState: {
+    solved: 'résolu',
+    failed: 'non résolu, fermé',
+    next: 'suivant',
+    ahead: 'non résolu',
+    locked: 'verrouillé, s’ouvre après une pub',
+  },
   language: 'Langue',
   theme: 'Thème',
   themes: { sea: 'Mer', lilac: 'Lilas', stone: 'Pierre' },
   tasksOnlyRussian: 'Pour l’instant, les problèmes sont en russe : la traduction arrive.',
   results: 'Mes résultats',
   resultsSub: 'Ce qui est résolu, et recommencer un âge',
-  resultsNote:
-    '« Recommencer » rouvre tous les problèmes de l’âge, même ceux qui n’ont pas marché.',
+  resultsNote: `« Recommencer » permet de refaire tous les problèmes de l’âge, même ceux qui n’ont pas marché. Les problèmes après le ${PORTION}e se rouvrent après une pub.`,
   solvedWord: frPlural('résolu', 'résolus'),
   failedWord: 'pas réussis',
   aheadWord: 'à faire',
@@ -364,9 +410,17 @@ const fr: Strings = {
   restart: 'Recommencer',
   restartTitle: (age) => `Recommencer « ${age} ans » ?`,
   restartText: (age) =>
-    `Tous les problèmes pour ${age} ans redeviennent non résolus, et tu pourras les refaire. Les résultats seront effacés pour de bon.`,
+    `Tous les problèmes pour ${age} ans redeviennent non résolus, et tu pourras les refaire. Les résultats seront effacés pour de bon. Les problèmes après le ${PORTION}e se rouvriront après une pub.`,
   cancel: 'Annuler',
-  restarted: (age) => `${age} ans : tous les problèmes sont rouverts`,
+  restarted: (age) => `${age} ans : tu peux les refaire`,
+  portionTitle: ({ from, to }) => `Problèmes ${from}–${to}`,
+  portionText: `Regarde une pub pour ouvrir ces problèmes. Ils s’ouvrent dans l’ordre, ${PORTION} par ${PORTION}.`,
+  watchAd: 'Regarder une pub',
+  portionAsk: ({ from, to }) => `Ouvrir les problèmes ${from}–${to} ?`,
+  portionAskText: `Les problèmes s’ouvrent dans l’ordre, ${PORTION} par ${PORTION}. Pour ouvrir les suivants, il faut regarder une pub.`,
+  portionOpened: ({ from, to }) => `Problèmes ${from}–${to} ouverts`,
+  adOffline: 'Il faut internet pour regarder la pub',
+  adDismissed: 'Les problèmes s’ouvrent si tu regardes la pub jusqu’au bout',
   letters: LATIN,
 };
 

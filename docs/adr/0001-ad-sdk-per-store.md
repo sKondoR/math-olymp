@@ -14,16 +14,16 @@
 
 ## Решение
 
-Одна кодовая база, отдельная сборка на магазин; магазин задаёт переменная сборки `STORE=rustore|googleplay`.
+Одна кодовая база, отдельная сборка на магазин; магазин задаёт переменная сборки `EXPO_PUBLIC_STORE=rustore|googleplay` (одна и для нативной части, и для JS).
 
 - `rustore`: Yandex Mobile Ads (`yandex-mobile-ads`), с `setAgeRestrictedUser(true)`.
-- `googleplay`: AdMob (`react-native-google-mobile-ads`), child-directed, рейтинг G. Yandex SDK в эту сборку не попадает вовсе.
+- `googleplay`: AdMob (`react-native-google-mobile-ads`), child-directed, рейтинг G. Нативный Yandex SDK в эту сборку не попадает; JS-обёртка пакета остаётся в бандле (см. «Магазины и сборки» в PRODUCT.md).
 - В JS — общий интерфейс показа rewarded-ролика с реализацией на каждый SDK; экраны не знают, какой SDK внутри.
 - Каждая сборка работает на весь мир. Пользователь в России в сборке Google Play рекламы не получит (no fill) — порция открывается бесплатно.
 - Порядок: этап 1 — RuStore + Yandex; этап 2 — Google Play + AdMob. В Google Play не публикуемся до этапа 2, чтобы не открывать всё бесплатно и потом закрывать.
 
 ## Последствия
 
-- Нативные зависимости различаются по сборкам: config plugin при prebuild подключает только SDK своего магазина.
-- Покупки в v2 тоже разные по магазинам (RuStore Pay SDK / Google Play Billing) и ложатся на ту же переменную `STORE`.
+- Нативные зависимости различаются по сборкам: `react-native.config.js` отключает autolinking SDK чужого магазина (config plugin не понадобился).
+- Покупки в v2 тоже разные по магазинам (RuStore Pay SDK / Google Play Billing) и ложатся на ту же переменную `EXPO_PUBLIC_STORE`.
 - Если Yandex появится в списке Families или AdMob вернётся в Россию, решение можно пересмотреть в сторону одной сборки.

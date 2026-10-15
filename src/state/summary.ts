@@ -1,16 +1,19 @@
 import type { Task } from '@/data/types';
 
+import { nextPortion, openUpTo, type GradeOpenings, type Portion } from './openings';
 import { recordOf, type GradeProgress, type TaskRecord } from './progress';
 
 /**
- * Summary of one age group: what is done, what is ahead and which task comes next. Screens read
- * the summary and never combine the records of tasks themselves.
+ * Summary of one age group: what is done, what is ahead, which task comes next and which tasks
+ * the next ad opens. Screens read the summary and never combine the records of tasks themselves.
  */
 
-export type TaskState = 'solved' | 'failed' | 'next' | 'open';
+/** `locked` — beyond the open portions; such a task waits for an ad (or a purchase). */
+export type TaskState = 'solved' | 'failed' | 'next' | 'ahead' | 'locked';
 
-type Split = 'solved' | 'failed' | 'open';
+type Split = 'solved' | 'failed' | 'ahead';
 
+/** Counted over every task of the age group; `ahead` (not closed yet) includes the locked ones. */
 export type Counts = Record<Split, number> & {
   total: number;
   /** the same split by difficulty 1–3 */
@@ -31,34 +34,49 @@ export type Level = {
   preview(size: number): Task[];
 };
 
+/** The tasks the next ad opens, and the first of them. */
+export type NextPortion = Portion & { first: Task };
+
 export type GradeSummary = {
   /** by number */
   tasks: Task[];
   counts: Counts;
-  /** the first task not closed yet; undefined when every task is closed */
+  /** the first open task not closed yet; undefined when every open task is closed */
   next: Task | undefined;
+  /** undefined when no task is locked */
+  portion: NextPortion | undefined;
   /** only the levels that have tasks, easy first */
   levels: Level[];
   recordOf(task: Task): TaskRecord;
   stateOf(task: Task): TaskState;
-  /** «Следующая задача»: the next open task after `task` by number, then from the start */
+  /**
+   * «Следующая задача»: the next open task not closed after `task` by number, then from the
+   * start; undefined when every open task is closed
+   */
   nextAfter(task: Task): Task | undefined;
 };
 
 /** `tasks` must be ordered by number. */
-export function summarize(tasks: Task[], progress: GradeProgress): GradeSummary {
+export function summarize(
+  tasks: Task[],
+  progress: GradeProgress,
+  openings: GradeOpenings,
+): GradeSummary {
   const doneOf = (t: Task) => progress[t.id]?.done;
-  const next = tasks.find((t) => !doneOf(t));
+  const upTo = openUpTo(openings);
+  const toSolve = (t: Task) => t.number <= upTo && !doneOf(t);
+  const next = tasks.find(toSolve);
+  const portion = nextPortion(openings, tasks.at(-1)?.number ?? 0);
 
   const counts: Counts = {
     solved: 0,
     failed: 0,
-    open: 0,
+    ahead: 0,
     total: tasks.length,
-    byWeight: { solved: [0, 0, 0], failed: [0, 0, 0], open: [0, 0, 0] },
+    byWeight: { solved: [0, 0, 0], failed: [0, 0, 0], ahead: [0, 0, 0] },
   };
   for (const t of tasks) {
-    const k = doneOf(t) ?? 'open';
+    const k = doneOf(t) ?? 'ahead';
     counts[k]++;
     counts.byWeight[k][t.weight - 1]++;
   }
@@ -84,9 +102,12 @@ export function summarize(tasks: Task[], progress: GradeProgress): GradeSummary 
     tasks,
     counts,
     next,
+    // a portion ends at the last number, so it always has a first task
+    portion: portion && { ...portion, first: tasks.find((t) => t.number >= portion.from)! },
     levels,
     recordOf: (task) => recordOf(progress, task),
-    stateOf: (task) => doneOf(task) ?? (task.id === next?.id ? 'next' : 'open'),
-    nextAfter: (after) => tasks.find((t) => t.number > after.number && !doneOf(t)) ?? next,
+    stateOf: (task) =>
+      doneOf(task) ?? (task.number > upTo ? 'locked' : task.id === next?.id ? 'next' : 'ahead'),
+    nextAfter: (after) => tasks.find((t) => t.number > after.number && toSolve(t)) ?? next,
   };
 }

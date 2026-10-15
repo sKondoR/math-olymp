@@ -9,12 +9,13 @@ import { AppBar } from '@/components/app-bar';
 import { PrimaryButton } from '@/components/buttons';
 import { Chip, useWeightLabel } from '@/components/difficulty';
 import { Icon, type IconName } from '@/components/icon';
+import { PortionButton } from '@/components/portion';
 import { FamilyIcon, TaskPicture } from '@/components/task-picture';
 import { Font, Text } from '@/components/text';
 import { useTask } from '@/data/bank';
 import type { Task } from '@/data/types';
 import { optionLetter, useLocalize, useStrings } from '@/i18n';
-import { useNav } from '@/navigation';
+import { ageHref, useNav } from '@/navigation';
 import { TRIES, type AttemptNote } from '@/state/attempt';
 import { useGradeSummary } from '@/state/store';
 import { useAttempt } from '@/state/use-attempt';
@@ -23,14 +24,20 @@ import { alpha, useTheme } from '@/theme';
 /**
  * One task: three tries, a wrong option is marked at once and can't be picked again;
  * after the right answer or the third miss the task closes and shows how to solve it.
- * A closed task opens read-only.
+ * A closed task opens read-only, a locked one does not open.
  */
 export default function TaskScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const task = useTask(id);
   if (!task) return <Redirect href="/" />;
   // a new key per task resets the pick and the scroll when «Следующая задача» swaps the task
-  return <TaskContent key={task.id} task={task} />;
+  return <OpenTask key={task.id} task={task} />;
+}
+
+function OpenTask({ task }: { task: Task }) {
+  const { stateOf } = useGradeSummary(task.grade);
+  if (stateOf(task) === 'locked') return <Redirect href={ageHref(task.grade)} />;
+  return <TaskContent task={task} />;
 }
 
 function TaskContent({ task }: { task: Task }) {
@@ -38,7 +45,7 @@ function TaskContent({ task }: { task: Task }) {
   const t = useStrings();
   const nav = useNav();
   const insets = useSafeAreaInsets();
-  const { nextAfter } = useGradeSummary(task.grade);
+  const { nextAfter, portion } = useGradeSummary(task.grade);
   const localize = useLocalize();
   const weight = useWeightLabel();
   const attempt = useAttempt(task);
@@ -57,7 +64,10 @@ function TaskContent({ task }: { task: Task }) {
     }
   };
 
-  const goNext = () => nav.nextTask(task, nextAfter(task));
+  const nextTask = nextAfter(task);
+  const goNext = () => nav.nextTask(task, nextTask);
+  /** every open task is closed: instead of «Следующая задача», the ad for the next portion */
+  const portionInstead = !nextTask && portion;
 
   const notes: Record<AttemptNote, { icon: IconName; text: string }> = {
     pick: { icon: 'touch_app', text: t.pickHint },
@@ -146,7 +156,18 @@ function TaskContent({ task }: { task: Task }) {
           },
         ]}
       >
-        {done ? (
+        {done && portionInstead ? (
+          <View style={{ gap: 6 }}>
+            <Text variant="small" muted style={{ textAlign: 'center' }}>
+              {t.portionTitle(portionInstead)}
+            </Text>
+            <PortionButton
+              grade={task.grade}
+              portion={portionInstead}
+              onOpened={() => nav.nextTask(task, portionInstead.first)}
+            />
+          </View>
+        ) : done ? (
           <PrimaryButton label={t.nextTask} onPress={goNext} />
         ) : (
           <PrimaryButton

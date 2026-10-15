@@ -28,6 +28,8 @@ const GLYPHS = {
   expand_more: 58831,
   expand_less: 58830,
   star: 59448,
+  lock: 59543,
+  smart_display: 61546,
 } as const;
 
 export type IconName = keyof typeof GLYPHS;

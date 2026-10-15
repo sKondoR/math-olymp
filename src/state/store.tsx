@@ -1,15 +1,19 @@
 import { createContext, use, useEffect, useState, type ReactNode } from 'react';
 
+import type { RewardedAds } from '@/ads';
 import type { ThemeName } from '@/constants/tokens';
 import { useTasks } from '@/data/bank';
 import type { GradeKey, Lang, Task } from '@/data/types';
 
+import { afterReset, withAdPortion, type GradeOpenings } from './openings';
 import { answer as applyAnswer } from './attempt';
 import { recordOf, type GradeProgress, type TaskRecord } from './progress';
 import {
   loadState,
+  saveOpenings,
   saveProgress,
   saveSettings,
+  type AllOpenings,
   type AllProgress,
   type Settings,
   type Storage,
@@ -31,40 +35,54 @@ type SettingsStore = {
 
 type ProgressStore = {
   progress: AllProgress;
+  /** what opens the tasks of each age group beyond the free portion */
+  openings: AllOpenings;
   /** gives an answer to a task, returns its record after the answer */
   answer(task: Task, value: string): TaskRecord;
-  /** «Начать заново»: every task of the age group is open again, results are gone */
+  /** a rewarded ad was watched (or there was none to show): the next portion opens */
+  openPortion(grade: GradeKey): void;
+  /**
+   * «Начать заново»: every task of the age group can be solved again, results are gone and the
+   * portions opened by ads close again
+   */
   resetGrade(grade: GradeKey): void;
 };
 
 const SettingsContext = createContext<SettingsStore | null>(null);
 const ProgressContext = createContext<ProgressStore | null>(null);
+const AdsContext = createContext<RewardedAds | null>(null);
 
 /**
- * Renders nothing until the saved state is read, so children can rely on it. The storage and the
- * device language come from outside: the device's in the app (`state/device.ts`), a map in tests.
+ * Renders nothing until the saved state is read, so children can rely on it. The storage, the
+ * device language and the ads come from outside: the device's and the build's in the app
+ * (`state/device.ts`, `ads/`), fakes in tests.
  */
 export function StoreProvider({
   storage,
   deviceLang,
+  ads,
   children,
 }: {
   storage: Storage;
   /** the language when none was chosen yet */
   deviceLang: Lang;
+  /** the rewarded ads that open portions */
+  ads: RewardedAds;
   children: ReactNode;
 }) {
   const [settings, setSettings] = useState<Settings | null>(null);
   const [progress, setProgress] = useState<AllProgress | null>(null);
+  const [openings, setOpenings] = useState<AllOpenings | null>(null);
 
   useEffect(() => {
     loadState(storage, deviceLang).then((st) => {
       setSettings(st.settings);
       setProgress(st.progress);
+      setOpenings(st.openings);
     });
   }, [storage, deviceLang]);
 
-  if (!settings || !progress) return null;
+  if (!settings || !progress || !openings) return null;
 
   const updateSettings = (patch: Partial<Settings>) => {
     const next = { ...settings, ...patch };
@@ -75,6 +93,11 @@ export function StoreProvider({
   const updateProgress = (grade: GradeKey, next: GradeProgress) => {
     setProgress({ ...progress, [grade]: next });
     saveProgress(storage, grade, next);
+  };
+
+  const updateOpenings = (grade: GradeKey, next: GradeOpenings) => {
+    setOpenings({ ...openings, [grade]: next });
+    saveOpenings(storage, grade, next);
   };
 
   const settingsStore: SettingsStore = {
@@ -88,6 +111,7 @@ export function StoreProvider({
 
   const progressStore: ProgressStore = {
     progress,
+    openings,
     answer: (task, value) => {
       const before = recordOf(progress[task.grade], task);
       const after = applyAnswer(before, task, value);
@@ -95,12 +119,18 @@ export function StoreProvider({
         updateProgress(task.grade, { ...progress[task.grade], [task.id]: after });
       return after;
     },
-    resetGrade: (grade) => updateProgress(grade, {}),
+    openPortion: (grade) => updateOpenings(grade, withAdPortion(openings[grade])),
+    resetGrade: (grade) => {
+      updateProgress(grade, {});
+      updateOpenings(grade, afterReset(openings[grade]));
+    },
   };
 
   return (
     <SettingsContext value={settingsStore}>
-      <ProgressContext value={progressStore}>{children}</ProgressContext>
+      <ProgressContext value={progressStore}>
+        <AdsContext value={ads}>{children}</AdsContext>
+      </ProgressContext>
     </SettingsContext>
   );
 }
@@ -117,7 +147,15 @@ export function useProgress() {
   return store;
 }
 
+/** The build's rewarded ads, as given to `StoreProvider`. */
+export function useAds() {
+  const ads = use(AdsContext);
+  if (!ads) throw new Error('useAds outside StoreProvider');
+  return ads;
+}
+
 /** Summary of an age group: what is done, what is ahead, the task to solve next. */
 export function useGradeSummary(grade: GradeKey) {
-  return summarize(useTasks(grade), useProgress().progress[grade]);
+  const { progress, openings } = useProgress();
+  return summarize(useTasks(grade), progress[grade], openings[grade]);
 }

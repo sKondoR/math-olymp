@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { memoryStorage as memory } from './memory-storage';
-import { loadState, saveProgress, saveSettings, type Storage } from './saved';
+import { loadState, saveOpenings, saveProgress, saveSettings, type Storage } from './saved';
 
 const broken: Storage = {
   multiGet: () => Promise.reject(new Error('disk')),
@@ -16,6 +16,25 @@ describe('loadState', () => {
     expect(settings).toEqual({ lang: 'en', theme: 'sea', lastGrade: null });
     expect(Object.keys(progress)).toEqual(['1', '2', '3-4', '5-6', '7-8', '9-10']);
     expect(Object.values(progress).every((p) => Object.keys(p).length === 0)).toBe(true);
+  });
+
+  it('opens only the free portion on the first launch', async () => {
+    const { openings } = await loadState(memory().storage, 'en');
+    expect(Object.values(openings).every((a) => a.ads === 0 && !a.bought)).toBe(true);
+  });
+
+  it('reads what opens the tasks, and drops what makes no sense', async () => {
+    const { storage } = memory({
+      'mo:openings:2': { ads: 2, bought: false },
+      'mo:openings:3-4': { ads: -1, bought: 'yes' },
+      'mo:openings:5-6': { ads: 1.5, bought: true },
+      'mo:openings:7-8': '[3]',
+    });
+    const { openings } = await loadState(storage, 'ru');
+    expect(openings['2']).toEqual({ ads: 2, bought: false });
+    expect(openings['3-4']).toEqual({ ads: 0, bought: false });
+    expect(openings['5-6']).toEqual({ ads: 0, bought: true });
+    expect(openings['7-8']).toEqual({ ads: 0, bought: false });
   });
 
   it('reads what was saved', async () => {
@@ -76,8 +95,9 @@ describe('save', () => {
   it('keeps each age group under its own key', () => {
     const { storage, data } = memory();
     saveProgress(storage, '5-6', {});
+    saveOpenings(storage, '5-6', { ads: 1, bought: false });
     saveSettings(storage, { lang: 'ru', theme: 'sea', lastGrade: null });
-    expect([...data.keys()]).toEqual(['mo:progress:5-6', 'mo:settings']);
+    expect([...data.keys()]).toEqual(['mo:progress:5-6', 'mo:openings:5-6', 'mo:settings']);
   });
 
   it('only warns when the storage fails', async () => {

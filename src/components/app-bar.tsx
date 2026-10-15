@@ -1,9 +1,9 @@
-import { useRouter } from 'expo-router';
 import type { ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useStrings } from '@/i18n';
+import { useNav } from '@/navigation';
 import { alpha, useTheme } from '@/theme';
 
 import { IconButton } from './buttons';
@@ -21,9 +21,9 @@ export function AppBar({
 }) {
   const c = useTheme();
   const t = useStrings();
-  const router = useRouter();
+  const nav = useNav();
   const insets = useSafeAreaInsets();
-  const back = onBack ?? (() => (router.canGoBack() ? router.back() : router.replace('/')));
+  const back = onBack ?? nav.back;
   return (
     <View style={[styles.bar, { paddingTop: insets.top, backgroundColor: alpha(c.page, 0.94) }]}>
       <View style={styles.row}>
