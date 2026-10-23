@@ -1,6 +1,8 @@
 # math-olymp
 
-MathOlymp — Android-приложение (Expo SDK 57) с тренажёром олимпиадной математики для детей 6–15 лет. Продукт описан в [PRODUCT.md](PRODUCT.md), устройство кода и команды разработки — в [CLAUDE.md](CLAUDE.md), реклама — в [ADS.md](ADS.md).
+[MathOlymp в RuStore](https://www.rustore.ru/catalog/app/ru.matholymp.mobile)
+
+MathOlymp — Android-приложение (Expo SDK 57) с тренажёром олимпиадной математики для детей 6–15 лет. Продукт описан в [PRODUCT.md](PRODUCT.md), устройство кода и команды разработки — в [CLAUDE.md](CLAUDE.md), реклама — в c.
 
 ## Разработка
 
