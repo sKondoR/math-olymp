@@ -1,4 +1,5 @@
-# MathOlymp - тренажёром олимпиадной математики для детей 6–15 лет
+# MathOlymp
+## тренажёр олимпиадной математики для детей 6–15 лет
 
 [MathOlymp в RuStore](https://www.rustore.ru/catalog/app/ru.matholymp.mobile)
 
